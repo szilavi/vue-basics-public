@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The v-if directive</title>
+    <script src="https://unpkg.com/vue@3"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Guitars</h1>
+      <div class="guitars">
+        <template v-for="guitar in guitars" :key="guitar.id">
+          <p v-if="guitar.stock > 0">{{ guitar.name }}</p>
+        </template>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
