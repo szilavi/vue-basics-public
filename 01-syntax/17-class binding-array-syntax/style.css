@@ -1,0 +1,11 @@
+.stock {
+  font-size: 1.15rem;
+}
+
+.out-of-stock {
+  color: red;
+}
+
+.in-stock {
+  color: green;
+}
