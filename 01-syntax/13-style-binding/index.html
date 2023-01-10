@@ -14,8 +14,8 @@
         <div v-for="guitar in guitars" :key="guitar.id">
           <h2>{{ guitar.name }}</h2>
           <span v-if="guitar.stock === 0" :style="{color: outOfStockColor}">
-            Out of stock</span
-          >
+            Out of stock
+          </span>
           <span
             v-else-if="guitar.stock < 3"
             :style="{color: onlyFewLeftInStockColor}"

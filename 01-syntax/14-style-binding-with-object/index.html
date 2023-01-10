@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The v-else-if and v-else directives</title>
+    <title>Style binding with objects</title>
     <script src="https://unpkg.com/vue@3"></script>
   </head>
   <body>
@@ -13,11 +13,13 @@
       <div class="guitars">
         <div v-for="guitar in guitars" :key="guitar.id">
           <h2>{{ guitar.name }}</h2>
-          <span v-if="guitar.stock === 0" style="color: red">Out of stock</span>
-          <span v-else-if="guitar.stock < 3" style="color: orange">
+          <span v-if="guitar.stock === 0" :style="outOfStock">
+            Out of stock
+          </span>
+          <span v-else-if="guitar.stock < 3" :style="onlyFewLeftInStock">
             Last chance, only {{ guitar.stock }} left in stock
           </span>
-          <span v-else style="color: green">In stock</span>
+          <span v-else :style="inStock">In stock</span>
         </div>
       </div>
     </div>
