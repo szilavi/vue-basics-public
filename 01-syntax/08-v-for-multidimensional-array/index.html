@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The v-for directive with multidimensional array</title>
+    <script src="https://unpkg.com/vue@3"></script>
+  </head>
+  <body>
+    <div id="app">
+      <ul
+        v-for="(frameworkArray, frameworkArrayIndex) in frameworks"
+        :key="frameworkArrayIndex"
+      >
+        <li
+          v-for="(framework, frameworkIndex) in frameworkArray"
+          :key="frameworkIndex"
+        >
+          {{ framework }}
+        </li>
+      </ul>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
