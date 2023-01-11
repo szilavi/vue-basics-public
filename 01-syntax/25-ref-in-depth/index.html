@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>template ref</title>
+    <title>ref in depth</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/vue@3"></script>
   </head>
@@ -13,16 +13,13 @@
       <form ref="userForm" @submit.prevent="handleSubmit">
         <div class="form-group">
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name" v-model="formData.name" />
+          <input type="text" id="name" name="name" v-model="name" />
+          <p>{{ name }}</p>
         </div>
         <div class="form-group">
           <label for="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            v-model="formData.email"
-          />
+          <input type="email" id="email" name="email" v-model="email" />
+          <p>{{ email }}</p>
         </div>
         <div class="form-group">
           <button>Submit</button>
