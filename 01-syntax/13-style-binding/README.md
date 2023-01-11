@@ -7,7 +7,7 @@
 ## Lépések
 
 - Nem csak egyes attribútumokhoz tudjuk egy-egy változó értékét hozzárendelni, de lehetőség van arra is, hogy egy css tulajdonsághoz rendeljük hozzá inline
-- Legyen három változónk is, és adjuk nekik értékül a következőket:
+- Legyen három változónk is, és adjuk nekik értéknek a következőket:
 
 ```js
 const outOfStockColor = 'red'

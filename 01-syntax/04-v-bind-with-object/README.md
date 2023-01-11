@@ -65,12 +65,12 @@ app.mount('#app')
 </div>
 ```
 
-- Jelen esetben mind az `src`, az `alt`, és a `width` a logo objektum egy-egy porpertyjét kapják értékül
-- Ilyen esetben, ha az attribútumok értékeit nem külön 3 darab változóban tároljuk, hanem egy objektumban (best practice), akkor a következőképp egyszerűsíthetjük a kódot:
+- Jelen esetben mind az `src`, az `alt`, és a `width` a logo objektum egy-egy tulajdonságát kapják értéknek
+- Ilyen esetben, ha az attribútumok értékeit nem külön 3 darab változóban tároljuk, hanem egy objektumban (bevált gyakorlat), akkor a következőképp egyszerűsíthetjük a kódot:
 
 ```html
 <img v-bind="logo" />
 ```
 
 - Ebben az esetben az `src` attribútum az `src` tulajdonság, az `alt` attribútum az `alt` tulajdonság, a `width` attribútum a `width` tulajdonság értékét kapja meg
-- Csak arra kell figyelni, hogy az objektum tulajdonságjei pont azoknak a nevek legyenek, mint a html attribútumok nevei
+- Csak arra kell figyelni, hogy az objektum tulajdonságok nevei megeggyezzenek a html attribútumok neveivel

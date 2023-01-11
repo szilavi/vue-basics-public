@@ -41,7 +41,7 @@ const app = Vue.createApp({
 app.mount('#app')
 ```
 
-- Amennyiben nem akarjuk az objektumok össze tulajdonságát kiírni, vagy nem szeretnék kiírni például, hogy `framework.name`, `framework.relaseDate` stb, egyszerűen csak a tulajdonság nevével akarunk a template-ben hivatkozni, akkor használhatjuk a destruktúrálást a `v-for` esetében is:
+- Amennyiben nem akarjuk az objektumok össze tulajdonságát kiírni, vagy nem szeretnék kiírni például, hogy `framework.name`, `framework.relaseDate` stb., egyszerűen csak a tulajdonság nevével akarunk a template-ben hivatkozni, akkor használhatjuk a átstruktúrálást a `v-for` esetében is:
 
 ```html
 <div id="app">

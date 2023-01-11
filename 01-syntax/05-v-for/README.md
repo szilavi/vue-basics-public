@@ -54,7 +54,7 @@ app.mount('#app')
 - Az `li` fog ismétlődi a tömb elemeinek számával, azaz kertrendszerek számával megegyező alkalommal, azaz összesen 3 darab `li` tag lesz
 - A `framework` változóba nem a kulcsok, hanem az elemek kerülnek
 - A natív szintaktikához közelebb álló `of` is használható az `in` helyett, a működésen nem fog változtatni
-- A `key`-t nem kötelező, de ajánlott (best practice) mindig megadni:
+- A `key`-t nem kötelező, de ajánlott (bevált gyakorlat) mindig megadni:
 
 ```html
 <div id="app">
@@ -69,6 +69,6 @@ app.mount('#app')
 - A `key` egy egyedi azonosítót rendel az elemhez, ami a későbbiekben jut fontosabb szerephez, amikor az adatok változni is fognak
 - A `key` segítségével a Vue.js könnyebben nyomon tudja követni a változásokat
 - A `key` értéknek minden `v-for`-on belül (tehát nem globálisa) egyedi értéknek kell lennie
-- Az egyik legegyszerűbb, ha a `key`-nek az adott elem `id`-ját adjuk értékül
+- Az egyik legegyszerűbb, ha a `key`-nek az adott elem `id`-ját adjuk értéknek
 - Nem kötelező, de egy prefixel ki is egészíthetjük az azonosító értékét: `framework-${framework.id}`
 - Böngészőben ellenőrizve látható, hogy létrejött a 3 `li` elem benne a keretrendszerek neveivel

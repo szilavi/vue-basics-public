@@ -42,7 +42,7 @@ app.mount('#app')
 ```
 
 - Jelenleg ha a `name` értéke változik, az input value-ja is változni fog
-- Hogy erről megbizonyosodjuk, tegyünk, egy setInterval-t a kódba:
+- Hogy erről megbizonyosodjuk, tegyünk, egy `setInterval()`-t a kódba:
 
 ```js
 const { createApp, ref, watch } = Vue
@@ -64,7 +64,7 @@ app.mount('#app')
 
 - **Megjegyzés**: Valós alkalmazásban így ne használjuk , mindig burkoljuk egy függvénybe, ha szükség van rá!
 - Másodpercenként változik a `name` értéke és egy a DOM-ban is megjelenik
-- Már csak azt kell elérnünk, hogy ez az adatkötés ne egyirányú legyen, azaz, ha az inputba beírok valami, akkor a `name` vegye azt fel értékül
+- Már csak azt kell elérnünk, hogy ez az adatkötés ne egyirányú legyen, azaz, ha az inputba beírok valami, akkor a `name` vegye azt fel értéknek
 - Ehhez egészítsük ki a HTML kódot:
 
 ```html

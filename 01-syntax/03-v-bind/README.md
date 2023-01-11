@@ -29,7 +29,7 @@ app.mount('#app')
 <h1 v-bind:title="title">Vue.js</h1>
 ```
 
-- A v-bind attribútum után kettősponttal megadjuk, melyik html attribútumhoz szeretnék értéket hozzárendelni, majd megadom értékül a JavaScript változó nevét
+- A v-bind attribútum után kettősponttal megadjuk, melyik html attribútumhoz szeretnék értéket hozzárendelni, majd megadom értéknek a JavaScript változó nevét
 - Ezzel azt értem el, hogy a böngészőben ha a címsor fölé viszem a kurzort megjelenik a _Long live Vue!_ szöveg, a devtoolban pedig az elemet megvizsgálva a következő látható:
 
 ```html

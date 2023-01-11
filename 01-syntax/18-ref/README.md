@@ -72,8 +72,8 @@ app.mount('#app')
 - A `ref`-nek paraméterként megadható a kezdőérték, hasonlóan, mint egy változó létrehozásánál az értékadás
 - A `ref` egy objektummal tér vissza, amely egy tulajdonságot tartalmaz: `value`
 - A példában lévő `counter` egy reaktív, mutálható változó lesz, melynek változását a Vue nyomon követi
-- A `counter` értékét mindig a value tulajdosnágon keresztül érjük el a JavaScript kódon belül
-- A `ref` a `createApp`-hoz hasonlóan a Vue objektumon keresztül érhető el, ezért, hogy ne kelljen kiírni, hogy Vue, destruktúrálást használva kimentem külön változóba őket
+- A `counter` értékét mindig a `value` tulajdonságon keresztül érjük el a JavaScript kódon belül
+- A `ref` a `createApp`-hoz hasonlóan a Vue objektumon keresztül érhető el, ezért, hogy ne kelljen kiírni, hogy Vue, átstruktúrálást használva kimentem külön változóba őket
 - Ezen kívül készítek két függvényt: `increaseCounter()`, `decreaseCounter()`, melyek semmi mást nem tesznek, mint a `counter` változó értékét növelik és csökkentik eggyel
 - Mind a `counter`t, mind a függvényeket megadom a visszatérési értéknél:
 
@@ -132,7 +132,7 @@ const app = createApp({
 app.mount('#app')
 ```
 
-- Destructuring használatával kiemeltem külön változóba azokat a metódusokat, amikre ténylegesen szükségem lesz
+- De használatával kiemeltem külön változóba azokat a metódusokat, amikre ténylegesen szükségem lesz
 - Teszteljük is le az alkalmazást
 - A gombokra kattintva a `counter` értéke változik, és az aktuális érték kerül mindig kiírásra
 - Mivel a Vue figyeli a változót, látja, hogy az értéke megváltozott, azt is nyilvántartja, hol van rá hivatkozás, és minden egyes helyen elvégzi a frissítést

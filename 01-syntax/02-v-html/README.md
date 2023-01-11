@@ -24,7 +24,7 @@ const app = Vue.createApp({
 app.mount('#app')
 ```
 
-- Felvettünk egy új változót `title` névvel, ami html taget is tartalmaz, és a `setup()` `return` objektumánál is megadtuk a `title`-t
+- Felvettünk egy új változót `title` névvel, ami html tag-et is tartalmaz, és a `setup()` `return` objektumánál is megadtuk a `title`-t
 - Az `index.html` tartalma legyen a következő:
 
 ```html
@@ -33,7 +33,7 @@ app.mount('#app')
 </div>
 ```
 
-- Ha megnézzük böngészőben, akkor látható, hogy a span nem került parse-olásra le, egyszerű szövegként jelenik meg
+- Ha megnézzük böngészőben, akkor látható, hogy a `span` nem került parse-olásra le, egyszerű szövegként jelenik meg
 - Ha szeretnénk magát a html tartalmat lerenderelni, akkor nem a text interpolation szintaxisát használjuk, hanem a _v-html_ attribútumot
 - Ehhez módosítsuk a kódot:
 
@@ -43,9 +43,9 @@ app.mount('#app')
 </div>
 ```
 
-- A `v-html` attributomot direktívának nevezzük
+- A `v-html` attribútomot direktívának nevezzük
 - A direktívák olyan speciális html attribútumok, melyek a keretrendszer számára értelmezhető utasításokat írnak le
-- Látható, hogy nem text interpolationt használtam, hanem a `h1` tagnek megadtam a `v-html` direktívát
-- A `v-html`nek értékül adtam a `title` változót
+- Látható, hogy nem text interpolationt használtam, hanem a `h1` tag-nek megadtam a `v-html` direktívát
+- A `v-html`nek értéknek adtam a `title` változót
 - Ha megnyitjuk böngészőben látható, hogy a `span` lerenderelődött
 - A text interpolationt úgy kell elképzelni, mintha az adott elem `textContent`jét módosítanánk, míg a `v-html`el az `innerHTML`t
