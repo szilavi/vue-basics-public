@@ -7,7 +7,7 @@
 
 ## Lépések
 
-- Amennyiben egy html elemnél több attribute bindingot is szeretnénk használni, azt megtehetjük
+- Amennyiben egy html elemnél több *attribute binding*ot is szeretnénk használni, azt megtehetjük
 - Újfent egészítsük ki a `main.js` fájlt:
 
 ```js
@@ -29,7 +29,7 @@ const app = Vue.createApp({
 app.mount('#app')
 ```
 
-- Használjunk ebben az esetben több attribute bindingot az elemen:
+- Használjunk ebben az esetben több *attribute binding*ot az elemen:
 
 ```html
 <div id="app">

@@ -7,8 +7,8 @@
 ## Lépések
 
 - Egyszerűsítsük az alkalmazást annyival, hogy minden esetben kiírja, hány darab gitár van készleten, azonban a 0, akkor az `out-of-stock` ha nullánál több, akkor az `in-stock` osztályt helyezzük el rajta
-- Ehhez a class bindingot Használjuk
-- A `class binding` hasonló, mint az egyszerű _attribute binding_
+- Ehhez a *class binding*ot Használjuk
+- A *class binding* hasonló, mint az egyszerű _attribute binding_
 - A példa kedvéért a CSS fájl legyen a következő:
 
 ```css
@@ -63,4 +63,4 @@
 </div>
 ```
 
-- A kapcsoszárójeleken belül, vesszővel elválasztva egy új classname, és a feltétel
+- A kapcsoszárójeleken belül, vesszővel elválasztva egy új osztálynév, és a feltétel

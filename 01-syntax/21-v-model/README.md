@@ -26,7 +26,7 @@ const app = createApp({
 app.mount('#app')
 ```
 
-- Az input elem esetében a `value`t attribute bindinggal össze kell kötnöm a `name` változóval
+- Az input elem esetében a `value`t *attribute binding*gal össze kell kötnöm a `name` változóval
 - A `name` értékét az input alá ki is íratom:
 
 ```html
