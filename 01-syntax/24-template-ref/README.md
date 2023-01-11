@@ -8,7 +8,7 @@
 
 - Annyival egészítsük ki még a kódot, hogy a küldés után reseteljük az űrlapot
 - Ehhez nem lesz szükség semmilyen JS metódusra (`querySelector()`, `getElementById()`, stb.), hogy mindezt megvalósítsuk, sőt az event objektumot sem foguk paraméterként átadni, hogy azon keresztül érjük el a formot
-- Ezek helyett létrehozok egy új reaktív változót a JS-ben `userForm` névvel:E
+- Ezek helyett létrehozok egy új reaktív változót a JS-ben `userForm` névvel:
 
 ```js
 const { createApp, reactive, ref } = Vue

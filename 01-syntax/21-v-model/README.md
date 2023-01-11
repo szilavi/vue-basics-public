@@ -86,7 +86,7 @@ app.mount('#app')
 ```
 
 - Egy egyszerű event bindingot használtam
-- Az árlapelem input eseményére beállítom a `name` értékét, tehát ha az őrlapelem értéke módosul, akkor a `name` értéke is, és azt is láthatjuk, hogy a `setInterval` ha módosítja a `name` értékét, akkor az input `value`ja is módosul
+- Az árlapelem input eseményére beállítom a `name` értékét, tehát ha az őrlapelem értéke módosul, akkor a `name` értéke is, és azt is láthatjuk, hogy a `setInterval` ha módosítja a `name` értékét, akkor az input `value`-ja is módosul
 - Ezt hívjuk kétirányú adatkötésnek
 - Hogy ne legyen zavaró, töröljük a JS kódból a `setInterval`t
 - Ami még nem szép, hogy az input eseményhez inline rendeltem a függvényt ezt kiszervezhetjük külön függvénybe

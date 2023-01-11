@@ -89,7 +89,7 @@ app.mount('#app')
 ```
 
 - A formázást a `formattedPrice()` valósítja meg
-- Mivel JS-en belül vagyunk, ezért amikor a `price`re hivatkozunk, már kell a `value`
+- Mivel JS-en belül vagyunk, ezért amikor a `price`-ra hivatkozunk, már kell a `value`
 - Módosítsuk a template-et is:
 
 ```html
@@ -154,6 +154,6 @@ app.mount('#app')
 ```
 
 - Látható, hogy nem, mint függvény használjuk a *computed property*t, hanem, mint változót, tehát nincsenek ot a zárójelek
-- A különbség a _ref_ és a _computed ref_ között, hogy _computed ref_ esetében, ha a JS-kódban hivatkozunk rá, akkor sem kell a *value*t kiírni, ez automatikusan megtörténik
+- A különbség a _ref_ és a _computed ref_ között, hogy _computed ref_ esetében, ha a JS-kódban hivatkozunk rá, akkor sem kell a *value*-t kiírni, ez automatikusan megtörténik
 - Bár használható a _computed property_ *setter*ként is, azonban a legjobb, ha csak *getter*ként használjuk, azaz ne csináljon mást, csak más értékekkel dolgozva előállít egy új értéket, tehát nem csinál más csak kiszámítja ezt az értéket és visszaadja azt
 - **FONTOS**: soha ne legyen aszinkron kérés, vagy DOM manipuláció a *computed property*n belül, a getter mindig mentes a side effectektől

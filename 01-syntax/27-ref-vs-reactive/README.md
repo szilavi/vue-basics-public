@@ -14,7 +14,7 @@
   - primitívek esetében
   - objektumok esetében ha újra értéket akarunk adni a teljes változónak
   - mindig ki kell írni a `value`t az érték lekérdezéséhez a JS-en belül
-  - a template-en belül a `value`t nem kell kiírni, ez automatikusan megtörténik
+  - a template-en belül a `value`-t nem kell kiírni, ez automatikusan megtörténik
   - a háttérben a `ractive()` függvényt hívja meg
 
 - REACTIVE:
