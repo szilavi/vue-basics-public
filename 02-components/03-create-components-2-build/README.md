@@ -65,8 +65,8 @@ import SiteContent from './components/SiteContent.vue'
 - A `dev` módben az alkalmazásból, a böngésző számára értelmezhető kód nem kerül fájlszinten kiírásra, ezt a Vite a memóriában tartja
 - A fájlok ilyenkor nem lesznek optimalizálva, minifyolva
 - Ha egy új verziót adunk ki az alkalmazásból, és a neten elérhetővé akarjuk tenni, akkor viszont szükség van a fájlokra
-- Ezen fájlok előállítását, és optimalizálását hívjuk build foylamatnak
+- Ezen fájlok előállítását, és optimalizálását hívjuk build folyamatnak
 - Futtassuk le a `build` parancsot? `npm run build`
 - Létrejön a `dist` mappa, benne a szükséges fájlokkal
-- Azok a fáljok, melyek a Vite által lettek feldolgozva (nem a public mappában voltak) optimalizált formában, egy hash-el ellátva jelennek meg
+- Azok a fájlok, melyek a Vite által lettek feldolgozva (nem a public mappában voltak) optimalizált formában, egy hash-el ellátva jelennek meg
 - A `preview` script futtatásával pedig megtekinthetjük böngészőben a lebuildelt alkalmazást
