@@ -85,14 +85,6 @@ VITE v3.2.5  ready in 471 ms
 - Látható néhány speciális tag. `HelloWorld`, `TheWelcome` melyeket komponenseknek nevezünk. Ezen fájlok kiterjesztése `.vue`
 - Ezekből épül fel az alkalmazás.
 
-- Egy komponens rendelkezhet egyedi tulajdonságokkal, mint például a `HelloWorld` esetében az `msg`. ,ez amolyan bemeneti adat.
-- Ha pedig megnézzük a `TheWelcome` komponenst, látható, hogy egyéb komponenseket használunk fel benne. A `WelcomeItem`-et ami meg egy-egy ikon komponenst is megjelenít.
-- Ezek az Single File Component-ek az alábbi 3 fő részt tartalmazhatják:
-
-  - <script setup></script>: Az komponens js/Vue.js kódja
-  - <tamplate></tamplate>: A komponens html kódja
-  - <style scoped></style>: A komponens css kódja. A scoped-al azt állítjuk, hogy ez a kód nem globálisan érvényes, hanem csak a komponensen belül. A globálisan érvényes css kódok az `assets` mappán belül található.
-
 - Amennyiben az alkalmazás elkészült, és nem fejlesztés közben vagyunk, akkor le kell buildelni az alkalmazást, azaz el kell készíteni fájl szinten is a böngésző számára értelmezhető kódot.
 - Ehhez az `npm run build` parancsot kell kiadni
 - Ekkor létrejön egy `dist` mappa a szükséges fájlokkal, amit a Vite állít elő
@@ -103,5 +95,3 @@ VITE v3.2.5  ready in 471 ms
 - Ugyanazt kell látnunk, mint dev mód esetében
 
 - Ilyen alkalmazásokat fogunk mi magunk is írni.
-
-- Ennek az egyik előnye, hogy gyors, a másik, hogy a Hot Module Reload, melyet a Vite biztosít, az alkalmazás, módosítása közben nem fogja a teljes oldalt frissíteni a böngészőben, csak azt a modult, azt a részt frissíti, amelyik módosult.

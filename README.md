@@ -33,17 +33,21 @@
 
 ## Komponensek
 
-- 01 - Komponensek létrehozása
-- 02 - A `defineProps` használata, szülő gyermek közötti kommunikáció
-- 03 - A `props` használata scripten belül
-- 04 - `props`: alapértelmezett érték
-- 05 - `props`: dinamikus érték
-- 06 - A `defineEmitts` használata, gyermek-szülő közötti kommunikáció
-- 07 - Komponens esemény paraméterekkel I.
-- 08 - Komponens esemény paraméterekkel II.
-- 09 - Komponens esemény paraméterekkel III.
-- 10 - Komponens események és a `props` együttes használata
-- 11 - Életciklus függvények
+- [Egy Vue.js 3 alkalmazás inicializálása](./02-components/00-create-app/)
+- [Új alkalmazás létrehozása](02-components/01-create-new-project/)
+- [Komponensek létrehozása I.](02-components/02-create-components-1/)
+- [Komponensek létrehozása II.](02-components/03)
+- Az alkalmazás lebuildelése
+- A `defineProps` használata, szülő gyermek közötti kommunikáció
+- A `props` használata scripten belül
+- `props`: alapértelmezett érték
+- `props`: dinamikus érték
+- A `defineEmitts` használata, gyermek-szülő közötti kommunikáció
+- Komponens esemény paraméterekkel I.
+- Komponens esemény paraméterekkel II.
+- Komponens esemény paraméterekkel III.
+- Komponens események és a `props` együttes használata
+- Életciklus függvények
 
 ## Alkalmazások
 
