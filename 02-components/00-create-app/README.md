@@ -50,7 +50,7 @@
 
   - `.vsode` mappa : Az adott projekttel kapcsolatos VSCode beállítások
   - `node_modules` mappa: A telepített NodeJS csomagok
-  - `public` mappa: Azokat a könyvtárakat, fájlokat helyezzük ide, melyek nem kerülnek a build tool, azaz a Vite által feldolgozásra, nem akarjuk ezeket optimalizálni, minifyolni, sem semmi egyéb.
+  - `public` mappa: Azokat a könyvtárakat, fájlokat helyezzük ide, melyek nem kerülnek a build tool, azaz a Vite (ejtsd: vit, nekem ez nem mindig sikerül :)) által feldolgozásra, nem akarjuk ezeket optimalizálni, minifyolni, sem semmi egyéb.
   - `src` mappa: A projekt feldolgozandó forrásállományai
     - `assets`: A projekthez szükséges egyéb erőforrás állományok (css fájlok, képek, betűtípusok, stb.)
     - `component`: A Vue.js komponensek könyvtára.
