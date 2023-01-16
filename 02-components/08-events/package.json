@@ -1,5 +1,5 @@
 {
-  "name": "07-props-binding",
+  "name": "08-events",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",

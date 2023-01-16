@@ -1,5 +1,5 @@
 {
-  "name": "03-create-components-2-build",
+  "name": "06-props-inside-scripts",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
