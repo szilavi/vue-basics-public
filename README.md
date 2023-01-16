@@ -41,8 +41,8 @@
 - [A `defineProps` használata, szülő gyermek közötti kommunikáció](02-components/05-props/)
 - [A `props` használata scripten belül](02-components/06-props-inside-script/)
 - [`props` binding](02-components/07-props-binding/)
-- [A `defineEmitts` használata, gyermek-szülő közötti kommunikáció]
-- [Komponens esemény paraméterekkel I.]
+- [A `defineEmitts` használata, gyermek-szülő közötti kommunikáció](02-components/08-events/)
+- [Komponens esemény paraméterrel](02-components/09-events-with-param/)
 - [Komponens esemény paraméterekkel II.]
 - [Komponens esemény paraméterekkel III.]
 - [Komponens események és a `props` együttes használata]
