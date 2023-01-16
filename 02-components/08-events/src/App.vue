@@ -2,7 +2,7 @@
 import InputField from './components/InputField.vue'
 
 function alertMessage() {
-  alert('Input hs focused')
+  alert('Input has focus')
 }
 </script>
 

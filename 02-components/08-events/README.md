@@ -45,7 +45,7 @@ defineEmits(['on-focus'])
 import InputField from './components/InputField.vue'
 
 function alertMessage() {
-  alert('Input has focused')
+  alert('Input has focus')
 }
 </script>
 
