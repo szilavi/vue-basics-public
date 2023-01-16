@@ -52,5 +52,3 @@ defineProps({
 - Ahhoz, hogy mindig kötelező legyen a required megadása, a `.eslintrs.cjs` fájt módosítsuk
 - Az `extends` első sora legyen a következő: `'plugin:vue/vue3-recommended'`
 - Így mindig meg kell majd adni a `required` értékét is, és ha az `false`, akkor a `default`ot is
-
-- **A props értékeket nem szabad módosítani!**
