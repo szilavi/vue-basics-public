@@ -37,7 +37,7 @@
 - [Új alkalmazás létrehozása](02-components/01-create-new-project/)
 - [Komponensek létrehozása I.](02-components/02-create-components-1/)
 - [Komponensek létrehozása II.](02-components/03-create-components-2/)
-- [Az alkalmazás lebuildelése](02-components/03-create-components-2/)
+- [Az alkalmazás lebuildelése](02-components/04-build-and-preview/)
 - A `defineProps` használata, szülő gyermek közötti kommunikáció
 - A `props` használata scripten belül
 - `props`: alapértelmezett érték
