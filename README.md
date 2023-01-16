@@ -38,10 +38,9 @@
 - [Komponensek létrehozása I.](02-components/02-create-components-1/)
 - [Komponensek létrehozása II.](02-components/03-create-components-2/)
 - [Az alkalmazás lebuildelése](02-components/04-build-and-preview/)
-- A `defineProps` használata, szülő gyermek közötti kommunikáció
-- A `props` használata scripten belül
-- `props`: alapértelmezett érték
-- `props`: dinamikus érték
+- [A `defineProps` használata, szülő gyermek közötti kommunikáció](02-components/05-props/)
+- [A `props` használata scripten belül](02-components/06-props-inside-script/)
+- [`props` binding](02-components/07-props-binding/)
 - A `defineEmitts` használata, gyermek-szülő közötti kommunikáció
 - Komponens esemény paraméterekkel I.
 - Komponens esemény paraméterekkel II.
