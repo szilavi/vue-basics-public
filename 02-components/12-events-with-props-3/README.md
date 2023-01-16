@@ -2,86 +2,63 @@
 
 ## Tartalom
 
-- `props` és `events` együttes használata II.
+- `props` és `events` együttes használata III.
 
 ## Lépések
 
-- Kicsit módosítsuk a kódot
-- Használjuk a `v-model` direktívát a dolgok egyszerűsítésére:
-- Az `email` értékét rögtön a `template`be bele is írom, hogy látszódjon a változás
+- A `v-model` használata a szülő-gyermek kommunikációnál nagyon hasznos
+- Alakítsuk át a kódot úgy, hogy ne csak egy hanem 3 `InputField` mező legyen:
+  - firstName
+  - lastName
+  - email
+- Ezeket helyezzük el egy `form`on belül
+- Legyen egy `reactive` `formData` változónk, amiben ezek az értékeket kerülnek
+- Használjuk fel a `v-model`nél
+- Készítsünk egy küldés gombot, ami csak annyit tesz, hogy kilogolja az űrlap adatait JSON formátumban
 
 ```vue
 <script setup>
-import { ref } from 'vue'
+import { reactive } from 'vue'
 import InputField from './components/InputField.vue'
 
-const email = ref('')
-</script>
-
-<template>
-  <InputField
-    id="email"
-    v-model="email"
-    name="email"
-    type="email"
-    label="E-mail address"
-  />
-  {{ email }}
-</template>
-```
-
-- Nincs egyedi esemény, amit mi magunk írtunk volna, azonban lehetőségünk van mégis összekapcsolni az `InputField`ben lévő értéket az `App`ban lévő változóval
-- A `v-model` segítségével a tárolt érték a `modelValue` keresztül elérhető
-- Amikor egy gyermek komponensnél használjuk, akkor ezt az értéket a `prop`ként is elérhetjük
-- Csak vegyük fel a `modelValue`t a gyermekben
-- Majd, amikor frissül az adat, erről a szülőt értesíteni kell, ehhez pedig a `update:modelValue` eseményt használhatjuk:
-
-```vue
-<script setup>
-defineProps({
-  modelValue: {
-    type: String,
-    required: true,
-  },
-  name: {
-    type: String,
-    required: true,
-  },
-  id: {
-    type: String,
-    required: true,
-  },
-  label: {
-    type: String,
-    required: true,
-  },
-  type: {
-    type: String,
-    required: true,
-  },
+const formData = reactive({
+  firstName: '',
+  lastName: '',
+  email: '',
 })
 
-defineEmits(['update:modelValue'])
+function submitForm() {
+  console.log(JSON.stringify(formData))
+}
 </script>
 
 <template>
-  <label :for="id">{{ label }}:</label>
-  <input
-    :id="id"
-    :name="name"
-    :type="type"
-    :value="modelValue"
-    @input="$emit('update:modelValue', $event.target.value)"
-  />
+  <form>
+    <InputField
+      id="firstName"
+      v-model="formData.firstName"
+      name="firstName"
+      type="text"
+      label="Firstname"
+    />
+    <InputField
+      id="lastName"
+      v-model="formData.lastName"
+      name="lastName"
+      type="text"
+      label="Lastname"
+    />
+    <InputField
+      id="email"
+      v-model="formData.email"
+      name="email"
+      type="email"
+      label="E-mail address"
+    />
+    <button @click="submitForm">Submit</button>
+  </form>
 </template>
-
-<style scoped>
-label {
-  display: block;
-  font-weight: bold;
-  margin: 0 0 0.5rem 0;
-}
-</style>
 ```
 
-- Ahogy szerkesztjük a mező értékét, az adat rögtön módosul is
+- Így van egy komplett űrlapom, melynek az adatait már küldhetem is el a backendnek
+- A `InputField` pedig egy szép újra felhasználható komponens
