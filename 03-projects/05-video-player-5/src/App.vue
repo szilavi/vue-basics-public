@@ -7,7 +7,7 @@ import VideoDetails from './components/VideoDetails.vue'
 const videos = ref(null)
 const selectedVideo = ref(null)
 
-async function searhVideos(query) {
+async function searchVideos(query) {
   const response = await youtubeAPI.get('/search', {
     params: {
       ...defaultParams,
@@ -18,7 +18,7 @@ async function searhVideos(query) {
   selectedVideo.value = videos.value[0]
 }
 
-onMounted(() => searhVideos('vuejs'))
+onMounted(() => searchVideos('vuejs'))
 </script>
 
 <template>
