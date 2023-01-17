@@ -43,14 +43,22 @@
 - [`props` binding](02-components/07-props-binding/)
 - [A `defineEmitts` használata, gyermek-szülő közötti kommunikáció](02-components/08-events/)
 - [Komponens esemény paraméterrel](02-components/09-events-with-param/)
-- [Komponens esemény paraméterekkel II.]
-- [Komponens esemény paraméterekkel III.]
-- [Komponens események és a `props` együttes használata]
-- [Életciklus függvények]
+- [A defineProps és a defineEmitts együttes használata I.](02-components/10-events-with-props-1/)
+- [A defineProps és a defineEmitts együttes használata II.](02-components/11-events-with-props-2/)
+- [A defineProps és a defineEmitts együttes használata III.](02-components/12-events-with-props-3/)
+- [A Vue.js komponensek életciklusai, hookok](02-components/13-lifecycle-hooks/)
 
 ## Alkalmazások
 
 ### Video player
+
+- [A youtube API használata](03-projects/01-video-player/01-youtubeAPI/)
+- [A videók kilistázása](03-projects/01-video-player/02-listing/)
+- [A VideoList és VideoItem komponensek elkészítése](03-projects/01-video-player/03-VideoList-VdeoItem/)
+- [A VideoItem tempaltejének véglegesítése](03-projects/01-video-player/04-VideoItem/)
+- [A VideoDetails komponens elkészítése](03-projects/01-video-player/05-VideoDetails/)
+- [Videó kiválasztásának lefejlesztése](03-projects/01-video-player/06-select-video/)
+- [A SearchBar elkészítése](03-projects/01-video-player/07-SearchBar/)
 
 ### User manager
 
