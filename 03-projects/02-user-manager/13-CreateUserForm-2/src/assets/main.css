@@ -1,0 +1,17 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: green;
+}
+
+input:focus:invalid {
+  box-shadow: 0 0 0 0.25rem rgba(255, 0, 0 0.25);
+}
+
+input:focus:valid {
+  box-shadow: 0 0 0 0.25rem rgba(0, 255, 0 0.25);
+}
