@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted } from 'vue'
 import { useUserStore } from '../store/user'
+import AppTitle from './components/AppTitle.vue'
 import CreateUserForm from './components/CreateUserForm.vue'
 import UsersTable from './components/UsersTable.vue'
 
@@ -16,6 +17,7 @@ onMounted(async () => {
 </script>
 
 <template>
+  <AppTitle />
   <div class="container">
     <CreateUserForm />
     <UsersTable />
