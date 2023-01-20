@@ -1,6 +1,4 @@
-<script setup>
-import { RouterLink } from 'vue-router'
-</script>
+<script setup></script>
 <template>
   <nav class="nav">
     <ul class="nav__list">
@@ -8,6 +6,9 @@ import { RouterLink } from 'vue-router'
         <router-link class="nav__link" :to="{ name: 'guitarsList' }">
           Guitars
         </router-link>
+      </li>
+      <li class="nav__item">
+        <router-link class="nav__link" :to="{ name: 'cart' }">Cart</router-link>
       </li>
     </ul>
   </nav>

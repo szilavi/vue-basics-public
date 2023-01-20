@@ -13,6 +13,9 @@ onMounted(async () => {
 
 <template>
   <MainNavigation />
+  <main>
+    <router-view></router-view>
+  </main>
 </template>
 
 <style scoped></style>

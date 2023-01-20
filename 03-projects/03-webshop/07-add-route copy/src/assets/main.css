@@ -1,0 +1,22 @@
+:root {
+  --green: #069e10;
+  --dark: #213547;
+  --light: #fefefe;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--green);
+}
