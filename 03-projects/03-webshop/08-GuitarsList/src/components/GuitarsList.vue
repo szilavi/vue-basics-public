@@ -1,21 +1,17 @@
 <script setup>
 import { onMounted } from 'vue'
 import { useGuitarsStore } from '../store/guitars'
-import MainNavigation from './components/MainNavigation.vue'
-
 const { guitars, fetchGuitars } = useGuitarsStore()
 
-onMounted(async () => {
-  await fetchGuitars()
-  console.log(guitars.value)
+onMounted(() => {
+  fetchGuitars()
 })
 </script>
 
 <template>
-  <MainNavigation />
-  <main>
-    <router-view></router-view>
-  </main>
+  <div class="guitars">
+    <GuitarItem v-for="guitar in guitars" :key="guitar.id" :guitar="guitar" />
+  </div>
 </template>
 
 <style scoped></style>
