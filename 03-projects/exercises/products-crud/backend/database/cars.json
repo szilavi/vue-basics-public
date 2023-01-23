@@ -1,0 +1,804 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "company": "Mazda",
+      "model": "Miata MX-5",
+      "year": 1997,
+      "price": 95080.27,
+      "stock": 0
+    },
+    {
+      "id": 2,
+      "company": "Nissan",
+      "model": "Armada",
+      "year": 2008,
+      "price": 99902.35,
+      "stock": 0
+    },
+    {
+      "id": 3,
+      "company": "Dodge",
+      "model": "Intrepid",
+      "year": 1994,
+      "price": 86879.09,
+      "stock": 0
+    },
+    {
+      "id": 4,
+      "company": "Pontiac",
+      "model": "Vibe",
+      "year": 2003,
+      "price": 13428.53,
+      "stock": 1
+    },
+    {
+      "id": 5,
+      "company": "Isuzu",
+      "model": "Rodeo",
+      "year": 1992,
+      "price": 49087.64,
+      "stock": 3
+    },
+    {
+      "id": 6,
+      "company": "Nissan",
+      "model": "Quest",
+      "year": 1999,
+      "price": 80060.75,
+      "stock": 2
+    },
+    {
+      "id": 7,
+      "company": "Chevrolet",
+      "model": "Astro",
+      "year": 1999,
+      "price": 22760.41,
+      "stock": 1
+    },
+    {
+      "id": 8,
+      "company": "Pontiac",
+      "model": "Grand Am",
+      "year": 1994,
+      "price": 7845.01,
+      "stock": 0
+    },
+    {
+      "id": 9,
+      "company": "GMC",
+      "model": "Savana 1500",
+      "year": 2012,
+      "price": 31409.7,
+      "stock": 1
+    },
+    {
+      "id": 10,
+      "company": "Ford",
+      "model": "Crown Victoria",
+      "year": 2003,
+      "price": 67703.27,
+      "stock": 2
+    },
+    {
+      "id": 11,
+      "company": "Chevrolet",
+      "model": "Suburban 1500",
+      "year": 2001,
+      "price": 29988.82,
+      "stock": 2
+    },
+    {
+      "id": 12,
+      "company": "Nissan",
+      "model": "Maxima",
+      "year": 2003,
+      "price": 24277.21,
+      "stock": 3
+    },
+    {
+      "id": 13,
+      "company": "Chevrolet",
+      "model": "Express 1500",
+      "year": 2005,
+      "price": 62690.73,
+      "stock": 0
+    },
+    {
+      "id": 14,
+      "company": "MINI",
+      "model": "Cooper",
+      "year": 2007,
+      "price": 74961.75,
+      "stock": 3
+    },
+    {
+      "id": 15,
+      "company": "BMW",
+      "model": "650",
+      "year": 2006,
+      "price": 12296.96,
+      "stock": 3
+    },
+    {
+      "id": 16,
+      "company": "Infiniti",
+      "model": "QX",
+      "year": 2010,
+      "price": 62245.28,
+      "stock": 2
+    },
+    {
+      "id": 17,
+      "company": "Dodge",
+      "model": "Viper",
+      "year": 1997,
+      "price": 33515.42,
+      "stock": 0
+    },
+    {
+      "id": 18,
+      "company": "Toyota",
+      "model": "Sienna",
+      "year": 2007,
+      "price": 8242.31,
+      "stock": 0
+    },
+    {
+      "id": 19,
+      "company": "Daihatsu",
+      "model": "Rocky",
+      "year": 1992,
+      "price": 21491.82,
+      "stock": 2
+    },
+    {
+      "id": 20,
+      "company": "Chrysler",
+      "model": "Imperial",
+      "year": 1926,
+      "price": 21277.39,
+      "stock": 2
+    },
+    {
+      "id": 21,
+      "company": "Mercury",
+      "model": "Sable",
+      "year": 1989,
+      "price": 96214.62,
+      "stock": 2
+    },
+    {
+      "id": 22,
+      "company": "Porsche",
+      "model": "944",
+      "year": 1989,
+      "price": 2568.7,
+      "stock": 1
+    },
+    {
+      "id": 23,
+      "company": "Rambler",
+      "model": "Classic",
+      "year": 1963,
+      "price": 69764.17,
+      "stock": 0
+    },
+    {
+      "id": 24,
+      "company": "Cadillac",
+      "model": "CTS",
+      "year": 2009,
+      "price": 67448.77,
+      "stock": 2
+    },
+    {
+      "id": 25,
+      "company": "Suzuki",
+      "model": "XL7",
+      "year": 2006,
+      "price": 23994.87,
+      "stock": 2
+    },
+    {
+      "id": 26,
+      "company": "Saturn",
+      "model": "Relay",
+      "year": 2007,
+      "price": 52246.31,
+      "stock": 1
+    },
+    {
+      "id": 27,
+      "company": "Buick",
+      "model": "LeSabre",
+      "year": 2003,
+      "price": 3050.97,
+      "stock": 0
+    },
+    {
+      "id": 28,
+      "company": "Saturn",
+      "model": "Ion",
+      "year": 2003,
+      "price": 51699.36,
+      "stock": 3
+    },
+    {
+      "id": 29,
+      "company": "Volkswagen",
+      "model": "GTI",
+      "year": 1992,
+      "price": 54057.81,
+      "stock": 3
+    },
+    {
+      "id": 30,
+      "company": "Subaru",
+      "model": "Impreza WRX",
+      "year": 2010,
+      "price": 38391.86,
+      "stock": 2
+    },
+    {
+      "id": 31,
+      "company": "Mitsubishi",
+      "model": "Montero",
+      "year": 2002,
+      "price": 17814.77,
+      "stock": 0
+    },
+    {
+      "id": 32,
+      "company": "Ford",
+      "model": "Explorer Sport Trac",
+      "year": 2010,
+      "price": 38457.71,
+      "stock": 0
+    },
+    {
+      "id": 33,
+      "company": "Acura",
+      "model": "SLX",
+      "year": 1999,
+      "price": 35414.29,
+      "stock": 2
+    },
+    {
+      "id": 34,
+      "company": "Chevrolet",
+      "model": "Suburban 1500",
+      "year": 2000,
+      "price": 33501.84,
+      "stock": 3
+    },
+    {
+      "id": 35,
+      "company": "Rolls-Royce",
+      "model": "Ghost",
+      "year": 2010,
+      "price": 46985.97,
+      "stock": 2
+    },
+    {
+      "id": 36,
+      "company": "Hyundai",
+      "model": "Accent",
+      "year": 1998,
+      "price": 33189.88,
+      "stock": 1
+    },
+    {
+      "id": 37,
+      "company": "Nissan",
+      "model": "240SX",
+      "year": 1993,
+      "price": 43855.53,
+      "stock": 3
+    },
+    {
+      "id": 38,
+      "company": "Pontiac",
+      "model": "Grand Am",
+      "year": 1993,
+      "price": 52685.57,
+      "stock": 2
+    },
+    {
+      "id": 39,
+      "company": "Bentley",
+      "model": "Continental GT",
+      "year": 2012,
+      "price": 11663.22,
+      "stock": 0
+    },
+    {
+      "id": 40,
+      "company": "Ford",
+      "model": "Bronco",
+      "year": 1992,
+      "price": 63208.35,
+      "stock": 1
+    },
+    {
+      "id": 41,
+      "company": "GMC",
+      "model": "Sierra Hybrid",
+      "year": 2006,
+      "price": 10090.45,
+      "stock": 0
+    },
+    {
+      "id": 42,
+      "company": "Cadillac",
+      "model": "DeVille",
+      "year": 1996,
+      "price": 71866.0,
+      "stock": 0
+    },
+    {
+      "id": 43,
+      "company": "Mitsubishi",
+      "model": "Chariot",
+      "year": 1992,
+      "price": 61833.73,
+      "stock": 1
+    },
+    {
+      "id": 44,
+      "company": "Toyota",
+      "model": "Camry",
+      "year": 2007,
+      "price": 96583.06,
+      "stock": 1
+    },
+    {
+      "id": 45,
+      "company": "Dodge",
+      "model": "Intrepid",
+      "year": 1993,
+      "price": 44292.74,
+      "stock": 0
+    },
+    {
+      "id": 46,
+      "company": "Volkswagen",
+      "model": "GTI",
+      "year": 1999,
+      "price": 65107.08,
+      "stock": 0
+    },
+    {
+      "id": 47,
+      "company": "Dodge",
+      "model": "Colt",
+      "year": 1992,
+      "price": 81142.7,
+      "stock": 2
+    },
+    {
+      "id": 48,
+      "company": "Mercedes-Benz",
+      "model": "S-Class",
+      "year": 1995,
+      "price": 77047.06,
+      "stock": 3
+    },
+    {
+      "id": 49,
+      "company": "Bentley",
+      "model": "Azure",
+      "year": 2006,
+      "price": 96187.36,
+      "stock": 0
+    },
+    {
+      "id": 50,
+      "company": "Saab",
+      "model": "9-3",
+      "year": 2011,
+      "price": 23595.09,
+      "stock": 0
+    },
+    {
+      "id": 51,
+      "company": "Ford",
+      "model": "Escape",
+      "year": 2001,
+      "price": 841.39,
+      "stock": 2
+    },
+    {
+      "id": 52,
+      "company": "Pontiac",
+      "model": "Firebird Trans Am",
+      "year": 1986,
+      "price": 25717.87,
+      "stock": 1
+    },
+    {
+      "id": 53,
+      "company": "MINI",
+      "model": "Cooper",
+      "year": 2002,
+      "price": 49430.91,
+      "stock": 2
+    },
+    {
+      "id": 54,
+      "company": "Hyundai",
+      "model": "Veracruz",
+      "year": 2007,
+      "price": 11935.24,
+      "stock": 3
+    },
+    {
+      "id": 55,
+      "company": "Nissan",
+      "model": "Altima",
+      "year": 1998,
+      "price": 66167.64,
+      "stock": 2
+    },
+    {
+      "id": 56,
+      "company": "Toyota",
+      "model": "4Runner",
+      "year": 2009,
+      "price": 25696.57,
+      "stock": 3
+    },
+    {
+      "id": 57,
+      "company": "Volvo",
+      "model": "240",
+      "year": 1992,
+      "price": 33207.07,
+      "stock": 0
+    },
+    {
+      "id": 58,
+      "company": "Chevrolet",
+      "model": "Blazer",
+      "year": 1996,
+      "price": 60075.54,
+      "stock": 1
+    },
+    {
+      "id": 59,
+      "company": "Audi",
+      "model": "TT",
+      "year": 2002,
+      "price": 57493.82,
+      "stock": 1
+    },
+    {
+      "id": 60,
+      "company": "Audi",
+      "model": "Q7",
+      "year": 2010,
+      "price": 84288.23,
+      "stock": 0
+    },
+    {
+      "id": 61,
+      "company": "GMC",
+      "model": "Savana 2500",
+      "year": 1998,
+      "price": 77959.99,
+      "stock": 3
+    },
+    {
+      "id": 62,
+      "company": "Ford",
+      "model": "Explorer Sport",
+      "year": 2002,
+      "price": 92347.77,
+      "stock": 1
+    },
+    {
+      "id": 63,
+      "company": "Holden",
+      "model": "VS Commodore",
+      "year": 1996,
+      "price": 13138.58,
+      "stock": 1
+    },
+    {
+      "id": 64,
+      "company": "Mazda",
+      "model": "B-Series Plus",
+      "year": 1996,
+      "price": 7437.53,
+      "stock": 2
+    },
+    {
+      "id": 65,
+      "company": "Audi",
+      "model": "200",
+      "year": 1989,
+      "price": 80658.21,
+      "stock": 2
+    },
+    {
+      "id": 66,
+      "company": "Jeep",
+      "model": "Grand Cherokee",
+      "year": 2006,
+      "price": 23698.61,
+      "stock": 3
+    },
+    {
+      "id": 67,
+      "company": "Plymouth",
+      "model": "Laser",
+      "year": 1994,
+      "price": 53945.52,
+      "stock": 0
+    },
+    {
+      "id": 68,
+      "company": "Chevrolet",
+      "model": "Silverado 1500",
+      "year": 2002,
+      "price": 17356.74,
+      "stock": 3
+    },
+    {
+      "id": 69,
+      "company": "Saab",
+      "model": "900",
+      "year": 1987,
+      "price": 19342.42,
+      "stock": 3
+    },
+    {
+      "id": 70,
+      "company": "Isuzu",
+      "model": "i-Series",
+      "year": 2008,
+      "price": 65194.0,
+      "stock": 2
+    },
+    {
+      "id": 71,
+      "company": "Ford",
+      "model": "Crown Victoria",
+      "year": 2010,
+      "price": 98025.02,
+      "stock": 2
+    },
+    {
+      "id": 72,
+      "company": "Ford",
+      "model": "F-Series",
+      "year": 2005,
+      "price": 18224.94,
+      "stock": 2
+    },
+    {
+      "id": 73,
+      "company": "Chrysler",
+      "model": "Pacifica",
+      "year": 2006,
+      "price": 76192.87,
+      "stock": 3
+    },
+    {
+      "id": 74,
+      "company": "Chevrolet",
+      "model": "Silverado",
+      "year": 2002,
+      "price": 77571.61,
+      "stock": 2
+    },
+    {
+      "id": 75,
+      "company": "Chrysler",
+      "model": "300",
+      "year": 2012,
+      "price": 2313.28,
+      "stock": 0
+    },
+    {
+      "id": 76,
+      "company": "Pontiac",
+      "model": "Grand Am",
+      "year": 1996,
+      "price": 5833.84,
+      "stock": 2
+    },
+    {
+      "id": 77,
+      "company": "Lexus",
+      "model": "LS",
+      "year": 1993,
+      "price": 47430.31,
+      "stock": 0
+    },
+    {
+      "id": 78,
+      "company": "Mitsubishi",
+      "model": "Galant",
+      "year": 2003,
+      "price": 48167.8,
+      "stock": 0
+    },
+    {
+      "id": 79,
+      "company": "Ford",
+      "model": "F150",
+      "year": 1994,
+      "price": 69170.34,
+      "stock": 2
+    },
+    {
+      "id": 80,
+      "company": "Dodge",
+      "model": "Ram Van B250",
+      "year": 1993,
+      "price": 47561.13,
+      "stock": 3
+    },
+    {
+      "id": 81,
+      "company": "Pontiac",
+      "model": "Bonneville",
+      "year": 2001,
+      "price": 54623.24,
+      "stock": 3
+    },
+    {
+      "id": 82,
+      "company": "BMW",
+      "model": "X6",
+      "year": 2009,
+      "price": 39080.23,
+      "stock": 2
+    },
+    {
+      "id": 83,
+      "company": "Ford",
+      "model": "Laser",
+      "year": 1986,
+      "price": 90172.12,
+      "stock": 3
+    },
+    {
+      "id": 84,
+      "company": "Lotus",
+      "model": "Esprit",
+      "year": 1998,
+      "price": 73221.49,
+      "stock": 0
+    },
+    {
+      "id": 85,
+      "company": "Volvo",
+      "model": "C30",
+      "year": 2012,
+      "price": 68630.02,
+      "stock": 3
+    },
+    {
+      "id": 86,
+      "company": "Studebaker",
+      "model": "Avanti",
+      "year": 1964,
+      "price": 47254.27,
+      "stock": 1
+    },
+    {
+      "id": 87,
+      "company": "Lexus",
+      "model": "LS",
+      "year": 2010,
+      "price": 61512.54,
+      "stock": 0
+    },
+    {
+      "id": 88,
+      "company": "Suzuki",
+      "model": "Aerio",
+      "year": 2006,
+      "price": 3352.62,
+      "stock": 2
+    },
+    {
+      "id": 89,
+      "company": "Chevrolet",
+      "model": "Suburban 1500",
+      "year": 2001,
+      "price": 35507.63,
+      "stock": 1
+    },
+    {
+      "id": 90,
+      "company": "Pontiac",
+      "model": "Torrent",
+      "year": 2008,
+      "price": 73414.45,
+      "stock": 2
+    },
+    {
+      "id": 91,
+      "company": "BMW",
+      "model": "X3",
+      "year": 2004,
+      "price": 61753.69,
+      "stock": 3
+    },
+    {
+      "id": 92,
+      "company": "Subaru",
+      "model": "Outback",
+      "year": 2012,
+      "price": 23618.73,
+      "stock": 1
+    },
+    {
+      "id": 93,
+      "company": "Chrysler",
+      "model": "Concorde",
+      "year": 1993,
+      "price": 26021.23,
+      "stock": 3
+    },
+    {
+      "id": 94,
+      "company": "Ford",
+      "model": "Fairlane",
+      "year": 1967,
+      "price": 71574.21,
+      "stock": 2
+    },
+    {
+      "id": 95,
+      "company": "Porsche",
+      "model": "928",
+      "year": 1995,
+      "price": 91888.62,
+      "stock": 0
+    },
+    {
+      "id": 96,
+      "company": "Pontiac",
+      "model": "Fiero",
+      "year": 1986,
+      "price": 47800.51,
+      "stock": 0
+    },
+    {
+      "id": 97,
+      "company": "Mazda",
+      "model": "B-Series Plus",
+      "year": 2003,
+      "price": 81048.06,
+      "stock": 2
+    },
+    {
+      "id": 98,
+      "company": "Subaru",
+      "model": "Leone",
+      "year": 1987,
+      "price": 20949.41,
+      "stock": 1
+    },
+    {
+      "id": 99,
+      "company": "Chrysler",
+      "model": "PT Cruiser",
+      "year": 2005,
+      "price": 30820.79,
+      "stock": 0
+    },
+    {
+      "id": 100,
+      "company": "GMC",
+      "model": "3500 Club Coupe",
+      "year": 1995,
+      "price": 48616.95,
+      "stock": 0
+    }
+  ]
+}

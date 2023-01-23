@@ -1,0 +1,3 @@
+- Alakítsd át az alkalmazás kódját úgy, hogy a `videos` és a `selectedVideo` egy közös store-ban legyen eltárolva
+- Ehhez hozd létre a store fájlt a szükséges függvényekkel együtt
+- Az komponensek pedig a store-t használják, ahol erre szükség van a _props_, és _events_ helyett

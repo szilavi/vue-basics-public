@@ -1,0 +1,21 @@
+- Egy személyautókat árusító webshopot járműveinek menedzselésére létre kell létrehoznod egy alkalmazást
+- A járművek az alábbi adatokkal rendelkeznek:
+  - `id`: egyedi azonosító
+  - `company`: gyártó
+  - `model`: model
+  - `year`: évjárat
+  - `price`: ár
+  - `stock`: darabszám
+- Az adatokat a _backend/database/cars.json_ fájl tartalmazza
+- Az adatok kiszolgálására json-servert használj
+- Az alkalmazás egy táblázatban jelenítse meg a járművek adatait az ID kivételével
+- Egy járművet lehessen:
+  - törölni: ekkor mindenképp kérni kell megerősítést
+  - módosítani: egy modal nyíljon benne egy form a jármű adataival
+  - új járművet felvinni: szintén egy modal nyíljon meg, ahol a jármű adatait fel lehet vinni
+- Mind a módosításra, mind a felvitelre az alábbi szabályok vonatkoznak:
+  - Minden adatot kötelező megadni az `id` kivételével
+  - Az `price` 1000-100000 közötti érték lehet
+  - Az `stock` 1-3 közötti érték lehet
+- Amíg nem megfelelő minden adat, ne lehessen menteni
+- Mind sikeres, és mind sikertelen művelet esetében is, a felhasználót tájékoztatni kell vizuálisan
