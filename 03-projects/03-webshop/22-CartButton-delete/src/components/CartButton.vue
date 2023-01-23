@@ -10,7 +10,8 @@ const props = defineProps({
 })
 
 const count = ref(0)
-const { cart, addItemToCart, getItemById, changeItemCount } = useCartStore()
+const { cart, addItemToCart, getItemById, changeItemCount, removeFromCart } =
+  useCartStore()
 const buttonText = ref('Add to cart')
 
 watch(count, () => {
@@ -50,6 +51,9 @@ function handleCartButtonClick(guitar) {
     buttonText.value = 'Update cart'
   } else if (item?.stock !== count.value && count.value > 0) {
     changeItemCount(id, count.value)
+  } else if (item && count.value === 0) {
+    removeFromCart(id)
+    buttonText.value = 'Add to cart'
   }
 }
 </script>

@@ -1,9 +1,10 @@
-import { readonly, ref } from 'vue'
+import { ref, readonly } from 'vue'
 
 const cart = ref([])
+
 export function useCartStore() {
-  function addItemToCart(guitar, count) {
-    cart.value.push = { ...guitar, count }
+  function addItemToCart(item, count) {
+    cart.value.push({ ...item, count })
   }
 
   return {

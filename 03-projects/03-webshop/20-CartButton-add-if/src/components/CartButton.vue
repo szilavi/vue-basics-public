@@ -10,16 +10,16 @@ const props = defineProps({
 })
 
 const count = ref(0)
+const { cart, addItemToCart, getItemById } = useCartStore()
 const buttonText = ref('Add to cart')
-const { addItemToCart, getItemById } = useCartStore()
 
 watch(count, () => {
   const minCount = 0
   const maxCount = props.guitar.stock
-  if (count.value > maxCount) {
-    count.value = maxCount
-  } else if (count.value < minCount) {
+  if (count.value < minCount) {
     count.value = minCount
+  } else if (count.value > maxCount) {
+    count.value = maxCount
   }
 })
 
@@ -30,25 +30,24 @@ function handleDescreaseCountClick() {
 function handleIncreaseCountClick() {
   count.value += 1
 }
-
-function handleCartButtonClick() {
+function handleCartButtonClick(guitar) {
   /**
    * add:
    *  - ha még nincs a kosárban
-   *  - a count nem 0
+   *  - count > 0
    * modify:
-   *  - ha már benne van a kosárban
-   *  - a kosárban lévő darabszám, nem egyenlő a counttal
-   *  - ha a count nem 0
-   * remove:
-   *  - ha már benne van a kosárban
-   *  - és a count 0
+   *  - ha már a kosárban van
+   *  - a count nem 0
+   *  - ha a count nem egyenlő a kosárban lévő darabszámmal
+   * delete:
+   *  - ha a kosárban van
+   *  - a count === 0
    */
-
-  if (!getItemById(props.guitar.id) && count.value > 0) {
-    addItemToCart(props.guitar, count.value)
+  if (!getItemById(guitar.id) && count.value > 0) {
+    addItemToCart(guitar, count.value)
     buttonText.value = 'Update cart'
   }
+  console.log(cart.value)
 }
 </script>
 
@@ -57,7 +56,7 @@ function handleCartButtonClick() {
     <button @click="handleDescreaseCountClick">-</button>
     <input v-model="count" type="text" />
     <button @click="handleIncreaseCountClick">+</button>
-    <button class="add-to-cart" @click="handleCartButtonClick">
+    <button class="add-to-cart" @click="handleCartButtonClick(guitar)">
       {{ buttonText }}
     </button>
   </div>

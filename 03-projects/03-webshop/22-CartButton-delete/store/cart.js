@@ -20,10 +20,16 @@ export function useCartStore() {
     cart.value[index].count = count
   }
 
+  function removeFromCart(id) {
+    const index = getItemIndexById(id)
+    cart.value.splice(index, 1)
+  }
+
   return {
     cart: readonly(cart),
     addItemToCart,
     getItemById,
     changeItemCount,
+    removeFromCart,
   }
 }

@@ -10,16 +10,16 @@ const props = defineProps({
 })
 
 const count = ref(0)
+const { cart, addItemToCart } = useCartStore()
 const buttonText = ref('Add to cart')
-const { addItemToCart } = useCartStore()
 
 watch(count, () => {
   const minCount = 0
   const maxCount = props.guitar.stock
-  if (count.value > maxCount) {
-    count.value = maxCount
-  } else if (count.value < minCount) {
+  if (count.value < minCount) {
     count.value = minCount
+  } else if (count.value > maxCount) {
+    count.value = maxCount
   }
 })
 
@@ -30,10 +30,10 @@ function handleDescreaseCountClick() {
 function handleIncreaseCountClick() {
   count.value += 1
 }
-
-function handleCartButtonClick() {
-  addItemToCart(props.guitar, count.value)
+function handleCartButtonClick(guitar) {
+  addItemToCart(guitar, count.value)
   buttonText.value = 'Update cart'
+  console.log(cart.value)
 }
 </script>
 
@@ -42,7 +42,7 @@ function handleCartButtonClick() {
     <button @click="handleDescreaseCountClick">-</button>
     <input v-model="count" type="text" />
     <button @click="handleIncreaseCountClick">+</button>
-    <button class="add-to-cart" @click="handleCartButtonClick">
+    <button class="add-to-cart" @click="handleCartButtonClick(guitar)">
       {{ buttonText }}
     </button>
   </div>

@@ -11,6 +11,7 @@ defineProps({
 
 const count = ref(0)
 const { cart, addItemToCart } = useCartStore()
+const buttonText = ref('Add to cart')
 
 function handleDescreaseCountClick() {
   count.value -= 1
@@ -19,9 +20,9 @@ function handleDescreaseCountClick() {
 function handleIncreaseCountClick() {
   count.value += 1
 }
-
 function handleCartButtonClick(guitar) {
   addItemToCart(guitar, count.value)
+  buttonText.value = 'Update cart'
   console.log(cart.value)
 }
 </script>
@@ -32,7 +33,7 @@ function handleCartButtonClick(guitar) {
     <input v-model="count" type="text" />
     <button @click="handleIncreaseCountClick">+</button>
     <button class="add-to-cart" @click="handleCartButtonClick(guitar)">
-      Add to cart
+      {{ buttonText }}
     </button>
   </div>
 </template>
