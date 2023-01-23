@@ -11,13 +11,7 @@ const props = defineProps({
 
 const count = ref(0)
 const buttonText = ref('Add to cart')
-const {
-  cart,
-  addItemToCart,
-  changeItemCount,
-  isCartContainsItem,
-  findItemById,
-} = useCartStore()
+const { addItemToCart, getItemById } = useCartStore()
 
 watch(count, () => {
   const minCount = 0
@@ -38,17 +32,23 @@ function handleIncreaseCountClick() {
 }
 
 function handleCartButtonClick() {
-  // add: ha nincs a kosárban, és a count > 0
-  if (!isCartContainsItem(props.guitar.id) && count.value > 0) {
+  /**
+   * add:
+   *  - ha még nincs a kosárban
+   *  - a count nem 0
+   * modify:
+   *  - ha már benne van a kosárban
+   *  - a kosárban lévő darabszám, nem egyenlő a counttal
+   *  - ha a count nem 0
+   * remove:
+   *  - ha már benne van a kosárban
+   *  - és a count 0
+   */
+
+  if (!getItemById(props.guitar.id) && count.value > 0) {
     addItemToCart(props.guitar, count.value)
     buttonText.value = 'Update cart'
-  } else if (
-    isCartContainsItem(props.guitar.id) &&
-    findItemById(props.guitar.id).count !== count.value
-  ) {
-    changeItemCount(props.guitar.id, count.value)
   }
-  console.log(cart.value)
 }
 </script>
 
