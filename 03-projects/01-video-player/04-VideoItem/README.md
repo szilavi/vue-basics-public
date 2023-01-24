@@ -1,35 +1,26 @@
-# 01-video-player
+- A videók megjelennek a DOM-ban, azonban az elrendezés még nem szép
+- Alakítsuk át a template-et
+- Arra is szükség van, hgoy amikor árkattintuk az egyik videóra, vagy amikor az Enter billentyűt nyomjuk meg amikor ki van váalsztva, betöltődjön majd a bal oldalra:
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+```vue
+<template>
+  <div
+    role="button"
+    class="container p-1 video"
+    @keyup.enter="event.target.click()"
+  >
+    <div class="row">
+      <div class="col-6">
+        <img
+          class="img-fluid"
+          :src="video.snippet.thumbnails.medium.url"
+          :alt="video.snippet.title"
+        />
+      </div>
+      <div class="col-6 p-0">
+        <h3 class="h6">{{ video.snippet.title }}</h3>
+      </div>
+    </div>
+  </div>
+</template>
 ```

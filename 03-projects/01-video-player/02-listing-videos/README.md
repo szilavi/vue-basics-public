@@ -1,35 +1,46 @@
-# 01-video-player
+Jelenleg az adatok még csak a konzolra vannak kilogolva. Ezt módosítsuk, méghozzá úgy, hogy létrehozok egy reaktív változót, `videos` névvel a `ref`-el, a kezdő érték pedig `null`-ra állítom.
+Az `onMounted` hookban lévő kódot kiemelem egy searchFunction függvénybe, ami a `queryt` paraméterként kapja majd meg. Ezen függvényen fogom beállítani a `videos` értékét. Mejd ezt a függvény hívom csak meg az `onMounted` hookon belül.
 
-This template should help get you started developing with Vue 3 in Vite.
+```js
+import { onMounted, ref } from 'vue'
+import { youtubeAPI, defaultParams } from './apis/youtubeAPI.js'
 
-## Recommended IDE Setup
+const videos = ref(null)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+async function searchVideos(query) {
+  const response = await youtubeAPI.get('/search', {
+    params: {
+      ...defaultParams,
+      q: query,
+    },
+  })
+  videos.value = response.data.items
+  console.log(response.data.items)
+}
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+onMounted(() => searchVideos('vuejs'))
 ```
 
-### Compile and Hot-Reload for Development
+Elkészítem a templatet is, hogy a DOM-ba is bele legyenek írva videók:
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+```html
+<header>
+  <div class="container">SearchBar</div>
+</header>
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8"></div>
+      <div class="col-lg-4">
+        <div v-for="video in videos" :key="video.id.videoId">
+          <h2 class="h4">{{ video.snippet.title }}</h2>
+          <img
+            :src="video.snippet.thumbnails.medium.url"
+            :alt="video.snippet.title"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
 ```

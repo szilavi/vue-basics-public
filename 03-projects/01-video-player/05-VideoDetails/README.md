@@ -1,35 +1,49 @@
-# 01-video-player
+- A `VideoDetails` komponens tartalmazza a nagyméretá videót bal oldalt, valamint alatta a videó címét lés rövid elírását
+- Amire oda kell figyelni, hogy keresésnél nem csak videókat, hanem lejátszási listákat is visszakaphatunk
+- Lejátszási listák esetében a video object paraméterei másként alakulnak
+- Hogy mindig a megfelelő link legen létrehozva, videó esetén a videóra, lejátszási lista esetén a lejátszási listára, szükségünk van egy computed propertyre is:
 
-This template should help get you started developing with Vue 3 in Vite.
+```vue
+<script setup>
+import { computed } from 'vue'
 
-## Recommended IDE Setup
+const props = defineProps({
+  video: {
+    type: Object,
+    required: true,
+  },
+})
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+const videoSrc = computed(() => {
+  const baseSrc = 'https://youtube.com/embed/'
+  return props.video.id.videoId
+    ? baseSrc + props.video.id.videoId
+    : `${baseSrc}videoseries?list=${props.video.id.playlistId}`
+})
+</script>
 ```
 
-### Compile and Hot-Reload for Development
+- Mivel lejátszási lista esetében nincs `videoId` csak `playlistId`
+- EMiatta `VideoList` tempalte-jét is módosítani kell:
 
-```sh
-npm run dev
+```html
+<template>
+  <VideoItem v-for="(video, index) in videos" :key="index" :video="video" />
+</template>
 ```
 
-### Compile and Minify for Production
+- A `VideoDetails` template-je pedig a következő lesz:
 
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+```html
+<template>
+  <div class="video-details">
+    <div class="ratio ratio-16x9">
+      <iframe :src="videoSrc" title="Video Player"></iframe>
+    </div>
+    <div class="mt-3">
+      <h2 class="h4">{{ video.snippet.title }}</h2>
+      <p class="lead">{{ video.snippet.description }}</p>
+    </div>
+  </div>
+</template>
 ```

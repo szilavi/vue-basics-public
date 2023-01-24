@@ -1,35 +1,58 @@
-# 01-video-player
+- A `SearchBar` komponensen belül tárolnunk kell, hogy mi a keresőszó, amit el akarunk madj küldeni
+- Ehhez egy `query` nevű reaktív változót hozok létre
+- Ezt a `v-model` direktíva segítségével összekötöm egy input mezővel
+- A `SearcBar`nál az enter billenyű leütésére fog elindulni a keresés
+- Ilyenkor kerül a form elküldésre
+- Szükségem lesz még egy egyedi eseményre, mely a küldésnél a `queryt` megkapja második paraméterként
+- Az egyedi esemány neve legyen `form-submit`
 
-This template should help get you started developing with Vue 3 in Vite.
+```vue
+<script setup>
+import { ref } from 'vue'
 
-## Recommended IDE Setup
+const query = ref('')
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+defineEmits(['form-submit'])
+</script>
 
-## Customize configuration
+<template>
+  <div class="search-bar my-3" @submit.prevent="$emit('form-submit', query)">
+    <form action="" class="form">
+      <div class="form-group d-flex justify-content-center">
+        <input
+          id="search"
+          v-model="query"
+          type="text"
+          class="form-control form-control-lg w-50"
+          placeholder="Search video"
+        />
+      </div>
+    </form>
+  </div>
+</template>
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+<style scoped></style>
 ```
 
-### Compile and Hot-Reload for Development
+- Ezt az egyedi esemny figyeljül az `App`on belül
+- Amikor bekövetkezik, meghívjuk a `searchVideos` függvényt
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+```html
+<header>
+  <div class="container">
+    <SearchBar @form-submit="searchVideos" />
+  </div>
+</header>
+<main>
+  <div class="container">
+    <div v-if="videos" class="row">
+      <div class="col-lg-8">
+        <VideoDetails :video="selectedVideo" />
+      </div>
+      <div class="col-lg-4">
+        <VideoList :videos="videos" @select-video="selectVideo" />
+      </div>
+    </div>
+  </div>
+</main>
 ```
