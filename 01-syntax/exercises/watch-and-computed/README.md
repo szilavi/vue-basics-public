@@ -1,0 +1,18 @@
+- Hozz létre egy formot
+- Ezen belül hozz létre két _number_ típusú input mezőt
+- Az egyik előtt egy `count` a másik előtt pedig `price` _label_ legyen
+- A `count` esetében a
+  - minimum: 0
+  - maximum: 10
+  - lépésköz: 1
+  - alapértelmezett érték: 0
+- A `price` esetében:
+  - minimum: 0
+  - maximum: 10000
+  - lépésköz: 100
+  - alapértelmezett érték: 0
+- Legyen egy `fullPrice` változód is, aminek az értéke a `count` és a `price` szorzata
+- Minden esetben, ha a `count` vagy a `price` változik a `fullPrice`nak is módosulnia kell
+- A DOM-ba, egy form alatti divbe az alábbi formátumban kerüljön kiírásra a `fullPrice`: _**Full price: $11.000**_
+- A kiírás csak akkor jelenjen meg, ha a `fullPrice` nem nulla
+- Metódust ne használj a megvalósítás során, csak _watch_ és _computed_ függvényeket

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>Vue unpkg</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <form @submit.prevent="submitForm">
+        <label for="name"></label>
+        <input type="text" v-model="name" />
+        <button>Send</button>
+      </form>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

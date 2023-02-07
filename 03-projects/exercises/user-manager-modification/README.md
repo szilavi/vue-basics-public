@@ -1,2 +1,0 @@
-- Alakítsd át úgy az alkalmazást, hogy az `EditUserModal`, és a `CreateNewUser` komponensek is egy újra felhasználható `InputField` komponenst használjanak az űrlapelem csoportok (label+input) esetében 
-- Az `InputFiled` komponens kapjon meg minden propsot, amit az alkalmazás során szükségesnek ítélsz

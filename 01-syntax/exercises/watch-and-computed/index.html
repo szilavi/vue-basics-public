@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>Vue unpkg</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <form>
+        <label for="name">Count</label>
+        <input type="number" min="0" max="10" step="1" v-model="count" />
+        <label for="name">Price</label>
+        <input type="number" min="0" max="10000" step="100" v-model="price" />
+      </form>
+      <div v-show="fullPrice > 0">
+        <strong>Full price: {{ formattedFullPrice }}</strong>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

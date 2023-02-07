@@ -1,4 +1,37 @@
-- Egy személyautókat árusító webshopot járműveinek menedzselésére létre kell létrehoznod egy alkalmazást
+# Projekt feladatok
+- A projekt feladatok során legtöbbször a leckék során elkészített alkalmazásokat kell tovább fejlesztened.  
+- Nem kell minden feladatnál az adott alkalmazás kódját lemásolod, hanem folytatólagosan írhatod a kódot
+- A feladatoknak akkor állj neki, ha mind a 3 projektfeladat videóit végig nézted.
+- A projektekhez nincsenek minta megoldások, mert többféleképp is megvalósíthatók.
+
+## 01 
+- Alakítsd át a **VideoPlayer** alkalmazás kódját úgy, hogy a keresőmező mellett egy gomb is legyen, amire kattintva szintén történjen meg az API hívás ugyanúgy, mint amikor entert ütünk a keresőmezőben.
+
+## 02
+- Alakítsd át a **VideoPlayer** alkalmazás kódját úgy, hogy a `videos` és a `selectedVideo` egy közös store-ban legyen eltárolva
+- Ehhez hozd létre a store fájlt a szükséges függvényekkel együtt
+- Az komponensek pedig a store-t használják, ahol erre szükség van a _props_, és _events_ helyett
+- Alakítsd át a komponensek kódját a feladatnak megfelelően
+
+## 03
+- Alakítsd át a **UserManager** alkalmazást, hogy az `EditUserModal`, és a `CreateNewUser` komponensek is egy újra felhasználható `InputField` komponenst használjanak az űrlapelem csoportok (label+input) esetében 
+- Az `InputField` komponens kapjon meg minden propsot, amit az alkalmazás során szükségesnek ítélsz
+
+## 04
+- Alakítsd át a **UserManager** alkalmazást, hogy a `CreateUserForm` és az `EditUserModal` egy `UserForm` nevű komponenst használjanak fel. Ez a komponens tartalmazza a felhasználók módosítására és létrehozására is szolgáló kódot. Így nem kell az űrlapot átmásolni, hanem a teljes űrlap, mint egy külön komponens újra felhasználható lesz. Használd az elő feladatban létrehozott `InputField` komponenst is.
+
+## 05
+- Alakítsd át a **UserManager** alkalmazást, hogy ne _alert_, és _confirm_ ablakokat használj, hanem a `vue-toastification` csomagot
+
+## 06
+- Alakítsd át a **UserManager** alkalmazást, hogy az adatokat regulárisok segítségével validálod.
+- A megszorítások a következők:
+  - `firstName`: kötelező, minimum 2 hosszú
+  - `lastName`: kötelező, minimum 2 hosszú
+  - `email`: kötelező, szabványos email formátum
+
+## 07
+- Egy személyautókat árusító webshopot járműveinek menedzselésére kell létrehoznod egy alkalmazást.
 - A járművek az alábbi adatokkal rendelkeznek:
   - `id`: egyedi azonosító
   - `company`: gyártó
@@ -19,3 +52,8 @@
   - Az `stock` 1-3 közötti érték lehet
 - Amíg nem megfelelő minden adat, ne lehessen menteni
 - Mind sikeres, és mind sikertelen művelet esetében is, a felhasználót tájékoztatni kell vizuálisan
+  
+## 08
+- Alakítsd át a **Webshop** alkalmazás kódját úgy, hogy a **Cart** oldalon is legyen lehetőség a kosárban lévő termékek darabszámának módosítására
+- Amennyiben a darabszám 0-ra módosul, ki kell venni a kosárból a terméket, és nem kell megjeleníteni a kosárnál
+- Figyelj oda, hogy ne legyen duplikált kódrészleted!

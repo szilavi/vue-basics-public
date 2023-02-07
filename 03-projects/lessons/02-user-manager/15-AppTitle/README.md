@@ -1,0 +1,7 @@
+# Jegyzet
+
+## Tartalom
+
+
+
+## Lépések

@@ -1,0 +1,4 @@
+- Készíts egy formot benne egy text típusú űrlap mezővel, melyben egy nevet kérünk be
+- Legyen egy label elem is, valamint egy küldés gomb
+- Amikor rákattintunk a küldésre, logolja az input értékét a konzolra
+- Az űrlap elküldésekor ne legyen újra töltve az oldal, de az input tartalma legyen visszaállítva a kezdeti üres értékre
