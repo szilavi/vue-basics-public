@@ -1,35 +1,79 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- A `GuitarsImage` komponens
 
-## Recommended IDE Setup
+## Lépések
+- Módosítsuk még a `GuitarItem` kinézetét
+- A _main.css_ fájlban létrehozok két classt:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```css
+.container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1280px;
+}
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+.text-center {
+  text-align: center;
+}
 ```
 
-### Compile and Hot-Reload for Development
+- Majd a `GuitarsListView` fájlt módosítom:
 
-```sh
-npm run dev
+```js
+<script setup>
+import GuitarsList from '../components/GuitarsList.vue'
+</script>
+<template>
+  <h1 class="text-center">Guitars</h1>
+  <GuitarsList />
+</template>
+
+<style scoped></style>
 ```
 
-### Compile and Minify for Production
+- Az `App` komponensnél pedig felhasználom a `container`-t
 
-```sh
-npm run build
+```html
+<template>
+  <MainNavigation />
+  <main class="container">
+    <router-view></router-view>
+  </main>
+</template>
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+- Hozzuk létre a `GuitarImage` komponenst
+- propként elég a `title`t megkapnia, ez megegyezik a kép nevével
+- Megjelenítem a képet és formázom:
 
-```sh
-npm run lint
+```js
+<script setup>
+defineProps({
+  title: {
+    type: String,
+    required: true,
+  },
+})
+</script>
+
+<template>
+  <img :src="`guitars/${title}.jpg`" :alt="title" class="guitar__image" />
+</template>
+
+<style scoped>
+.guitar__image {
+  height: 250px;
+}
+</style>
+```
+
+- Felhasználom a `GuitarImage` komponenst a `GuitarItem` komponensen belül
+- A bal oldali rész tartalmazza a képet:
+
+```html
+<div class="left-column">
+  <GuitarImage :title="guitar.title" />
+</div>
 ```

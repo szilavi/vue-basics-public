@@ -1,35 +1,93 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- A `MainNavigation` komponens
+- Belső navigáció: `router-link`
 
-## Recommended IDE Setup
+## Lépések
+- Készítsünk egy új komponenst `MainNavigation` névvel
+- Itt készítjük el az oldal belső navigációját
+- Amennyiben nem külső oldalra készítünk hivatkozást, nem az `a` tag-et, hanem a `router-link`-et használjuk, amit a `vue-router`biztosít 
+- A router-link esetében megadhatjuk a hivatkozást akár a router fájlban definiált `path`re, de célszerűbb helyett a `name`re hivatkozni:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```js
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+<template>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <router-link class="nav__link" :to="{ name: 'guitarsList' }">
+          Guitars
+        </router-link>
+      </li>
+    </ul>
+  </nav>
+</template>
 ```
 
-### Compile and Hot-Reload for Development
+- A _main.css_ fájlban létrehozok néhány változót a színeknek 
+- Majd megírom a komponens stílusát
 
-```sh
-npm run dev
+```css
+:root {
+  --green: #069e10;
+  --dark: #213547;
+  --light: #fefefe;
+}
 ```
 
-### Compile and Minify for Production
+```css
+<style scoped>
+.nav {
+  background: var(--dark);
+}
 
-```sh
-npm run build
+.nav__list {
+  margin: 0;
+  padding: 1rem 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__item {
+  padding: 0 1rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+</style>
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+- Az `App`ba importáljuk a `MainNavigation` komponenst és használjuk is fel:
 
-```sh
-npm run lint
+```html
+<template>
+  <MainNavigation />
+</template>
+```
+
+- A _main.css_-t kibővítem néhány alapértelmezett értékkel:
+
+```css
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--green);
+}
 ```

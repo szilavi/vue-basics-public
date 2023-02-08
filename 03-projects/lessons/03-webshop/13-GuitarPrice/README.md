@@ -1,35 +1,57 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- A `GuitarsPrice` komponens
 
-## Recommended IDE Setup
+## Lépések
+- A gitárok árát formázva kell megjeleníteni
+- Hozzunk létre egy mappát az _src_-n belül _utils_ névvel
+- Ezen belül legyen egy _formatPrice.js_ fájl 
+- Itt egy függvény, ami a paraméterként kapott számot angol formátum szerint, euró jellel ellátva formázottan visszaadja
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```js
+export default function formatPrice(price) {
+  return price.toLocaleString('en-US', { style: 'currency', currency: 'EUR' })
+}
 ```
 
-### Compile and Hot-Reload for Development
+- A `GuitarPrice` propként megkapja az árat
+- A formázott árat egy computed propertybe fogom letárolni, és ezt fogom kiíratni 
 
-```sh
-npm run dev
+```js
+<script setup>
+import { computed } from 'vue'
+import formatPrice from '../utils/formatPrice.js'
+
+const props = defineProps({
+  price: {
+    type: Number,
+    required: true,
+  },
+})
+
+const formattedPrice = computed(() => formatPrice(props.price))
+</script>
+
+<template>
+  <div class="guitar__price">{{ formattedPrice }}</div>
+</template>
+
+<style scoped>
+.guitar__price {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+}
+</style>
 ```
 
-### Compile and Minify for Production
+- Megjelenítem az árat a `GuitarItem` komponensben:
 
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+```html
+<div class="right-column">
+  <GuitarTitle :title="guitar.title" />
+  <GuitarDescription :description="guitar.description" />
+  <GuitarPrice :price="guitar.price" />
+</div>
 ```

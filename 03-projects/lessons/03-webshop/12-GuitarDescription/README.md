@@ -1,35 +1,30 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- A `GuitarsDescription` komponens
 
-## Recommended IDE Setup
+## Lépések
+- A `GuitarsDescription` komponens megkapja propként a gitár leírását és egy bekezdésen belül megjeleníti azt:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```js
+<script setup>
+defineProps({
+  description: {
+    type: String,
+    required: true,
+  },
+})
+</script>
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+<template>
+  <p class="guitar__description">{{ description }}</p>
+</template>
 ```
+- Ezt felhasználjuk a `GuitarItem`en belül
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+```html
+  <div class="right-column">
+    <GuitarTitle :title="guitar.title" />
+    <GuitarDescription :description="guitar.description" />
+  </div>
 ```

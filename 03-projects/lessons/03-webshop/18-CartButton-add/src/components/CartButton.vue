@@ -20,6 +20,7 @@ function handleDescreaseCountClick() {
 function handleIncreaseCountClick() {
   count.value += 1
 }
+
 function handleCartButtonClick(guitar) {
   addItemToCart(guitar, count.value)
   buttonText.value = 'Update cart'

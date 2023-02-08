@@ -12,7 +12,7 @@ const props = defineProps({
 
 const count = ref(0)
 const buttonText = ref('Add to cart')
-const { cart, addItemToCart, getItemById, changeItemCount, removeFromCart } =
+const { addItemToCart, getItemById, changeItemCount, removeFromCart } =
   useCartStore()
 const toast = useToast()
 

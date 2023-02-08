@@ -1,35 +1,39 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- A `Toast` használata az alkalmazásban
+- Gitárok kilogolása
 
-## Recommended IDE Setup
+## Lépések
+- A `vue-toastification` nem egy komponensen, hanem a store-on belül használom
+- A `vue-toastification` fájljait importáljuk a `main.js` fájlba
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```js
+import Toast from 'vue-toastification'
+import 'vue-toastification/dist/index.css'
 ```
 
-### Compile and Hot-Reload for Development
+- Majd az `app.mount()` tegyük az alkalmazás számára elérhetővé a `Toast`ot: 
 
-```sh
-npm run dev
+```js
+app.use(Toast)
 ```
 
-### Compile and Minify for Production
+- Az _App_-on belül logoljuk ki a gitárokat
+- Az `onMounted()` hookon belül meghívom a `fetchGuitars`-t
 
-```sh
-npm run build
+```js
+<script setup>
+import { onMounted } from 'vue'
+import { useGuitarsStore } from '../store/guitars'
+
+const { guitars, fetchGuitars } = useGuitarsStore()
+
+onMounted(async () => {
+  await fetchGuitars()
+  console.log(guitars.value)
+})
+</script>
 ```
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+-

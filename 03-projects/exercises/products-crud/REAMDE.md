@@ -57,3 +57,12 @@
 - Alakítsd át a **Webshop** alkalmazás kódját úgy, hogy a **Cart** oldalon is legyen lehetőség a kosárban lévő termékek darabszámának módosítására
 - Amennyiben a darabszám 0-ra módosul, ki kell venni a kosárból a terméket, és nem kell megjeleníteni a kosárnál
 - Figyelj oda, hogy ne legyen duplikált kódrészleted!
+
+## 09
+- Alakítsd át a **Webshop** alkalmazás kódját úgy, hogy amikor terméket adunk a kosárhoz, vagy módosítunk, törlünk, ezen feltételek vizsgálata, azaz hogy melyik store függvény kerüljön meghívásra, ne a komponensen, hanem a store-on belül történjen.
+
+# 10
+- Alakítsd át a **Webshop** alkalmazás kódját úgy, hogy amikor a kosárba helyezem a termékeket, azok tartósan meg is maradjanak
+- Ennek a megvalósításához használj localStorage-ot
+- A localStorage tárolja a `cart`-ot
+- Amikor az alkalmazás elindul ki is olvassa a localStorageban lévő értéket - ha van -  és feltölti a cart-ot

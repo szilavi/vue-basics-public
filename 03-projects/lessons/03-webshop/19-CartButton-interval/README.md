@@ -1,35 +1,21 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- Kosárba helyezhető termékek darabszám intervallumának megadása
 
-## Recommended IDE Setup
+## Lépések
+- Nem szabad engedni, hogy a darabszám 0 alá menjen
+- Nem szabad engedni, hogy a darabszám a készleten lévő darabszám fölé menjen
+- Ezt egy `watch` segítségével be tudom szabályozni:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+```js
+watch(count, () => {
+  const minCount = 0
+  const maxCount = props.guitar.stock
+  if (count.value < minCount) {
+    count.value = minCount
+  } else if (count.value > maxCount) {
+    count.value = maxCount
+  }
+})
 ```

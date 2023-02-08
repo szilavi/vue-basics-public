@@ -1,35 +1,74 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- A `GuitarStock` komponens
 
-## Recommended IDE Setup
+## Lépések
+- A GuitarStock komponens 
+  - piros színnel kiírja: _Out of stock_ ha a termék nincs raktáron
+  - narancs színnel kiírja: _Last chance, only X left_ ha 3nál kevesebb van raktáron
+  - zöld színnel kiírja: _In stock_ ha 3nál több van raktáron
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```js
+<script setup>
+defineProps({
+  stock: {
+    type: Number,
+    required: true,
+  },
+})
+</script>
 
-## Customize configuration
+<template>
+  <div class="guitar__stock">
+    <span v-if="stock === 0" class="text-red">Out of stock</span>
+    <span v-else-if="stock < 3" class="text-orange">
+      Last chance, only {{ stock }} left
+    </span>
+    <span v-else class="text-green">In stock</span>
+  </div>
+</template>
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+<style scoped>
+.guitar__stock {
+  font-weight: bold;
+}
+</style>
 ```
 
-### Compile and Hot-Reload for Development
+- A megfelelő színekhez és 3 classt létrehozok a _main.css_ fájlban:
+```css
+.text-red {
+  color: var(--red);
+}
 
-```sh
-npm run dev
+.text-orange {
+  color: var(--orange);
+}
+
+.text-green {
+  color: var(--green);
+}
 ```
 
-### Compile and Minify for Production
+- A `GuitarRating` komponensnek adok egy alsó margót:
 
-```sh
-npm run build
+```html
+<style scoped>
+.guitar__rating {
+  margin: 0 0 0.5rem 0;
+}
+</style>
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+- A `GuitarItem`en belül felhasználom a komponenst:
 
-```sh
-npm run lint
+```html
+<div class="right-column">
+  <GuitarTitle :title="guitar.title" />
+  <GuitarDescription :description="guitar.description" />
+  <GuitarPrice :price="guitar.price" />
+  <GuitarRating :rating="guitar.rating" />
+  <GuitarStock :stock="guitar.stock" />
+</div>
 ```

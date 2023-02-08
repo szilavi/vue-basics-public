@@ -1,35 +1,49 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- A `CartButton` komponens script-je
 
-## Recommended IDE Setup
+## Lépések
+- A komponensnek propként meg kell kapnia a gitárt, melyet majd a kosárba akarunk tenni
+- A `count` reaktív változóba tárolom el, hogy hány darabot akarok a kosárba tenni/mennyi van most a termékből a kosárban
+- `handleDescreaseCountClick()` és a `handleIncreaseCountClick()` metódusok eggyel növelik/csökkentik a `count` értékét
+- A `handleCartButtonClick()` a terméket a kosárba helyezi/frissíti a kosarat
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```js
+<script setup>
+import { ref } from 'vue'
 
-## Customize configuration
+defineProps({
+  guitar: {
+    type: Object,
+    required: true,
+  },
+})
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+const count = ref(0)
 
-## Project Setup
+function handleDescreaseCountClick() {
+  count.value -= 1
+}
 
-```sh
-npm install
+function handleIncreaseCountClick() {
+  count.value += 1
+}
+function handleCartButtonClick() {}
+</script>
 ```
 
-### Compile and Hot-Reload for Development
+- Használjuk fel a metódusokat a tempalte-ben
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+```html
+<template>
+  <div class="cart">
+    <button @click="handleDescreaseCountClick">-</button>
+    <input v-model="count" type="text" />
+    <button @click="handleIncreaseCountClick">+</button>
+    <button class="add-to-cart" @click="handleCartButtonClick">
+      Add to cart
+    </button>
+  </div>
+</template>
 ```

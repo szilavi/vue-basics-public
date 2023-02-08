@@ -1,35 +1,29 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- A `ShoppingCart` komponens formázása
 
-## Recommended IDE Setup
+## Lépések
+- Formázom a megjelenő táblázatot:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```html
+<style scoped>
+.cart {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
-## Customize configuration
+th,
+td {
+  padding: 0.25rem 1rem;
+}
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+tfoot {
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-align: right;
+}
+</style>
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```

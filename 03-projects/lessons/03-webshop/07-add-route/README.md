@@ -1,35 +1,46 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- A `router-view` tesztelés linkekkel
 
-## Recommended IDE Setup
+## Lépések
+- Két oldalam lesz, így a routerben két view-ra, és két router bejegyzésre van szükség
+- A `view` mappán belül hozzunk létre egy új view-t
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```html
+<script setup></script>
+<template>
+  <div>CartView</div>
+</template>
 
-## Customize configuration
+<style scoped></style>
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+```
+- És kell az új router bejegyzés is
+- Azokat a View komponenseket, amelyekre kezdetben nincs szükség, felesleges előre betölteni
+- Lehetőségünk van ezeket dinamikusan importálni:
 
-## Project Setup
-
-```sh
-npm install
+```js
+routes: [
+  {
+    path: '/',
+    name: 'guitarsList',
+    component: GitarsListView,
+  },
+  {
+    path: '/cart',
+    name: 'cart',
+    component: () => import('../views/CartView.vue'),
+  },
+],  
 ```
 
-### Compile and Hot-Reload for Development
+- A `MainNavigation` komponensen belül hozzunk létre egy új listaelemet benne a `router-link`el:
 
-```sh
-npm run dev
+```html
+<li class="nav__item">
+  <router-link class="nav__link" :to="{ name: 'cart' }">Cart</router-link>
+</li>
 ```
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- Most már tesztelhetjük a két belső linket

@@ -10,7 +10,7 @@ const props = defineProps({
 })
 
 const count = ref(0)
-const { cart, addItemToCart, getItemById, changeItemCount } = useCartStore()
+const { addItemToCart, getItemById, changeItemCount } = useCartStore()
 const buttonText = ref('Add to cart')
 
 watch(count, () => {
@@ -30,6 +30,7 @@ function handleDescreaseCountClick() {
 function handleIncreaseCountClick() {
   count.value += 1
 }
+
 function handleCartButtonClick(guitar) {
   /**
    * add:

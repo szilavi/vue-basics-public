@@ -1,35 +1,38 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
 
-## Recommended IDE Setup
+## Lépések
+- A termék hozzáadásnak vannak speciális feltételei
+- Akkor kell hozzáadni a kosárhoz, ha még nincs benne, egyébként frissíteni kell
+- Ezen kívül, ha a `count` értéke 0 és így kattintunk a gombra, akkor törölnünk kell a terméket a kosárból 
+- Elsőre le kell kérdeznünk, hogy a termék a kosárban van-e, ha nincs és a `count` nem 0, akkor kell csak meghívni a `addItemToCart()` függvényt
+- A kosárhoz való hozzáadás, módosítás, törlés feltételeit az alábbiakban foglalhatjuk össze:
+  - add:
+    - ha még nincs a kosárban
+    - és a count > 0
+  - modify:
+    - ha már a kosárban van
+    - a count nem 0 és nem egyenlő a kosárban lévő darabszámmal
+  - delete:
+    - ha a kosárban van
+    - és a count === 0
+- Bővítem a store-t egy függvénnyel, ami guitar id alapján megmondja, hogy az adott elem benne van-e a kosárba:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```js
+  function getItemById(id) {
+    return cart.value.find((item) => item.id === id)
+  }
 ```
 
-### Compile and Hot-Reload for Development
+- Majd a `handleCartButtonClick()`et kiegészítem a feltételekkel:
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+```js
+function handleCartButtonClick(guitar) {
+  if (!getItemById(guitar.id) && count.value > 0) {
+    addItemToCart(guitar, count.value)
+    buttonText.value = 'Update cart'
+  }
+  console.log(cart.value)
+}
 ```

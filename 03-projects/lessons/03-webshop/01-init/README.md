@@ -1,35 +1,29 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- Alkalmazás inicializálása
+- Router
+- View
 
-## Recommended IDE Setup
+## Lépések
+- Inicializáljunk egy új Vue alkalmazást _webshop_ névvel, most a router-t is válasszuk ki a telepítés során
+- Telepítsük a függőségeket, konfiguráljuk az eslint-et, és a prettiert
+- Töröljük a felesleges állományokat
+- Az _src_ mappában most van egy `router` és egy `views` mappa
+- A routerben konfiguráljuk majd, hogy milyen útvonalon milyen nézet komponens töltődjön be
+- Egyelőre maradjon itt ennyi:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```js
+import { createRouter, createWebHistory } from 'vue-router'
 
-## Customize configuration
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [],
+})
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+export default router
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- A _view_ mappában a nézet komponensek lesznek, amelyeket arra használunk, hogy más komponenseket fogjunk össze, csoportosítsunk, és ezeket töltjük majd be az egyes útvonalakon
+- Egyelőre a mappa legyen üres
+- Az `App` tartalma is legyen egy üres template

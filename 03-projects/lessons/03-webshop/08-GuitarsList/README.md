@@ -1,35 +1,44 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- A `GuitarsList` komponens
 
-## Recommended IDE Setup
+## Lépések
+- Hozzuk létre a _components_ mappán belül a `GuitarsList` komponenst
+- Ez nem mást fog tartalmazni, mit `GuitarItem`eket
+- A `GuitarItem` komponensen használom a `v-for` direktívát, így annyi `GuitarItem` komponensünk lesz, amennyi gitár van a kínálatban
+- A `GuitarItem` propként meg fogja kapni az adott gitárt
+- Valamint az App helyett itt fogom a `fetchGuitars()` metódust meghívni
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```js
+<script setup>
+import { onMounted } from 'vue'
+import { useGuitarsStore } from '../store/guitars'
 
-## Customize configuration
+const { guitars, fetchGuitars } = useGuitarsStore()
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+onMounted(() => {
+  fetchGuitars()
+})
+</script>
 
-## Project Setup
-
-```sh
-npm install
+<template>
+  <div class="guitars">
+    <GuitarItem v-for="guitar in guitars" :key="guitar.id" :guitar="guitar" />
+  </div>
+</template>
 ```
 
-### Compile and Hot-Reload for Development
+- Az App-ot lepucolom:
 
-```sh
-npm run dev
-```
+```js
+<script setup>
+import MainNavigation from './components/MainNavigation.vue'
+</script>
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+<template>
+  <MainNavigation />
+  <main>
+    <router-view></router-view>
+  </main>
+</template>

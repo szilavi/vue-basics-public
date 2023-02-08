@@ -1,4 +1,0 @@
-- Hozz lére egy color picker inputot
-- Valósítsd meg, hogy a color picker értéke változik, dinamikusan úgy változzon a teljes oldal háttérszíne
-- Az oldal töltse ki a screent
-- Tipp: Ne a body, vagy az #app háttérszínét módosítsd

@@ -1,35 +1,36 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- Kosárban lévő termék darabszámának módosítása
 
-## Recommended IDE Setup
+## Lépések
+- Abban az esetben, ha a termák már a kosárban van, és a `count` jelenleg nem 0, akkor módosítanunk kell a kosárban lévő darabszámot
+- Két függvényt adok a cart storehoz:
+- A `getItemIndexById()` visszaadja a kosárban lévő termék indexét
+- A `changeItemCount()` frissíti az adott id-jú elem darabszámát a kosárban
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```js
+  function getItemIndexById(id) {
+    return cart.value.findIndex((item) => item.id === id)
+  }
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+  function changeItemCount(id, count) {
+    const index = getItemIndexById(id)
+    cart.value[index].count = count
+  }
 ```
 
-### Compile and Hot-Reload for Development
+- Módosítom a `handleCartButtonClick()`et, hogy a megfelelő feltételek mellett ne hozzáadja, hanem módosítsa a termék darabszámát a kosárban
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+```js
+function handleCartButtonClick(guitar) {
+  const { id } = guitar
+  const item = getItemById(id)
+  if (!item && count.value > 0) {
+    addItemToCart(guitar, count.value)
+    buttonText.value = 'Update cart'
+  } else if (item?.stock !== count.value && count.value > 0) {
+    changeItemCount(id, count.value)
+  }
+}
 ```

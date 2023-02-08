@@ -1,35 +1,49 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- A `CartButton` komponens template-je
 
-## Recommended IDE Setup
+## Lépések
+- A `CartButton` komponens templateje 3 gombot tartalmaz
+- Ezen kívül még egy input mezőre lesz szükség, ahol megjeleni, hány darab terméket akarunk a kosárba tenni / mennyi termék van jelenleg a kosárban
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```js
+<template>
+  <div class="cart">
+    <button>-</button>
+    <input type="text" />
+    <button>+</button>
+    <button class="add-to-cart">Add to cart</button>
+  </div>
+</template>
 
-## Customize configuration
+<style scoped>
+button {
+  padding: 0.25rem 1rem;
+  background: var(--dark);
+  border: 1px solid var(--dark);
+  color: var(--light);
+}
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+button:active {
+  background: var(--light);
+  color: var(--dark);
+}
 
-## Project Setup
+buttom:hover {
+  cursor: pointer;
+}
 
-```sh
-npm install
-```
+input {
+  border: 1px solid var(--dark);
+  padding: 0.25rem;
+  border-radius: 0;
+  width: 5ch;
+  text-align: center;
+}
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+.add-to-cart {
+  margin: 0 0 0 1rem;
+}
+</style>
 ```

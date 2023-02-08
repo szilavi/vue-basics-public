@@ -1,35 +1,33 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- Termék törlése a kosárból
 
-## Recommended IDE Setup
+## Lépések
+- Bővítem a cart store, a `removeFromCart()`al, ami adott id-jú elemet töröl a kosárból
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```js
+  function removeFromCart(id) {
+    const index = getItemIndexById(id)
+    cart.value.splice(index, 1)
+  }
 ```
 
-### Compile and Hot-Reload for Development
+- A `handleCartButtonClick()`et kiegészítem a törlés feltételével
+- Ha töröljük az elemet a kosárból, akkor a gomb szövegét módosítani kell 
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+```js
+function handleCartButtonClick(guitar) {
+  const { id } = guitar
+  const item = getItemById(id)
+  if (!item && count.value > 0) {
+    addItemToCart(guitar, count.value)
+    buttonText.value = 'Update cart'
+  } else if (item?.stock !== count.value && count.value > 0) {
+    changeItemCount(id, count.value)
+  } else if (item && count.value === 0) {
+    removeFromCart(id)
+    buttonText.value = 'Add to cart'
+  }
+}
 ```

@@ -1,35 +1,32 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- A `GitarsListView` komponens
+- A router bejegyzés
 
-## Recommended IDE Setup
+## Lépések
+- A `views` mappán belül hozzuk létre egy _GuitarsListView.vue_ fájlt 
+_ Ennek a tartalma:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```html
+<script setup></script>
+<template>
+  <div>GuitarsList</div>
+</template>
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+<style scoped></style>
 ```
 
-### Compile and Hot-Reload for Development
+- A router mappán belül az index.js fájlban írjuk meg az első routing-ot
+- A főoldalon a `GitarsListView` komponens legyen betöltve
+- A `path` az útvonal, aminél az adott komponensnek be kell töltődnie 
+- A `component`, hogy melyik komponens töltődjön be
+- A `name` az útvonal neve, ez opcionális, viszont érdemes mindig megadni, így a későbbiekben már hivatkozhatunk erre a `path`-bél megadott útvonal helyett is
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+```js
+  {
+    path: '/',
+    name: 'guitarsList',
+    component: GitarsListView,
+  },
+``` 

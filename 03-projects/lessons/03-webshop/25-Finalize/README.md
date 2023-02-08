@@ -1,35 +1,71 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- A kosárban lévő termékek 9ssz darabszámának kalkulálása
+- Kosár tartalmának módosításakor notification megjelenítése a felhasználónak
 
-## Recommended IDE Setup
+## Lépések
+- A felső menüben a Cart mellett zárójelben meg kell jeleníteni a kosárban lévő termékek darabszámát
+- A `totalPrice`hoz hasonlóan egy `totalCount` computed propertyt is létrehozok 
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```js
+  const totalCount = computed(() =>
+    cart.value.reduce((prev, curr) => prev + curr.count, 0)
+  )
 ```
 
-### Compile and Hot-Reload for Development
+- Felhasználom a `MainNavigation` komponensen belül:
 
-```sh
-npm run dev
+```js
+<script setup>
+import { useCartStore } from '../../store/cart'
+
+const { totalCount } = useCartStore()
+</script>
+<template>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <router-link class="nav__link" :to="{ name: 'guitarsList' }">
+          Guitars
+        </router-link>
+      </li>
+      <li class="nav__item">
+        <router-link class="nav__link" :to="{ name: 'cart' }">
+          Cart ({{ totalCount }})
+        </router-link>
+      </li>
+    </ul>
+  </nav>
+</template>
 ```
 
-### Compile and Minify for Production
+- Még nem kapunk visszajelzést arról, ha a kosár tartalma módosul
+- Használjuk a `CartButton` komponensél is a Toast-ot
+- Importáljuk a `useToast` függvényt, hozzuk létre a `toast` változót
 
-```sh
-npm run build
+```js
+import { useToast } from 'vue-toastification'
+const toast = useToast()
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+- Majd a `handleCartButtonClick()` függvénynél használjuk is:
 
-```sh
-npm run lint
+```js 
+function handleCartButtonClick(guitar) {
+  const { id } = guitar
+  const item = getItemById(id)
+  if (!item && count.value > 0) {
+    addItemToCart(guitar, count.value)
+    buttonText.value = 'Update cart'
+    toast.success('Item has been added to the cart')
+  } else if (item?.stock !== count.value && count.value > 0) {
+    changeItemCount(id, count.value)
+    toast.success('Item count has been changed')
+  } else if (item && count.value === 0) {
+    removeFromCart(id)
+    buttonText.value = 'Add to cart'
+    toast.success('Item has been deleted form cart')
+  }
+}
 ```

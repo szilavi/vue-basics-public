@@ -1,35 +1,53 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- A `GuitarItem` komponens váza
+- A `GuitarItem` által felhasznált egyéb komponensek
 
-## Recommended IDE Setup
+## Lépések
+- Hozzuk létre a `GuitarItem` komponenst
+- Egy `GuitarItem` komponens több apró komponensből fog felépülni, ezek:
+  - GuitarImage
+  - GuitarName
+  - GuitarDescription
+  - GuitarPrice
+  - GuitarRating
+  - GuitarStock
+  - CartButton
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- A `GuitarItem`  propként mindig megkap egy guitar objektumot
+- A tempalte két fő részre osztható:
+  - bal oldalt egy kép
+  - jobb oldalt az egyéb adatok
 
-## Customize configuration
+```js
+<script setup>
+defineProps({
+  guitar: {
+    type: Object,
+    required: true,
+  },
+})
+</script>
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+<template>
+  <div class="guitar">
+    <div class="left-column">Image</div>
+    <div class="right-column">Content</div>
+  </div>
+</template>
 
-## Project Setup
+<style scoped>
+.guitar {
+  box-shadow: 0.25rem 0.1rem 0.5rem rgba(0, 0, 0, 0.15);
+  display: flex;
+  padding: 1rem;
+  margin: 0 0 2rem 0;
+}
 
-```sh
-npm install
-```
+.right-column {
+  padding: 0 0 0 3rem;
+}
+</style>
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```

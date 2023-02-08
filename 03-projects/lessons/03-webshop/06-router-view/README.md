@@ -1,35 +1,18 @@
-# 03-webshop
+# Jegyzet
 
-This template should help get you started developing with Vue 3 in Vite.
+## Tartalom
+- router-view
 
-## Recommended IDE Setup
+## Lépések
+- Még meg kell adnunk, hogy a belső navigáció esetében hova töltődjön be az adott view
+- Ezt az App-on belül adom meg:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```html
+<template>
+  <MainNavigation />
+  <main>
+    <router-view></router-view>
+  </main>
+</template>
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- A `router-link`re kattintva a `router-view`ba töltődik be az adott View komponens

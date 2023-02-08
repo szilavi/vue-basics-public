@@ -31,6 +31,7 @@ function handleDescreaseCountClick() {
 function handleIncreaseCountClick() {
   count.value += 1
 }
+
 function handleCartButtonClick(guitar) {
   /**
    * add:
