@@ -10,7 +10,7 @@
 - Használjuk a `v-model` direktívát a dolgok egyszerűsítésére:
 - Az `email` értékét rögtön a `template`be bele is írom, hogy látszódjon a változás
 
-```vue
+```js
 <script setup>
 import { ref } from 'vue'
 import InputField from './components/InputField.vue'
@@ -36,7 +36,7 @@ const email = ref('')
 - Csak vegyük fel a `modelValue`t a gyermekben
 - Majd, amikor frissül az adat, erről a szülőt értesíteni kell, ehhez pedig a `update:modelValue` eseményt használhatjuk:
 
-```vue
+```js
 <script setup>
 defineProps({
   modelValue: {

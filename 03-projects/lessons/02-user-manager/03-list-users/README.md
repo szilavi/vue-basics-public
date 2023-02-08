@@ -16,7 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 - Az `App.vue` fájlon belül készítsünk egy alap template-et, amin belül ki tudjuk a felhasználókat
 - Egyelőre a táblázat fejrészét hozom létre:
 
-```vue
+```js
 <template>
   <table class="table table-striped table-fixed">
     <thead>
@@ -49,7 +49,7 @@ onMounted(async () => {
 
 - Elkészítem a `thead` alatt a `tbody`-t, hogy a DOM-ba bele tudjuk írni a felhasználókat:
 
-```vue
+```js
   <tbody>
       <tr v-for="user in users" :key="user.id">
         <td>{{ user.emailAddress }}</td>

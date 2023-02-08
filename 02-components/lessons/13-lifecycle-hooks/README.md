@@ -34,7 +34,7 @@
 - A Vue API az adott életciklusokhoz egy-egy függvényt is biztosít
 - Elsőként az `onBeforeMount`, és az `onMounted` `hook`okat nézzük meg
 
-```vue
+```js
 <script setup>
 import { onBeforeMount, onBeforeUnmount, ref } from 'vue'
 
@@ -51,7 +51,7 @@ onMounted(() => console.log('mounted'))
 
 - Az App komponens a következő:
 
-```vue
+```js
 <script setup>
 import { ref } from 'vue'
 import AppTitle from './components/AppTitle.vue'
@@ -84,7 +84,7 @@ setTimeout(() => (title.value = 'New title'), 3000)
 - Egészítsük ki az `App`ot, egy `isTitleVisible` változóval, melynek értékéhez kötjük az `AppTitle` komponens megjelenítését
 - Egy `setTimeout()`tal ennek az érétkét is módosítsuk
 
-```vue
+```js
 <script setup>
 import { ref } from 'vue'
 import AppTitle from './components/AppTitle.vue'

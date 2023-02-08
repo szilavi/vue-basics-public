@@ -13,7 +13,7 @@
 
 - A `SiteContent.vue` fájl tartalma:
 
-```vue
+```js
 <template>
   <main>Content</main>
 </template>
@@ -27,7 +27,7 @@ main {
 
 - A `SiteFooter.vue` fájl tartalma:
 
-```vue
+```js
 <template>
   <footer>Footer</footer>
 </template>
@@ -43,7 +43,7 @@ footer {
 - Ha ezzel megvagyunk, állítsuk össze az alkalmazást ezen komponensek felhasználásával
 - Az `App.vue` tartalmát módosítsuk:
 
-```vue
+```js
 <script setup>
 import MainNavigation from './components/MainNavigation.vue'
 import SiteFooter from './components/SiteFooter.vue'

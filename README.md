@@ -10,7 +10,7 @@
 - [A `v-bind` direktíva használata objektummal](01-syntax/lessons/04-v-bind-with-object/)
 - [A `v-for` direktíva](01-syntax/lessons/05-v-for/)
 - [Index használata a `v-for` direktívánál](01-syntax/lessons/06-v-for-index/)
-- [A `v-for` használata átstruktúrlással](01-syntax/lessons/07-v-for-destructuring/)
+- [A `v-for` használata átstrukturálással](01-syntax/lessons/07-v-for-destructuring/)
 - [A `v-for` használata többdimenziós tömbök esetében](01-syntax/lessons/08-v-for-multidimensional-array/)
 - [A `v-for` `key` alias](01-syntax/lessons/09-v-for-with-object/)
 - [A `v-if` direktíva és a `template` tag](01-syntax/lessons/10-v-if/)
@@ -69,7 +69,7 @@
 - [A UserManager alkalmazás inicializálása, backend elkészítése](03-projects/lessons/02-user-manager/01-init/)
 - [A usersAPI elkészítés](03-projects/lessons/02-user-manager/02-usersAPI/)
 - [A felhasználók kilistázása](03-projects/lessons/02-user-manager/03-list-users/)
-- [Bevezetés a state mendzsmentbe](03-projects/lessons/02-user-manager/04-store/)
+- [Bevezetés a state menedzsmentbe](03-projects/lessons/02-user-manager/04-store/)
 - [A store használata part](03-projects/lessons/02-user-manager/04-store/)
 - [A UsersTable komponent elkészítése](03-projects/lessons/02-user-manager/05-UsersTable/)
 - [Felhasználó törlése](03-projects/lessons/02-user-manager/06-delete-user/)
@@ -105,10 +105,12 @@
 - [A termék kosárhoz való hozzáadásának megírása](03-projects/lessons/03-webshop/18-CartButton-add/)
 - [A termék kosárba tehető mennyiségének korlátozása](03-projects/lessons/03-webshop/19-CartButton-interval/)
 - [A termék hozzáadásának feltételei](03-projects/lessons/03-webshop/20-CartButton-add-if/)
-- [A kosárban lávő termékek darabszámának módosítása](03-projects/lessons/03-webshop/21-CartButton-modify/)
+- [A kosárban lévő termékek darabszámának módosítása](03-projects/lessons/03-webshop/21-CartButton-modify/)
 - [Termék törlése a kosárból](03-projects/lessons/03-webshop/22-CartButton-delete/)
 - [A ShoppingCart komponens elkészítése](03-projects/lessons/03-webshop/23-ShoppingCart/)
 - [A ShoppingCart formázása](03-projects/lessons/03-webshop/24-Finalize/)
 - [A felhasználói értesítések megvalósítása kosárba helyezéskor](03-projects/lessons/03-webshop/25)
 
 - [Feladatok](03-projects/exercises/)
+
+

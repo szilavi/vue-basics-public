@@ -16,7 +16,7 @@
 - Használjuk fel a `v-model`nél
 - Készítsünk egy küldés gombot, ami csak annyit tesz, hogy kilogolja az űrlap adatait JSON formátumban
 
-```vue
+```js
 <script setup>
 import { reactive } from 'vue'
 import InputField from './components/InputField.vue'

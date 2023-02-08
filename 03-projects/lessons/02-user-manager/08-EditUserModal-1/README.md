@@ -7,7 +7,7 @@
 - Hozzunk létre egy új komponenst `EditUserModal` névvel
 - Itt fel fogjuk használni a bootstrap modal komponensét
 
-```vue
+```js
 <template>
   <div
     id="editUserModal"
@@ -55,7 +55,7 @@
 - Ennek a felhasználónak kell az adatait egy formon belül megjeleníteni
 - A modal save gombjára kattintva el kell mentenünk az adatokat, ekkor hívódik meg a `handleSaveButtonClick` függvény
 
-```vue
+```js
 <script setup>
 import { ref } from 'vue'
 import { useUserStore } from '../../store/user'

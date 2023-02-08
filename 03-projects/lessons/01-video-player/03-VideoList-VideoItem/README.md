@@ -13,7 +13,7 @@
 - A template-en belül pedig a `VideoItem` komponensen magán használom a `v-for` direktívát
 - A `VideoItem` propsként mindig egy videót fog kapni
 
-```vue
+```js
 <script setup>
 import VideoItem from './VideoItem.vue'
 
@@ -34,7 +34,7 @@ defineProps({
 
 - A `VideoItem` a videó címét, és a bélyegképét fogja megjeleníteni:
 
-```vue
+```js
 <script setup>
 defineProps({
   video: {

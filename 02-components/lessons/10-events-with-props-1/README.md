@@ -15,7 +15,7 @@
 - Az input tag felett jelenlen meg a `label` tag is, a benne megjelenő szöveg a `label prop` értéke legyen
 - A teljes kód:
 
-```vue
+```js
 <script setup>
 import { ref } from 'vue'
 
@@ -65,7 +65,7 @@ label {
 
 - Ennek megfelelően alakítsuk át az `App.vue`t is:
 
-```vue
+```js
 <script setup>
 import InputField from './components/InputField.vue'
 
@@ -91,7 +91,7 @@ function logMessage(name) {
 - Ami nem szép, hogy a `logMessage` paramétere mindig `name`. az `InputField` komponensen belül is mindig `name` a reaktív változó neve is, pedig jelen esetben is egy email mezőt használunk
 - A gyermekben nincs szükség a reaktív változóra, csak a szülőben akarom elérni az értéket, így töröljük is, és az input value-ját adjuk át mindig az `$event`ön keresztül:
 
-```vue
+```js
 <script setup>
 defineProps({
   name: {
@@ -130,7 +130,7 @@ defineEmits(['on-input'])
   komponens nagyon jól újra felhasználható lett
 - Módosítom még az `App` komponenst is, és ott hozom létre a reaktív változót, és egy függvény segítségével módosítom mindig, ha új érték lesz:
 
-```vue
+```js
 <script setup>
 import InputField from './components/InputField.vue'
 import { ref } from 'vue'

@@ -45,7 +45,7 @@ const { users } = useUserStore()
 
 - Az `App`on belül már csak a `fetchUsers`re van szükség, és a template helyett a `UsersTable` komponenst fogom használni, amit egy container osztályú div-be helyezek el
 
-```vue
+```js
 <script setup>
 import { onMounted } from 'vue'
 import { useUserStore } from '../store/user'

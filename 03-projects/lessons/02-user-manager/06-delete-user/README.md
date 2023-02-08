@@ -31,7 +31,7 @@ export default { getUsers, deleteUser }
 - A `UsersTable` törlés gombjára kattintva kell meghívni ez a függvényt
 - Módosítsuk a template-et:
 
-```vue
+```js
   <button class="btn btn-danger" @click="handleDeleteClick(user.id)">
     Delete
   </button>

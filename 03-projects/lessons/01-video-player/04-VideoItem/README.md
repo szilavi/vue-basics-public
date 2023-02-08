@@ -10,7 +10,7 @@
 - Alakítsuk át a template-et
 - Arra is szükség van, hogy amikor rákattintunk az egyik videóra, vagy amikor az Enter billentyűt nyomjuk meg amikor ki van választva, betöltődjön majd a bal oldalra:
 
-```vue
+```js
 <template>
   <div
     role="button"

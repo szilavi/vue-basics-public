@@ -22,7 +22,7 @@
 
 - A `MainNavigation.vue` fájl tartalma:
 
-```vue
+```js
 <template>
   <nav>
     <ul>
@@ -66,7 +66,7 @@ a {
 
 - Az `App.vue` tartalmát módosítsuk:
 
-```vue
+```js
 <script setup>
 import MainNavigation from './components/MainNavigation.vue'
 </script>

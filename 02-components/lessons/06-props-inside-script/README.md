@@ -38,7 +38,7 @@ function alertTitle() {
 
 - Módosítsuk a legelső menü elemet:
 
-```vue
+```js
 <li>
   <a href="/" @click="alertTitle">
     {{ title }}

@@ -11,7 +11,7 @@
 - Majd használjunk két irányú adatkötést
 - Most ne a `click` hanem az `input` esemény figyeljük, amikor ez bekövetkezik a komponens kibocsájtja az egyedi `on-input` eseményt, további argumentumként a `name`-et is megadjuk
 
-```vue
+```js
 <script setup>
 import { ref } from 'vue'
 
@@ -27,7 +27,7 @@ const name = ref()
 
 - A szülő automatikusan megkapja a paramétereket, csak arra kell figyelni, hogy a függvény definíciónál is megadjuk őket, jelenleg a `name`-et
 
-```vue
+```js
 <script setup>
 import InputField from './components/InputField.vue'
 

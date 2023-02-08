@@ -33,7 +33,7 @@ export function useUserStore() {
 - _composable_: olyan függvény, mely a vue rektivitását használja fel állapotmentes logika újra felhasználhatósága céljából
 - Az `App.vue`-t módosítanom kell, hogy a store.t használja:
 
-```vue
+```js
 <script setup>
 import { onMounted } from 'vue'
 import { useUserStore } from '../store/user'

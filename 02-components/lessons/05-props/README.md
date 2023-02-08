@@ -10,7 +10,7 @@
 - A `props` segítségével egy komponensnek adatokat tudunk átadni a szülő komponensből
 - Ha az `App`-ból, mint szülő komponensből szeretnénk adatot átadni a `MainNavigation`-nejk, mint gyermekkomponensnek, ezt megtehetjük:
 
-```vue
+```js
 <MainNavigation title="Vue app" />
 ```
 
@@ -27,7 +27,7 @@ defineProps({
 - A `defineProps()` egy complier-macro, csak a script setup-on belül használható
 - Bár a fenti megadási mód is megfelelő, sokkal strict-ebb lesz a kód, ha megadjuk az is, hogy ez a prop kötelező-e vagy sem:
 
-```vue
+```js
 <script setup>
 defineProps({
   title: {
@@ -40,7 +40,7 @@ defineProps({
 
 - Ezután a `MainNavigation` komponens első listaelemének kódját kell kicserélni a következőre:
 
-  ```vue
+  ```js
   <li>
     <a href="/">
       {{ title }}

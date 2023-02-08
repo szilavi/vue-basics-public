@@ -11,7 +11,7 @@
 - Lejátszási listák esetében a video object paraméterei másként alakulnak
 - Hogy mindig a megfelelő link legen létrehozva, videó esetén a videóra, lejátszási lista esetén a lejátszási listára, szükségünk van egy computed propertyre is:
 
-```vue
+```js
 <script setup>
 import { computed } from 'vue'
 

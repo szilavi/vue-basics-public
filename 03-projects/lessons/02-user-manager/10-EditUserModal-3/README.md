@@ -21,7 +21,7 @@ function handleSelectUser(user) {
 - Ezt a függvényt fogom felhasználni a templaten belül
 - Hogy a modal meg is nyíljon a `data-bs-toggle` és a `data-bs-target`-et
 
-```vue
+```js
   <button
     data-bs-toggle="modal"
     data-bs-target="#editUserModal"
@@ -33,7 +33,7 @@ function handleSelectUser(user) {
 ```
 - Valamint a table alatt az `EditUserModal`-t is megadom, ami propként megkapja a `selectedUser`t
 
-```vue
+```js
   <EditUserModal :user="selectedUser" />
 ```
 

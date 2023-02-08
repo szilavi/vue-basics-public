@@ -11,7 +11,7 @@
 - Ehhez tudnunk kell, melyik videó van kiválasztva, és ezt a kiválasztott videót kell a `VideoDetails` komponensnek megkapnia
 - Ami eddig kimarad, hogy ahhoz, hogy a videó fókuszálható legyen, még a tabindexet is meg kell adnunk a `VideoItem`-en:
 
-```vue
+```js
 <div
     role="button"
     tabindex="0"
@@ -43,7 +43,7 @@ const selectedVideo = ref(null)
 - Hozzunk létre a `VideosList`en belül egy egyedi eseményt, melynek legyen a neve `select-video`
 - Amikor a `VideoItem`en kattintunk, vagy entert ütünk, akkor bocsájtja majd ki az eseményt, mindek a második paramétere az adott video object lesz:
 
-```vue
+```js
 <script setup>
 import VideoItem from './VideoItem.vue'
 
@@ -69,7 +69,7 @@ defineEmits(['select-video'])
 
 - Majd pedig az `App`on belül rendeljünk ehhez az eseményhez egy függvényt
 
-```vue
+```js
 <script setup>
 import { onMounted, ref } from 'vue'
 import { youtubeAPI, defaultParams } from './apis/youtubeAPI.js'

@@ -40,7 +40,7 @@ defineEmits(['on-focus'])
 - Az esemény neve bármi lehetne, kebabCase névmegadást használunk
 - Az `App.vue` kódja legyen a következő:
 
-```vue
+```js
 <script setup>
 import InputField from './components/InputField.vue'
 

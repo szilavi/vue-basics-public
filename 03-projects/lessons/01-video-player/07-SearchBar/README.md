@@ -14,7 +14,7 @@
 - Szükségem lesz még egy egyedi eseményre, mely a küldésnél a `queryt` megkapja második paraméterként
 - Az egyedi esemény neve legyen `form-submit`
 
-```vue
+```js
 <script setup>
 import { ref } from 'vue'
 
