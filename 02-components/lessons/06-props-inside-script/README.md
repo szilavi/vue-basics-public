@@ -17,7 +17,7 @@ function alertTitle() {
 ```
 
 - Rögtön látjuk is, hogy a VSCode hibát fog jelezni, hogy nincs `title` nevű változó
-- Ha a scripten belül el akarjuk érni a props értékeket, akkor egy változóhot kell hozzárendelni:
+- Ha a scripten belül el akarjuk érni a props értékeket, akkor egy változóhoz kell hozzárendelni:
 
 ```js
 const props = defineProps({
@@ -47,4 +47,4 @@ function alertTitle() {
 ```
 
 - A `title` helyett a `props.title` is írhatjuk, de a tempalte-ben ez nem kötelező,
-  azonban ha lenne egy `title` nevű reactive változónk, akkor a kettő megkülönböztetése végett már muszáj a `props.title`-t használni
+  azonban ha lenne egy `title` nevű reaktív változónk, akkor a kettő megkülönböztetése végett már muszáj a `props.title`-t használni

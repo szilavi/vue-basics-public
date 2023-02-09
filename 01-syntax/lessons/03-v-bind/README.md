@@ -8,7 +8,7 @@
 
 - A következő hasznos direktíva a `v-bind` direktíva, aminek a segítségével html attribútumoknak tudunk értéket adni JavScriptből (_attribute binding_)
 - A Vue direktívák neve mindig a _v-_ előtaggal kezdődik
-- Az `main.js` tartalma legyen a következő:
+- Az _main.js_ tartalma legyen a következő:
 
 ```js
 const app = Vue.createApp({

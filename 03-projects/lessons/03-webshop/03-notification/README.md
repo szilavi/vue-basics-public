@@ -1,10 +1,12 @@
 # Jegyzet
 
 ## Tartalom
+
 - A `Toast` használata az alkalmazásban
 - Gitárok kilogolása
 
 ## Lépések
+
 - A `vue-toastification` nem egy komponensen, hanem a store-on belül használom
 - A `vue-toastification` fájljait importáljuk a `main.js` fájlba
 
@@ -13,7 +15,7 @@ import Toast from 'vue-toastification'
 import 'vue-toastification/dist/index.css'
 ```
 
-- Majd az `app.mount()` tegyük az alkalmazás számára elérhetővé a `Toast`ot: 
+- Majd az `app.mount()` tegyük az alkalmazás számára elérhetővé a `Toast`ot:
 
 ```js
 app.use(Toast)

@@ -1,20 +1,23 @@
 # Jegyzet
 
 ## Tartalom
+
 - A `ShoppingCart` komponens
-- Kosár tartalmának össz ára 
+- Kosár tartalmának össz ára
 
 ## Lépések
+
 - A `ShoppingCart` komponens fogja egy táblázatba kilistázni a kosárban lévő termékeket, a darabszámot, az árat, és egy össz árat
 - A termékenkénti összesített árat egyszerűen ki tudjuk számolni, az a kosárban lévő darabszám és egységár szorzata
 - A kosár teljes tartalmának össz ár egy kicsit bonyolultabb
 - Ezt célszerű akár a cart store-on belül kiszámolni egy computed propertybe:
 
 ```js
-  const totalPrice = computed(() =>
-    cart.value.reduce((prev, curr) => prev + curr.count * curr.price, 0)
-  )
+const totalPrice = computed(() =>
+  cart.value.reduce((prev, curr) => prev + curr.count * curr.price, 0)
+)
 ```
+
 - Ezt a `totalPrice`t aztán fel tudjuk már használni:
 
 ```js

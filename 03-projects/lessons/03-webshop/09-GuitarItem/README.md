@@ -1,12 +1,15 @@
 # Jegyzet
 
 ## Tartalom
+
 - A `GuitarItem` komponens váza
 - A `GuitarItem` által felhasznált egyéb komponensek
 
 ## Lépések
+
 - Hozzuk létre a `GuitarItem` komponenst
 - Egy `GuitarItem` komponens több apró komponensből fog felépülni, ezek:
+
   - GuitarImage
   - GuitarName
   - GuitarDescription
@@ -15,7 +18,7 @@
   - GuitarStock
   - CartButton
 
-- A `GuitarItem`  propként mindig megkap egy guitar objektumot
+- A `GuitarItem` propként mindig megkap egy guitar objektumot
 - A tempalte két fő részre osztható:
   - bal oldalt egy kép
   - jobb oldalt az egyéb adatok

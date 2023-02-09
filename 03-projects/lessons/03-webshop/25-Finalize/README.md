@@ -1,17 +1,19 @@
 # Jegyzet
 
 ## Tartalom
+
 - A kosárban lévő termékek 9ssz darabszámának kalkulálása
 - Kosár tartalmának módosításakor notification megjelenítése a felhasználónak
 
 ## Lépések
+
 - A felső menüben a Cart mellett zárójelben meg kell jeleníteni a kosárban lévő termékek darabszámát
-- A `totalPrice`hoz hasonlóan egy `totalCount` computed propertyt is létrehozok 
+- A `totalPrice`hoz hasonlóan egy `totalCount` computed propertyt is létrehozok
 
 ```js
-  const totalCount = computed(() =>
-    cart.value.reduce((prev, curr) => prev + curr.count, 0)
-  )
+const totalCount = computed(() =>
+  cart.value.reduce((prev, curr) => prev + curr.count, 0)
+)
 ```
 
 - Felhasználom a `MainNavigation` komponensen belül:
@@ -51,7 +53,7 @@ const toast = useToast()
 
 - Majd a `handleCartButtonClick()` függvénynél használjuk is:
 
-```js 
+```js
 function handleCartButtonClick(guitar) {
   const { id } = guitar
   const item = getItemById(id)

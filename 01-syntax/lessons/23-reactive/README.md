@@ -57,7 +57,7 @@ app.mount('#app')
 
 - A küldésnél látjuk, hogy a konzolon ott lesz az összes adat egy Proxy-n belül
 - Azonban amennyiben objektumot akarunk használni az összetartozó adatok tárolására, a `ref()` helyett használhatjuk a `reactive()` függvényt is
-- A `reactive()` a `ref()`hez hasonlóan reaktív változót hoz létre, azonban van néhány különbség
+- A `reactive()` a `ref()`-hez hasonlóan reaktív változót hoz létre, azonban van néhány különbség
 - A `reactive()` értéke mindig egy objektum kell legyen, valamint nem kell a `value`-t kiírni, ha el akarjuk érni a benne tárolt adatot:
 
 ```js

@@ -1,20 +1,22 @@
 # Jegyzet
 
 ## Tartalom
+
 - Termék törlése a kosárból
 
 ## Lépések
+
 - Bővítem a cart store, a `removeFromCart()`al, ami adott id-jú elemet töröl a kosárból
 
 ```js
-  function removeFromCart(id) {
-    const index = getItemIndexById(id)
-    cart.value.splice(index, 1)
-  }
+function removeFromCart(id) {
+  const index = getItemIndexById(id)
+  cart.value.splice(index, 1)
+}
 ```
 
-- A `handleCartButtonClick()`et kiegészítem a törlés feltételével
-- Ha töröljük az elemet a kosárból, akkor a gomb szövegét módosítani kell 
+- A `handleCartButtonClick()`-et kiegészítem a törlés feltételével
+- Ha töröljük az elemet a kosárból, akkor a gomb szövegét módosítani kell
 
 ```js
 function handleCartButtonClick(guitar) {

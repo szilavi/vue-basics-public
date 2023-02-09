@@ -10,7 +10,7 @@
 
 ## Lépések
 
-- Készítsünk egy új mappát a projekt könyvtárunkban vuejs-basic néven
+- Készítsünk egy új mappát a projekt könyvtárunkban _vuejs-basic_ néven
 - Nyissuk meg a mappát VSCodeban
 - Hozzunk létre egy fájlt `index.html` néven
 - Készítsünk el egy egyszerű html struktúrát:
@@ -29,7 +29,7 @@
 </html>
 ```
 
-- Linkeljük be a head-be a következőt:
+- Linkeljük be a `head`-be a következőt:
 
 ```js
 <script src="https://unpkg.com/vue@3"></script>
@@ -55,12 +55,12 @@ app.mount('#app')
 
 - A `Vue` objektum globálisan elérhető, hiszen a `head`-be belinkeltük a `Vue`-t
 - A `createApp` metódus hozza létre magát az alkalmazást
-- A `createApp` egy options objectet kap paraméterként
-- Az options objectet jelenleg egy metódust tartalmaz: `setup()`
+- A `createApp` egy options object-et kap paraméterként
+- Az options object-et jelenleg egy metódust tartalmaz: `setup()`
 - Ezen belül létrehozunk egy `message` változót, és értéket adunk neki
 - A `setup()` visszatérési értéke egy objektum, mely azokat az adatokat tartalmazza, melyeket a komponensen belül globálisan el szeretnénk érni
 - Ez jelenleg csak a `message` lesz, melynek az értékét meg akarom jeleníteni
-- Amit fel kell csatolnunk a DOM-ba, hogy valahol az oldalon belül életre megjelenjen, működjön az alkalmazás. Egész pontosan az `app` id-jú elembe helyezzük el.
+- Amit fel kell csatolnunk a DOM-ba, hogy valahol az oldalon belül életre megjelenjen, működjön az alkalmazás. Egész pontosan az `app` id-jú elembe helyezzük el
 - Ezután adjuk hozzá a body-hoz a következőt:
 
 ```html

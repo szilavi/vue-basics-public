@@ -6,9 +6,9 @@
 
 ## Lépések
 
-- Ha nem akarjuk bonyolítani az életünket, és a lehetőség van arra, hogy valamit CSS-ből oldjunk meg javascript helyett, akkor mindig tegyük azt
+- Ha nem akarjuk bonyolítani az életünket, és a lehetőség van arra, hogy valamit CSS-ből oldjunk meg JavaScript helyett, akkor mindig tegyük azt
 - Ha a CSS tulajdonságok statikusak lesznek, amiket hozzá akarunk rendelni az elemekhez, akkor a legegyszerűbb, ha felveszünk egy-egy class-t
-- Hozzuk létre a `style.css` fájlt a tartalma pedig legyen a következő:
+- Hozzuk létre a _style.css_ fájlt a tartalma pedig legyen a következő:
 
 ```css
 .out-of-stock {

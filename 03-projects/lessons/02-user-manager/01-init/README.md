@@ -8,6 +8,7 @@
 - db script írása
 
 ## Lépések
+
 - A [https://www.mockaroo.com/](https://www.mockaroo.com/) oldalon generáljunk le 1000 user adatát
 - Az adatok a következők legyenek:
   - id

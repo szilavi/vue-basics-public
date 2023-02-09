@@ -1,9 +1,11 @@
 # Jegyzet
 
 ## Tartalom
+
 - A `GuitarsTitle` komponens
 
 ## Lépések
+
 - A `GuitarsTitle` komponens propként csak a `title`t fogja megkapni
 - Ezt egy címsor kettőn belül fogja megjeleníteni
 

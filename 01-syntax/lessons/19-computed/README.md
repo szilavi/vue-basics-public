@@ -102,7 +102,7 @@ app.mount('#app')
 ```
 
 - Az alkalmazás továbbra is működik
-- Mivel a `formattedPrice()`-on belül hivatkozunk a `price`re, így ha a `price` módosul a függvény meghívódik újra, és a friss érték kerül a DOM-ba
+- Mivel a `formattedPrice()`-on belül hivatkozunk a `price`-ra, így ha a `price` módosul a függvény meghívódik újra, és a friss érték kerül a DOM-ba
 - Ez egy sokkal szebb megoldás, de van még tovább
 - A Vue lehetőséget biztosít úgynevezett _computed property_ - számított értékek - használatára
 - Nézzük a kódot:
@@ -154,6 +154,7 @@ app.mount('#app')
 ```
 
 - Látható, hogy nem, mint függvény használjuk a *computed property*t, hanem, mint változót, tehát nincsenek ot a zárójelek
-- A különbség a _ref_ és a _computed ref_ között, hogy _computed ref_ esetében, ha a JS-kódban hivatkozunk rá, akkor sem kell a *value*-t kiírni, ez automatikusan megtörténik
+- A különbség a _ref_ és a _computed property_ között, hogy _computed property_ esetében, ha a JS-kódban hivatkozunk rá, akkor sem kell a _value_-t kiírni, ez automatikusan megtörténik
+- A _computed property_ figyeli a benne felhasznált reaktív változók módosítását, és automatikusan frissíti magát
 - Bár használható a _computed property_ *setter*ként is, azonban a legjobb, ha csak *getter*ként használjuk, azaz ne csináljon mást, csak más értékekkel dolgozva előállít egy új értéket, tehát nem csinál más csak kiszámítja ezt az értéket és visszaadja azt
-- **FONTOS**: soha ne legyen aszinkron kérés, vagy DOM manipuláció a *computed property*n belül, a getter mindig mentes a side effectektől
+- **FONTOS**: soha ne legyen aszinkron kérés, vagy DOM manipuláció a *computed property*n belül, a _getter_ mindig mentes a side effectektől

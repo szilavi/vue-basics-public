@@ -1,44 +1,45 @@
 # Feladatok
 
 ## 01 - form submit
+
 - Készíts egy formot benne egy text típusú űrlap mezővel, melyben egy nevet kérünk be
 - Legyen egy label elem is, valamint egy küldés gomb
 - Amikor rákattintunk a küldésre, logolja az input értékét a konzolra
 - Az űrlap elküldésekor ne legyen újra töltve az oldal, de az input tartalma legyen visszaállítva a kezdeti üres értékre
 
-
 ## 02 - style binding
+
 - Adott webshop, mely hangszereket forgalmaz
 - Néhány ezek közül, melyeknek az adatait megkapod:
 
 ```js
-[
+;[
   {
     id: 1,
-    title: "Ibanez S6570SK-STB Prestige",
+    title: 'Ibanez S6570SK-STB Prestige',
     stock: 0,
   },
   {
     id: 2,
-    title: "Fender AM Ultra Luxe Strat MN PRB",
+    title: 'Fender AM Ultra Luxe Strat MN PRB',
     stock: 2,
   },
   {
     id: 3,
-    title: "FGN Expert Odyssey SBB",
+    title: 'FGN Expert Odyssey SBB',
     stock: 11,
   },
   {
     id: 4,
-    title: "Gibson SG Standard Reissue Cherry VOS",
+    title: 'Gibson SG Standard Reissue Cherry VOS',
     stock: 1,
   },
   {
     id: 5,
-    title: "Jackson SL2A MAH Pro Soloist UWH",
+    title: 'Jackson SL2A MAH Pro Soloist UWH',
     stock: 25,
   },
-];
+]
 ```
 
 - Listázd ki a gitárokat
@@ -47,43 +48,45 @@
 - Style bindingot használj
 
 ## 03 - style binding 2
+
 - Hozz lére egy color picker inputot
 - Valósítsd meg, hogy a color picker értéke változik, dinamikusan úgy változzon a teljes oldal háttérszíne
 - Az oldal töltse ki a screent
 - Tipp: Ne a body, vagy az #app háttérszínét módosítsd
 
 ## 04 - v-for and class binding
+
 - Adott webshop, mely hangszereket forgalmaz
 - Néhány ezek közül, melyeknek az adatait megkapod:
 
 ```js
-[
+;[
   {
     id: 1,
-    title: "Ibanez S6570SK-STB Prestige",
+    title: 'Ibanez S6570SK-STB Prestige',
     stock: 0,
   },
   {
     id: 2,
-    title: "Fender AM Ultra Luxe Strat MN PRB",
+    title: 'Fender AM Ultra Luxe Strat MN PRB',
     stock: 2,
   },
   {
     id: 3,
-    title: "FGN Expert Odyssey SBB",
+    title: 'FGN Expert Odyssey SBB',
     stock: 11,
   },
   {
     id: 4,
-    title: "Gibson SG Standard Reissue Cherry VOS",
+    title: 'Gibson SG Standard Reissue Cherry VOS',
     stock: 1,
   },
   {
     id: 5,
-    title: "Jackson SL2A MAH Pro Soloist UWH",
+    title: 'Jackson SL2A MAH Pro Soloist UWH',
     stock: 25,
   },
-];
+]
 ```
 
 - Listázd ki a gitárkat
@@ -92,6 +95,7 @@
 - Class bindingot használj
 
 ## 05 - watch and computed
+
 - Hozz létre egy formot
 - Ezen belül hozz létre két _number_ típusú input mezőt
 - Az egyik előtt egy `count` a másik előtt pedig `price` _label_ legyen

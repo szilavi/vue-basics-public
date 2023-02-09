@@ -6,12 +6,12 @@
 - usersAPI elkészítése
 
 ## Lépések
-- Létrehozok egy `utils` mappát 
+
+- Létrehozok egy `utils` mappát
 - **Megjegyzés**: Én az `src` mellett hoztam, de érdemes az `src`-n belül létrehozni
-- Ezen belül létrehozok egy `apiClient.js` fájlt 
+- Ezen belül létrehozok egy `apiClient.js` fájlt
 - HA nem telepítettük még, akkor telepítsük az `axios` csomagot: `npm i axios`
 - Ebben létrehozom az `axios` példányt:
-
 
 ```js
 import axios from 'axios'
@@ -48,5 +48,5 @@ export async function getUser() {
 - Az `urlFragment` változóba lementem a szerveren lévő útvonalat
 - Ez `users` lesz, hiszen itt érem el a felhasználókat
 - Egy függvényt hoztam létre a `getUser`t, ami lekéri a felhasználók adatait
-- `Megjegyzés`: a getUsers jobb elnevezés 
+- `Megjegyzés`: a `getUsers` jobb elnevezés
 - `axios` használatánál a válasz törzse mindig a `data`-n keresztül érhető el

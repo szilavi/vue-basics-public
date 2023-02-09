@@ -6,7 +6,7 @@
 
 ## Lépések
 
-- A `ref()`-et kiveséztük, nézzük meg ugyanígy a `reactive()`-et is
+- A `ref()`-et kiveséztük, nézzük meg ugyanígy a `reactive()`-ot is
 
 ```js
 const formData = reactive({

@@ -8,7 +8,7 @@
 
 - Az `App.vue`-ból szervezzük ki a videók kilistázását
 - Maga a lista a `VideosList` komponensen belül lesz
-- A `VideosList` komponens pedig nem másokat, mint VideoItem-eket fog tartalmazni.
+- A `VideosList` komponens pedig nem másokat, mint `VideoItem`-eket fog tartalmazni.
 - A `VideosList` komponens props-ként megkapja a videos tümböt
 - A template-en belül pedig a `VideoItem` komponensen magán használom a `v-for` direktívát
 - A `VideoItem` propsként mindig egy videót fog kapni

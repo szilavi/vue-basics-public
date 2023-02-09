@@ -23,4 +23,4 @@
   - nem adhatunk új értéket neki
   - nem kell kiírni a `value`t sem a JS, sem a HTML fájlban
 
-- A hivatalosan dokumentáció a `ref()`et primitívekhez ajánlja, míg a `ractive()`ot objektumokhoz, de vannak fejlesztők, akik a kód egységessége végett a `reactive()`ot egyáltalán nem használják
+- A hivatalosan dokumentáció a `ref()`-et primitívekhez ajánlja, míg a `ractive()`-et objektumokhoz, de vannak fejlesztők, akik a kód egységessége végett a `reactive()`-ot egyáltalán nem használják

@@ -1,14 +1,16 @@
 # Jegyzet
 
 ## Tartalom
+
 - A cart store
 - Gitár hozzáadása a kosárhoz
 
 ## Lépések
+
 - A kosár módosításához kell egy új store
 - A `store` mappán belül hozzuk létre a _cart.js_ fájlt
 - A `cart` egy reaktív változó lesz, ezt `readonly`vá teszem, hogy kívülről csak a függvények tudják módosítani
-- A `addItemToCart()` egy adott termékből x darabot a kosárba helyez 
+- A `addItemToCart()` egy adott termékből x darabot a kosárba helyez
 
 ```js
 import { ref, readonly } from 'vue'
@@ -29,7 +31,7 @@ export function useCartStore() {
 
 - Most módosítsuk a `CartButton` komponenst
 - Importáljuk a `useCartStore`t, ebből a `cart` és az `addItemToCart()`re lesz szükségünk
-- A `handleCartButtonClick` paraméterként kaja meg a gitárt - ne felejtsétek el a template-be átadni -  és hívja meg a `addItemToCart()`ot, átadva neki a gitárt és a darabszámot
+- A `handleCartButtonClick` paraméterként kaja meg a gitárt - ne felejtsétek el a template-be átadni - és hívja meg a `addItemToCart()`ot, átadva neki a gitárt és a darabszámot
 - Abban esetben, ha egy terméket beletettünk a kosárba a gomb felirata _Add to cart_-ról _Update cart_-ra kell, hogy változzon
 - Ehhez szükséges egy reaktív változó a `buttonText` melybe eltároljuk a kezdeti értéket, és módosítjuk, ha a terméket a kosárba helyeztük
 - A `buttonText` értékét kell a gomb felirataként megjeleníteni
@@ -81,5 +83,5 @@ function handleCartButtonClick(guitar) {
 - Ezért egy `v-if` direktívát helyezek el rajta
 
 ```html
-  <CartButton v-if="guitar.stock > 0" :guitar="guitar" />
+<CartButton v-if="guitar.stock > 0" :guitar="guitar" />
 ```

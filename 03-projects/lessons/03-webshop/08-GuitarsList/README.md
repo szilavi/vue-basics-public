@@ -1,9 +1,11 @@
 # Jegyzet
 
 ## Tartalom
+
 - A `GuitarsList` komponens
 
 ## Lépések
+
 - Hozzuk létre a _components_ mappán belül a `GuitarsList` komponenst
 - Ez nem mást fog tartalmazni, mit `GuitarItem`eket
 - A `GuitarItem` komponensen használom a `v-for` direktívát, így annyi `GuitarItem` komponensünk lesz, amennyi gitár van a kínálatban
@@ -29,7 +31,7 @@ onMounted(() => {
 </template>
 ```
 
-- Az App-ot lepucolom:
+- Az `App`-ot lepucolom:
 
 ```js
 <script setup>
@@ -42,3 +44,4 @@ import MainNavigation from './components/MainNavigation.vue'
     <router-view></router-view>
   </main>
 </template>
+```

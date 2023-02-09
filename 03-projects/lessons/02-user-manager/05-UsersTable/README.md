@@ -1,10 +1,11 @@
 # Jegyzet
 
 ## Tartalom
+
 - A UsersTable komponsens
 
-
 ## Lépések
+
 - Létrehozok egy új komponenst `UsersTable` névvel
 - Itt fel fogom használni a storeból a `users`t
 - Az `App`ból átmásolom a template-et
@@ -43,7 +44,7 @@ const { users } = useUserStore()
 <style scoped></style>
 ```
 
-- Az `App`on belül már csak a `fetchUsers`re van szükség, és a template helyett a `UsersTable` komponenst fogom használni, amit egy container osztályú div-be helyezek el
+- Az `App`on belül már csak a `fetchUsers`re van szükség, és a template helyett a `UsersTable` komponenst fogom használni, amit egy `container` osztályú div-be helyezek el
 
 ```js
 <script setup>
@@ -67,7 +68,4 @@ onMounted(async () => {
     <UsersTable />
   </div>
 </template>
-
-<style scoped></style>
-
 ```

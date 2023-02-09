@@ -1,9 +1,11 @@
 # Jegyzet
 
 ## Tartalom
+
 - A `CartButton` komponens script-je
 
 ## Lépések
+
 - A komponensnek propként meg kell kapnia a gitárt, melyet majd a kosárba akarunk tenni
 - A `count` reaktív változóba tárolom el, hogy hány darabot akarok a kosárba tenni/mennyi van most a termékből a kosárban
 - `handleDescreaseCountClick()` és a `handleIncreaseCountClick()` metódusok eggyel növelik/csökkentik a `count` értékét

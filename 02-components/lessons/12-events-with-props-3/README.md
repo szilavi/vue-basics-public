@@ -11,8 +11,8 @@
   - firstName
   - lastName
   - email
-- Ezeket helyezzük el egy `form`on belül
-- Legyen egy `reactive` `formData` változónk, amiben ezek az értékeket kerülnek
+- Ezeket helyezzük el egy formon belül
+- Legyen egy reaktív `formData` változónk, amiben ezek az értékeket kerülnek
 - Használjuk fel a `v-model`nél
 - Készítsünk egy küldés gombot, ami csak annyit tesz, hogy kilogolja az űrlap adatait JSON formátumban
 

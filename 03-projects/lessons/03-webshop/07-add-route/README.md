@@ -1,9 +1,11 @@
 # Jegyzet
 
 ## Tartalom
+
 - A `router-view` tesztelés linkekkel
 
 ## Lépések
+
 - Két oldalam lesz, így a routerben két view-ra, és két router bejegyzésre van szükség
 - A `view` mappán belül hozzunk létre egy új view-t
 
@@ -14,8 +16,8 @@
 </template>
 
 <style scoped></style>
-
 ```
+
 - És kell az új router bejegyzés is
 - Azokat a View komponenseket, amelyekre kezdetben nincs szükség, felesleges előre betölteni
 - Lehetőségünk van ezeket dinamikusan importálni:
@@ -32,7 +34,7 @@ routes: [
     name: 'cart',
     component: () => import('../views/CartView.vue'),
   },
-],  
+],
 ```
 
 - A `MainNavigation` komponensen belül hozzunk létre egy új listaelemet benne a `router-link`el:

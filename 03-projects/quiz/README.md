@@ -6,7 +6,7 @@
 
 ---
 
-2.  Válaszd ki, melyik lifecycle hookon belül érdemes az API hívásokat elindítani a kezdeti adatok elkéréshez!
+2.  Válaszd ki, a komponens melyik életciklusában érdemes az API hívásokat elindítani a kezdeti adatok elkéréshez!
     - unmounted
     - updated
     - beforeUpdate
@@ -22,15 +22,23 @@
 
 ---
 
-4. Válaszd ki, hogyan lehetséges egy reactive() függvénnyel létrehozott változóhoz új értéket rendelni!
-   - Ez sehogyan sem lehetséges, a ref()-et kell használni ilyen esetben a reactive() helyett
-   - Csak ki kell tenni az assignement (=) operátort, mint bármilyen változó esetében
-   - **Az Object.assign() metódussal megvalósítható**
-   - Az Object.create() metódussal megvalósítható
+4. Válaszd ki, mire használhatjuk a _readonly()_ proxyt!
+   - Kizárólag a _ref()_-el létrehozott változókat csak olvashatóvá tehetünk
+   - Kizárólag a _reactive()_-el létrehozott változót csak olvashatóvá tehetünk
+   - Bármilyen objektumot csak olvashatóvá tehetünk
+   - Egyik válasz sem igaz
 
 ---
 
-5. Válaszd ki, mire szolgál a router!
+5. Válaszd ki, hogyan lehetséges egy _reactive()_ függvénnyel létrehozott változóhoz új értéket rendelni!
+   - Ez sehogyan sem lehetséges, a _ref()_-et kell használni ilyen esetben a _reactive()_ helyett
+   - Csak ki kell tenni az assignement (=) operátort, mint bármilyen változó esetében
+   - **Az _Object.assign()_ metódussal megvalósítható**
+   - Az _Object.create()_ metódussal megvalósítható
+
+---
+
+6. Válaszd ki, mire szolgál a router!
    - Külső oldalakra történő navigáció megvalósítására
    - **Az oldalon belüli navigáció megvalósítására**
    - Az oldalon belüli és a külső oldalakra történő navigáció megvalósítására
@@ -38,7 +46,15 @@
 
 ---
 
-6. Válaszd ki, mire szolgál a view!
+7. Válaszd ki, melyik állítás igaz a nevesített útvonalakra!
+   - Ilyen esetben elég az útvonal helyett a router fájlban a nevet megadni, így nem is szükséges az útvonal
+   - **Nevesített útvonal esetében nem csak a _path_, hanem a _name_ is megadható a belső linkeknél**
+   - Az nevesített útvonal azt adja meg, hogy melyik _router-view_-ba töltődjön be a View komponens
+   - A nevesített útvonal csak speciális esetekben használható, ahol az útvonal egy külső fájlra mutat
+
+---
+
+8. Válaszd ki, mire szolgál a view!
    - **Egy "oldal" komponenseinek az összefogására szolgáló komponens**
    - A teljes alkalmazás komponenseinek az összefogására szolgáló komponens
    - Egy külső forrásból származó adat betöltésére szolgáló komponens
@@ -46,8 +62,16 @@
 
 ---
 
-7. Válaszd ki, miért célszerű az egyes View-kat dinamikusan betölteni!
+9. Válaszd ki, miért célszerű az egyes View-kat dinamikusan betölteni!
    - Csak így valósítható meg a routing, statikusan nem lehetséges a View-k betöltése
    - **Az alkalmazás elindulásakor így nem pazaroljuk az erőforrásokat**
-   - Mert csak ilyen esetben lehet nevesített routingot használi
+   - Mert csak ilyen esetben lehet nevesített routingot használni
    - A fentiek közül egyik sem igaz
+
+---
+
+10. Válaszd ki a Vue.js-re vonatkozó helyes állítást!
+    - A 
+    - asd
+    - as ad
+    - dsfdf

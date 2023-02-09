@@ -1,11 +1,13 @@
 # Jegyzet
 
 ## Tartalom
+
 - A felhasználó kiválasztása
 - A modal megnyitása
 - watch, mint getter és setter
 
 ## Lépések
+
 - Amikor rákattintok egy felhasználónál az edit gombra, akkor el kell menteni, melyik felhasználóról is van szó, és ezt a felhasználót kell átadni az `EditUserModal` komponensnek
 - Ehhez létrehozok egye reaktív változót `selectedUser` névvel, ami kezdetben egy üres object legyen
 - Valamint kell egy függvény, ami a `selectedUser` értékét módosítja a paraméterként kapott értékre
@@ -18,7 +20,7 @@ function handleSelectUser(user) {
 }
 ```
 
-- Ezt a függvényt fogom felhasználni a templaten belül
+- Ezt a függvényt fogom felhasználni a template-en belül
 - Hogy a modal meg is nyíljon a `data-bs-toggle` és a `data-bs-target`-et
 
 ```js
@@ -31,6 +33,7 @@ function handleSelectUser(user) {
     Edit
   </button>
 ```
+
 - Valamint a table alatt az `EditUserModal`-t is megadom, ami propként megkapja a `selectedUser`t
 
 ```js
@@ -46,5 +49,6 @@ watch(
   (value) => (userFormData.value = value)
 )
 ```
+
 - Az első paraméter egy getter a második a setter
 - Így ha a prop változik, a `userFormData` is fog

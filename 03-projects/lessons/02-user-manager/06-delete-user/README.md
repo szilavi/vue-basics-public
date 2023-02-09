@@ -7,6 +7,7 @@
 - Törlés megvalósítása a komponensen belül
 
 ## Lépések
+
 - A törléshez a `userAPI`t egészítsük ki:
 
 ```js
@@ -22,11 +23,12 @@ export default { getUsers, deleteUser }
 - importáljuk, majd hozzuk létre a `removeUser` függvényt, amit ne felejtsünk el megadni a return-nél is:
 
 ```js
- async function removeUser(id) {
-    await usersApi.deleteUser(id)
-    users.value = users.value.filter((user) => user.id !== id)
-  }
+async function removeUser(id) {
+  await usersApi.deleteUser(id)
+  users.value = users.value.filter((user) => user.id !== id)
+}
 ```
+
 - Ez a függvény meghívja az API-t, majd a `users` reaktív tömbből is törli a felhasználót
 - A `UsersTable` törlés gombjára kattintva kell meghívni ez a függvényt
 - Módosítsuk a template-et:
@@ -36,8 +38,9 @@ export default { getUsers, deleteUser }
     Delete
   </button>
 ```
+
 - A `handleDeleteClick` megkapja majd az adott user id-ját
-- Írjuk meg a függvény, a `removeUser`re is szükség lesz a storeból
+- Írjuk meg a függvény, a `removeUser`re is szükség lesz a store-ból
 - Törlés előtt kérjünk megerősítést a felhasználótól
 
 ```js
@@ -52,6 +55,7 @@ async function handleDeleteClick(id) {
   } catch (error) {
     alert('Can not remove user')
   }
-} 
-``` 
+}
+```
+
 - A delete gombra kattintva most már törölni tudjuk a felhasználót

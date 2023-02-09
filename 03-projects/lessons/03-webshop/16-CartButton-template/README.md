@@ -1,10 +1,12 @@
 # Jegyzet
 
 ## Tartalom
+
 - A `CartButton` komponens template-je
 
 ## Lépések
-- A `CartButton` komponens templateje 3 gombot tartalmaz
+
+- A `CartButton` komponens template-je 3 gombot tartalmaz
 - Ezen kívül még egy input mezőre lesz szükség, ahol megjeleni, hány darab terméket akarunk a kosárba tenni / mennyi termék van jelenleg a kosárban
 
 ```js

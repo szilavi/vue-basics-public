@@ -35,10 +35,10 @@
 - Ha a Youtube API működésére vagyunk kíváncsiak, akkor a [developers.google.com](developers.google.com) oldalon ezt meg tudjuk nézni.
 - A **Products**-ból válasszátok ki a **Youtube**-ot
 - Itt az **Add Youtube Data** alatt a **Reference**t.
-- A Search, list-re, azaz a keresett videók listájára van szükségem.
+- A **Search**, **list**-re, azaz a keresett videók listájára van szükségem.
 - Egyetlen egy dolgot használni fogok, az nem más, mint az \_axios_ami egy HTTP kliens.
 - Az _axios_ egyebek között abban is a segítségünkre van, hogy ne kelljen mindig, hogyha egy kérésre válasz érkezik, akkor meghívni a `json() ` metódust még külön és átalakítani a kapott adatokat, az _axios_ ezt automatikusan meg fogja csinálni.
-- Létrehozok egy objectet `defaultParams` návvel. Ez az object fogja tartalmazni azokat a paramétereket, amelyeket én itt a kérés során szeretnék elküldeni a szervernek.
+- Létrehozok egy objektumot `defaultParams` névvel. Ez az objektum fogja tartalmazni azokat a paramétereket, amelyeket én itt a kérés során szeretnék elküldeni a szervernek.
 
 ```js
 export const defaultParams = {
@@ -48,7 +48,7 @@ export const defaultParams = {
 }
 ```
 
-- Ezután az \_axios_ból egy instance-t, egy példányt fogok létrehozni a következő féleképpen:
+- Ezután az *axios*ból egy instance-t, egy példányt fogok létrehozni a következő féleképpen:
 
 ```js
 export const youtubeAPI = axios.create({
@@ -57,9 +57,9 @@ export const youtubeAPI = axios.create({
 ```
 
 - Ha kérést akarunk küldeni, akkor a `baseUrl`-re kell a kérést küldenünk.
-- Az axios valójában annyit csinál, hogy a _fetch API_-ra épülve egy nagyon szép és teljes HTTP klienset biztosít számunkra. Az axios egy `get`, `post`, `put`, `delete` stb metódusokat biztosít, amik elérhetőek, hasonlóan, mint a fetch esetében, csak nem optionsként fogom megadni, hanem mint method fogom őket elérni.
+- Az axios valójában annyit csinál, hogy a _fetch API_-ra épülve egy nagyon szép és teljes HTTP klienst biztosít számunkra. Az axios egy `get`, `post`, `put`, `delete` stb metódusokat biztosít, amik elérhetőek, hasonlóan, mint a fetch esetében, csak nem optionsként fogom megadni, hanem mint method fogom őket elérni.
 - Nézzünk meg, hogy egyáltalán tudunk-e kéréseket indítani a Youtube felé.
-- Az `App.vue`-ba importálni fogom a YoutubeAPI-t, és fel is fogom használni az onMounted hookban.
+- Az _App.vue_-ba importálni fogom a `YoutubeAPI`-t, és fel is fogom használni az `onMounted` hookban.
 
 ```js
 <script setup>
@@ -78,7 +78,7 @@ onMounted(async () => {
 </script>
 ```
 
-- Egy get kérést indítok, aaz alapértelmezett URL-het a `search` lesz hozzáfűzve.
+- Egy get kérést indítok, az alapértelmezett URL-hez a `search` lesz hozzáfűzve.
 - Az option object egy params objektumot kap paraméterként.
 - Itt az alapértelmezett paramétereket adom meg, melyeket szintén importáltam, valamint a `q` paramétert, ami a keresőszót tartalmazza.
 - Kiiratom konzolra a választ, amit a `data`-n keresztül érek el.

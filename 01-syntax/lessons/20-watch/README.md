@@ -6,7 +6,7 @@
 
 ## Lépések
 
-- A _computed property_ esetében a side effect kerülendő, de még is van, hogy szükség lenne rá, akár egy változó mósoítására, vagy egy aszinkron hívásra
+- A _computed property_ esetében a side effect kerülendő, de még is van, hogy szükség lenne rá, akár egy változó módosítására, vagy egy aszinkron hívásra
 - A Vue ilyen esetben a *watcher*t azaz a `watch()` függvényt használja
 - A `watch()` segítségével figyelhetjük, ha egy változó értéke módosul, és ilyenkor meghívunk egy függvényt
 - Az alap szintaktika az alábbi kódban látható:
@@ -56,7 +56,7 @@ app.mount('#app')
 - A `watch`ot szintén kiemeltem a Vue objektumból
 - Felvettem egy `money` változót, ez reprezentálja a pénzünket
 - Felvettem egy `errorMessage` változót is, ez tartalmazza a hibaüzenetet, ha túl sokat költenénk
-- A `watch()` függvény első paramétere a változó (vagy tömbszerűen megadva, akár több is), aminek a módosulását figyelni akarom, a második pedig egy callback, ami lefut ebben az esetben
+- A `watch()` függvény első paramétere a változó (vagy tömb szerűen megadva, akár több is), aminek a módosulását figyelni akarom, a második pedig egy callback, ami lefut ebben az esetben
 - Ha a `price` értéke módosul, lefut a callback
 - Ha a `price` értéke nagyobb volt, mint a `money` akkor a hibaüzenet értéke beállításra kerül
 - A HTML kód:

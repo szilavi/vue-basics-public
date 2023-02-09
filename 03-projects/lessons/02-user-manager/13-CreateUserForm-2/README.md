@@ -1,9 +1,11 @@
 # Jegyzet
 
 ## Tartalom
+
 - Űrlapelemek formázása
 
 ## Lépések
+
 - Formázzuk az input űrlapelemeket
 - Amennyiben valid lesz, a keret legyen zöld, ha fókuszba kerül, akkor a `box-shadow` is legyen zöld
 - Amennyiben invalid lesz, a keret legyen piros, ha fókuszba kerül, akkor a `box-shadow` is legyen piros
@@ -28,7 +30,6 @@ input:focus:invalid {
 input:focus:valid {
   box-shadow: 0 0 0 0.25rem rgba(0, 255, 0 0.25);
 }
-
 ```
 
 - Így már csak ezt a fájlt kell a `main.js`-be importálni

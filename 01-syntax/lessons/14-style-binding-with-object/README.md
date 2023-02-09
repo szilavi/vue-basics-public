@@ -66,7 +66,7 @@ const app = Vue.createApp({
 app.mount('#app')
 ```
 
-- Ebben az esetben a kapcsoszárójelek között vesszővel elválasztva több css tulajdonság nevét és értékként egy javascript objektum tulajdonság az értékét rendeljük egymáshoz
+- Ebben az esetben a kapcsoszárójelek között vesszővel elválasztva több css tulajdonság nevét és értékként egy JavaScript objektum tulajdonság az értékét rendeljük egymáshoz
 
 ```html
 <div id="app">
@@ -96,7 +96,7 @@ app.mount('#app')
 
 - Amit még észrevehető, hogy a `font-size` nem kebab-case van írva, hanem camelCase
 - Vue esetében ez az ajánlott elnevezési konvenció
-- Ilyen esetben, amikor egy objektum összes tulajdonságát meg akarjuk feleltetni egy-egy css tulajdosnágnak lehetőség van egy egyszerűbb megadási módra:
+- Ilyen esetben, amikor egy objektum összes tulajdonságát meg akarjuk feleltetni egy-egy css tulajdonságnak lehetőség van egy egyszerűbb megadási módra:
 
 ```html
 <div id="app">

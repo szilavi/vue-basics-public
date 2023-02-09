@@ -30,7 +30,7 @@ const app = Vue.createApp({
 app.mount('#app')
 ```
 
-- Az `index.html`-be írjuk ki a `framework` objektum összes kulcsát, és kettősponttal utána az értékét
+- Az _index.html_-be írjuk ki a `framework` objektum összes kulcsát, és kettősponttal utána az értékét
 - Mindegyik kulcs érték pár egy listaelem legyen:
 
 ```html

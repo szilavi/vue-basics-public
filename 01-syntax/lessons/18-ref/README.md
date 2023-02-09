@@ -69,11 +69,11 @@ app.mount('#app')
 - Tehát a függvények működnek, a JavaScripten belüli változások nem lesznek kihatással a DOM-ra
 - A Vue a változókat nyomon tudja követni (de nekünk kell gondoskodni arról melyikeket), és ha módosul bármelyiknek az értéke, akkor minden egyes helyen, ahol erre a változóra hivatkozva van, szintén frissüljön az adat, frissüljön a DOM. Ez adja magát a reaktivitást.
 - Amennyiben olyan primitív változót akarunk létrehozni, melynek a változásait a Vue nyomon követi, a `ref` speciális attribútumot kell használnunk
-- A `ref`-nek paraméterként megadható a kezdőérték, hasonlóan, mint egy változó létrehozásánál az értékadás
-- A `ref` egy objektummal tér vissza, amely egy tulajdonságot tartalmaz: `value`
+- A `ref()`-nek paraméterként megadható a kezdőérték, hasonlóan, mint egy változó létrehozásánál az értékadás
+- A `ref()` egy objektummal tér vissza, amely egy tulajdonságot tartalmaz: `value`
 - A példában lévő `counter` egy reaktív, mutálható változó lesz, melynek változását a Vue nyomon követi
 - A `counter` értékét mindig a `value` tulajdonságon keresztül érjük el a JavaScript kódon belül
-- A `ref` a `createApp`-hoz hasonlóan a Vue objektumon keresztül érhető el, ezért, hogy ne kelljen kiírni, hogy Vue, átstruktúrálást használva kimentem külön változóba őket
+- A `ref()` a `createApp`-hoz hasonlóan a Vue objektumon keresztül érhető el, ezért, hogy ne kelljen kiírni, hogy Vue, átstruktúrálást használva kimentem külön változóba őket
 - Ezen kívül készítek két függvényt: `increaseCounter()`, `decreaseCounter()`, melyek semmi mást nem tesznek, mint a `counter` változó értékét növelik és csökkentik eggyel
 - Mind a `counter`t, mind a függvényeket megadom a visszatérési értéknél:
 

@@ -1,9 +1,11 @@
 # Jegyzet
 
 ## Tartalom
+
 - Az `AppTitle` komponens elkészítése
 
 ## Lépések
+
 - Az alkalmazás tetején egy formázott címsornak kell megjelennie
 - Ehhez hozzunk létre egy `AppTitle` nevű komponenst
 
@@ -13,7 +15,6 @@
     User manager application
   </h1>
 </template>
-
 ```
 
 - Használjuk fel az `App`on belül:

@@ -9,7 +9,7 @@
 
 - Amikor rákattintunk egy videóra, vagy amikor rajta van a fókusz és lenyomjuk az enter billentyűt, be kell töltődnie a bal oldalra
 - Ehhez tudnunk kell, melyik videó van kiválasztva, és ezt a kiválasztott videót kell a `VideoDetails` komponensnek megkapnia
-- Ami eddig kimarad, hogy ahhoz, hogy a videó fókuszálható legyen, még a tabindexet is meg kell adnunk a `VideoItem`-en:
+- Ami eddig kimarad, hogy ahhoz, hogy a videó fókuszálható legyen, még a `tabindex`et is meg kell adnunk a `VideoItem`-en:
 
 ```js
 <div

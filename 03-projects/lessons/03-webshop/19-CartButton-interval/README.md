@@ -1,9 +1,11 @@
 # Jegyzet
 
 ## Tartalom
+
 - Kosárba helyezhető termékek darabszám intervallumának megadása
 
 ## Lépések
+
 - Nem szabad engedni, hogy a darabszám 0 alá menjen
 - Nem szabad engedni, hogy a darabszám a készleten lévő darabszám fölé menjen
 - Ezt egy `watch` segítségével be tudom szabályozni:

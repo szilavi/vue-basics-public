@@ -1,10 +1,12 @@
 # Jegyzet
 
 ## Tartalom
+
 - A `GuitarStock` komponens
 
 ## Lépések
-- A GuitarStock komponens 
+
+- A `GuitarStock` komponens
   - piros színnel kiírja: _Out of stock_ ha a termék nincs raktáron
   - narancs színnel kiírja: _Last chance, only X left_ ha 3nál kevesebb van raktáron
   - zöld színnel kiírja: _In stock_ ha 3nál több van raktáron
@@ -37,6 +39,7 @@ defineProps({
 ```
 
 - A megfelelő színekhez és 3 classt létrehozok a _main.css_ fájlban:
+
 ```css
 .text-red {
   color: var(--red);
@@ -55,9 +58,9 @@ defineProps({
 
 ```html
 <style scoped>
-.guitar__rating {
-  margin: 0 0 0.5rem 0;
-}
+  .guitar__rating {
+    margin: 0 0 0.5rem 0;
+  }
 </style>
 ```
 

@@ -63,7 +63,7 @@ label {
 </style>
 ```
 
-- Ennek megfelelően alakítsuk át az `App.vue`t is:
+- Ennek megfelelően alakítsuk át az *App.vue*t is:
 
 ```js
 <script setup>

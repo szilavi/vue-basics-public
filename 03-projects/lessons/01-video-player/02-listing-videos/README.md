@@ -29,7 +29,7 @@ async function searchVideos(query) {
 onMounted(() => searchVideos('vuejs'))
 ```
 
-Elkészítem a templatet is, hogy a DOM-ba is bele legyenek írva videók:
+Elkészítem a template-et is, hogy a DOM-ba is bele legyenek írva videók:
 
 ```html
 <header>

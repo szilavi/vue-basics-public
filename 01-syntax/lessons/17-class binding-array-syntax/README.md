@@ -28,5 +28,5 @@
 
 - A class attribútum és benne a stock átkerül a *class binding*hoz
 - A *class binding*ál szögletes és nem kapcsos zárójelet használok
-- Az első osztály amit megadok az a 'stock'
+- Az első osztály amit megadok az a stock
 - Ezután használok egy ternary operátoré s a feltételtől függően az `out-of-stock` vagy az `in-stock` osztály is belekerül a *classList*be

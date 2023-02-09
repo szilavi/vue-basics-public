@@ -33,7 +33,7 @@ app.mount('#app')
 </div>
 ```
 
-- Ha megnézzük böngészőben, akkor látható, hogy a `span` nem került parse-olásra le, egyszerű szövegként jelenik meg
+- Ha megnézzük böngészőben, akkor látható, hogy a `span` nem került parse-olásra, egyszerű szövegként jelenik meg
 - Ha szeretnénk magát a html tartalmat lerenderelni, akkor nem a text interpolation szintaxisát használjuk, hanem a _v-html_ attribútumot
 - Ehhez módosítsuk a kódot:
 
@@ -43,7 +43,7 @@ app.mount('#app')
 </div>
 ```
 
-- A `v-html` attribútomot direktívának nevezzük
+- A `v-html` attribútumot direktívának nevezzük
 - A direktívák olyan speciális html attribútumok, melyek a keretrendszer számára értelmezhető utasításokat írnak le
 - Látható, hogy nem text interpolationt használtam, hanem a `h1` tag-nek megadtam a `v-html` direktívát
 - A `v-html`nek értéknek adtam a `title` változót

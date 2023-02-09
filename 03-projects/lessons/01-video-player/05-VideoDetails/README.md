@@ -2,7 +2,7 @@
 
 ## Tartalom
 
-- A `VideoDetails` komponens 
+- A `VideoDetails` komponens
 
 ## Lépések
 

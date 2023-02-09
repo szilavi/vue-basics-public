@@ -1,13 +1,15 @@
 # Jegyzet
 
 ## Tartalom
+
 - A `MainNavigation` komponens
 - Belső navigáció: `router-link`
 
 ## Lépések
+
 - Készítsünk egy új komponenst `MainNavigation` névvel
 - Itt készítjük el az oldal belső navigációját
-- Amennyiben nem külső oldalra készítünk hivatkozást, nem az `a` tag-et, hanem a `router-link`-et használjuk, amit a `vue-router`biztosít 
+- Amennyiben nem külső oldalra készítünk hivatkozást, nem az `a` tag-et, hanem a `router-link`-et használjuk, amit a `vue-router`biztosít
 - A router-link esetében megadhatjuk a hivatkozást akár a router fájlban definiált `path`re, de célszerűbb helyett a `name`re hivatkozni:
 
 ```js
@@ -25,7 +27,7 @@
 </template>
 ```
 
-- A _main.css_ fájlban létrehozok néhány változót a színeknek 
+- A _main.css_ fájlban létrehozok néhány változót a színeknek
 - Majd megírom a komponens stílusát
 
 ```css

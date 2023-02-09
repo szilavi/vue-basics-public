@@ -6,7 +6,7 @@
 
 ---
 
-2. Válaszd ki, melyik állítás igaz az App.vue állományra!
+2. Válaszd ki, melyik állítás igaz az _App.vue_ állományra!
 
 - Az alkalmazás létrehozásának és a DOM-ba való betöltésére szolgáló kódot tartalmazza.
 - Az a html template, melybe az alkalmazás be fog töltődni.
@@ -42,7 +42,7 @@
 6. Válaszd ki, hogyan lehetséges a props adatok elérése a scripten belül!
    - Sehogy sem lehetséges
    - Egyszerűen csak a prop nevét kell használni, ugyanúgy, mint a templatben
-   - Előbb egy reactive változót kell készíteni belőle a ref() vagy a reactive() segítségéve, és csak ezután lehetséges a scriptben felhasználni
+   - Előbb egy reaktív változót kell készíteni belőle a _ref()_ vagy a _reactive()_ segítségéve, és csak ezután lehetséges a scriptben felhasználni
    - **Elég egy változóhoz hozzárendelni (pl.:props) és ezen keresztül már elérhetjük**
 
 ---
@@ -57,14 +57,14 @@
 
 8. Válaszd ki az eventsekre vonatkozó **hamis** állítást!
 
-- A defineEmits() függvényen belül sorolom fel, milyen egyedi eseményeket akarok használni
+- A _defineEmits()_ függvényen belül sorolom fel, milyen egyedi eseményeket akarok használni
 - Kaphat paramétert
-- Egy komponensen a v-model az update:modelValue eseményt használja alapértelmezetten a frissítésnél
+- Egy komponensen a _v-model_ az _update:modelValue_ eseményt használja alapértelmezetten a frissítésnél
 - **Egy komponens maximum egy egyedi eseményt bocsájthat ki**
 
 ---
 
-1.  Válaszd ki, melyik nem egy Vue.js lifecycle hook!
+9.  Válaszd ki, melyik nem egy Vue.js lifecycle hook!
     - unmounted
     - **destroyed**
     - beforeUpdate

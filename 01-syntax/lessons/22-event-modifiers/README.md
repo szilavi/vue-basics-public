@@ -58,7 +58,7 @@ app.mount('#app')
 
 - A `handleSubmit()` megkapja paraméterként a `$event`et, ez a speciális változó tartalmazza az event objektumot
 - Rendezzük az űrlapelemeket középre, egymás alá
-- Hozzunk létre egy CSS fájlt `style.css` névvel és linkeljük is be:
+- Hozzunk létre egy CSS fájlt _style.css_ névvel és linkeljük is be:
 
 ```css
 form {
@@ -77,7 +77,7 @@ label {
 ```
 
 - Ha kitöltjük az űrlapot és a küldés gombra kattintunk, a konzolon megjelenik a két mező neve, és értéke
-- A `preventDefault()`ra azért volt szükség, hogy küldés után ne töltődjön újra az oldal
+- A `preventDefault()`-ra azért volt szükség, hogy küldés után ne töltődjön újra az oldal
 - Ez utóbbira azonban van egy szebb megoldás
 - A Vue úgynevezett `event modifier`-öket is definiál, melyek közül az egyik a `prevent`
 - A módosított HTML kódban látható, hogy a submit után ponttal megadtam a módosítót:

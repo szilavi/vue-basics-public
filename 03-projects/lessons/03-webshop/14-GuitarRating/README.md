@@ -1,9 +1,11 @@
 # Jegyzet
 
 ## Tartalom
+
 - A `GuitarsRating` komponens
 
 ## Lépések
+
 - A gitárok értékelése egy 1-5 közötti egész szám
 - Annyi tele csillagot kell megjeleníteni amennyi az értékelés
 - Ha 5-nél kevesebb, akkor üres csillagokkal kall feltölteni a helyeket, hogy pontosan 5 darab csillag legyen
@@ -55,4 +57,4 @@ const ratingStars = computed(
   <GuitarRating :rating="guitar.rating" />
   <GuitarStock :stock="guitar.stock" />
 </div>
-``` 
+```

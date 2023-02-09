@@ -8,10 +8,10 @@
 
 - Hozzunk létre a maradék két komponenst:
 
-  - `SiteContent.vue`
-  - `SiteFooter.vue`
+  - _SiteContent.vue_
+  - _SiteFooter.vue_
 
-- A `SiteContent.vue` fájl tartalma:
+- A _SiteContent.vue_ fájl tartalma:
 
 ```js
 <template>
@@ -25,7 +25,7 @@ main {
 </style>
 ```
 
-- A `SiteFooter.vue` fájl tartalma:
+- A _SiteFooter.vue_ fájl tartalma:
 
 ```js
 <template>
@@ -61,5 +61,6 @@ import SiteContent from './components/SiteContent.vue'
 - Futtassuk a `dev` scriptet, és nézzük meg böngészőben az alkalmazást
 - A `dev` scriptet futtatva nagyon gyorsan elindul az alkalmazás,
 - Ha bármelyik komponenst módosítjuk, akkor a - Hot Module Reload, melyet a Vite biztosít - nem fogja a teljes oldalt frissíteni a böngészőben, csak azt a modult, azt a részt frissíti, amelyik módosult.
-- A `dev` módben az alkalmazásból, a böngésző számára értelmezhető kód nem kerül fájlszinten kiírásra, ezt a Vite a memóriában tartja
-- A fájlok ilyenkor nem lesznek optimalizálva, minifyolva
+- A Vue valójában egy úgynevezett Virtual DOM-ot használ. Ez hasonló, mint a hagyományos DOM. A különbség az, hogy a Vue a memóriában egy objektumban tárolja a alkalmazáson belül használt elemeket. Figyeli a komponensek állapotának változásait. Ha egy komponens állapota megváltozik, a Vue.js létrehoz egy második virtuális DOM-ot, amely tartalmazza a frissített adatokat. Aztán a Vue.js összehasonlítja a két virtuális DOM-ot, és kiszámítja a szükséges változtatásokat, majd frissíti a virtuális, aztán a valódi DOM-ot.
+- A `dev` módban az alkalmazásból, a böngésző számára értelmezhető kód nem kerül fájlszinten kiírásra, ezt a Vite a memóriában tartja
+- A fájlok ilyenkor nem lesznek optimalizálva, minify-olva

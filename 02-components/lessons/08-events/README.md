@@ -9,7 +9,7 @@
 - Amennyiben nem a szülőből szeretnénk a gyermeknek adatot átadni, hanem a gyermekből a szülőnek, azt egyedi események létrehozásával tudjuk megtenni
 - A gyermekben egyedi eseményeket definiálunk, melyek bekövetkezésétől a szülő értesül, és lefuttathatja a szükséges kódot
 - Hozzunk létre egy új alkalmazást
-- A `assets` mappából csak a main.css-t tartsuk meg az alábbi tartalommal:
+- A _assets_ mappából csak a _main.css_-t tartsuk meg az alábbi tartalommal:
 
 ```css
 body {
@@ -36,9 +36,9 @@ defineEmits(['on-focus'])
 ```
 
 - Van egy `defineEmits()` compiler-macro, mely egy tömb paramétert vár, melyben felsorolhatjuk a komponensünk által kibocsájtott egyedi eseményeket
-- Ezután az inputon belül felvesszük a `@click` eseményfigyelőt, tehát amikor belekattintunk az űrlapelembe, akkor kibocsájtja az egyedi `on-focus`eseményt, melyről a szülő értesül
+- Ezután az inputon belül felvesszük a `@click` eseményfigyelőt, tehát amikor belekattintunk az űrlapelembe, akkor kibocsájtja az egyedi `on-focus` eseményt, melyről a szülő értesül
 - Az esemény neve bármi lehetne, kebabCase névmegadást használunk
-- Az `App.vue` kódja legyen a következő:
+- Az _App.vue_ kódja legyen a következő:
 
 ```js
 <script setup>
@@ -55,4 +55,4 @@ function alertMessage() {
 ```
 
 - A szülőben felhasználom az `InputField` komponenst
-- Amikor bekövetkezik az egyedi `on-focus` esemény, meghívom az itt - azaz a szülőben - definiált`alertMessage` függvényt
+- Amikor bekövetkezik az egyedi `on-focus` esemény, meghívom az itt - azaz a szülőben - definiált `alertMessage` függvényt

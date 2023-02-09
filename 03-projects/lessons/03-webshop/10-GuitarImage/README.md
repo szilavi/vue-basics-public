@@ -1,9 +1,11 @@
 # Jegyzet
 
 ## Tartalom
+
 - A `GuitarsImage` komponens
 
 ## Lépések
+
 - Módosítsuk még a `GuitarItem` kinézetét
 - A _main.css_ fájlban létrehozok két classt:
 

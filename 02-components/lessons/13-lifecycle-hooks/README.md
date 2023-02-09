@@ -2,6 +2,7 @@
 
 ## Tartalom
 
+- A Vue.js komponensek életciklusa
 - Lifecycle hookok
 
 ## Lépések
@@ -32,7 +33,7 @@
 - Hozzunk létre egy `AppTitle` komponenst
 - Mindössze egy `title` reaktív változónk legyen
 - A Vue API az adott életciklusokhoz egy-egy függvényt is biztosít
-- Elsőként az `onBeforeMount`, és az `onMounted` `hook`okat nézzük meg
+- Elsőként az `onBeforeMount`, és az `onMounted` hookokat nézzük meg
 
 ```js
 <script setup>
@@ -82,7 +83,7 @@ setTimeout(() => (title.value = 'New title'), 3000)
 - Importáljuk az `onUnmounted` és az `onUpdated()` függvényeket
 - Ha egy komponenst a `v-if` direktívához kötötten jelenítünk, vagy rejtünk el, akkor belekerül, avagy kikerül a DOM-ból, azaz `mounted`, vagy `unmounted` lesz
 - Egészítsük ki az `App`ot, egy `isTitleVisible` változóval, melynek értékéhez kötjük az `AppTitle` komponens megjelenítését
-- Egy `setTimeout()`tal ennek az érétkét is módosítsuk
+- Egy `setTimeout()`-tal ennek az érétkét is módosítsuk
 
 ```js
 <script setup>

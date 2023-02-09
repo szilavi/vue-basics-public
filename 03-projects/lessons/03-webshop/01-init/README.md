@@ -1,11 +1,13 @@
 # Jegyzet
 
 ## Tartalom
+
 - Alkalmazás inicializálása
 - Router
 - View
 
 ## Lépések
+
 - Inicializáljunk egy új Vue alkalmazást _webshop_ névvel, most a router-t is válasszuk ki a telepítés során
 - Telepítsük a függőségeket, konfiguráljuk az eslint-et, és a prettiert
 - Töröljük a felesleges állományokat

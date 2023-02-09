@@ -1,9 +1,11 @@
 # Jegyzet
 
 ## Tartalom
+
 - Az EditUserModal komponens elkészítése
 
 ## Lépések
+
 - Hozzunk létre egy új komponenst `EditUserModal` névvel
 - Itt fel fogjuk használni a bootstrap modal komponensét
 
@@ -82,6 +84,7 @@ async function handleSaveButtonClick() {
 }
 </script>
 ```
+
 - A propként kapott userről készítek egy reaktív másolatot
 - Ezt már bármikor módosíthatom
 - HA a módosítás sikeres lesz akkor be kell zárni a modalt, így egy template ref-be elmentem a bezárás gombot, így manuálisan ki fogom tudni váltani a click eseményt

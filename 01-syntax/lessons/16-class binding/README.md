@@ -8,7 +8,7 @@
 
 - Egyszerűsítsük az alkalmazást annyival, hogy minden esetben kiírja, hány darab gitár van készleten, azonban a 0, akkor az `out-of-stock` ha nullánál több, akkor az `in-stock` osztályt helyezzük el rajta
 - Ehhez a *class binding*ot Használjuk
-- A *class binding* hasonló, mint az egyszerű _attribute binding_
+- A _class binding_ hasonló, mint az egyszerű _attribute binding_
 - A példa kedvéért a CSS fájl legyen a következő:
 
 ```css
@@ -41,7 +41,7 @@
 </div>
 ```
 
-- A `span` tagre minden esetben rákerül a `stock` class
+- A `span` tag-re minden esetben rákerül a `stock` class
 - Majd a class bindingnál - itt is látható a kettőspont - kapcsoszárójelek között megadom, hogy kerüljön rá az `out-of-stock` class, ha 0-nál több termék van raktáron
 - Azok a termékeknek a mennyisége, amik nincsenek raktáron, pirossal fog megjelenni
 - Amennyiben szeretnénk, hogy a raktáron lévő termékek megkapják az `in-stock` classt, és zöld színnel jelenjenek meg, tegyük a következőt:

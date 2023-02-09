@@ -7,9 +7,9 @@
 ## Lépések
 
 - Hozzuk létre az első saját komponensünket az alábbi névvel:
-  - `MainNavigation.vue`
+  - _MainNavigation.vue_
 - Alapértelmezés szerint a komponensek nevei legalább két szóból álljanak
-- A Single File Component-ek az alábbi 3 fő részt tartalmazhatják:
+- A _Single File Component_-ek az alábbi 3 fő részt tartalmazhatják:
 
   - <script setup></script>: Az komponens js/Vue.js kódja
   - <tamplate></tamplate>: A komponens html kódja
@@ -18,9 +18,8 @@
 - A `vbase-3-setup` code snippet segítségével le tudjuk generálni az SFC kiinduló kódját
 - A kiinduló kódban a `template` és `script` helyzetét cseréljük fel
 - Míg a Vue.js v2 esetében a `template` volt felül, addig Vue.js v3-ban a scriptet helyezzük konvenció szerint felülre, igaz a sorrend az alkalmazás működését nem befolyásolja
--
 
-- A `MainNavigation.vue` fájl tartalma:
+- A _MainNavigation.vue_ fájl tartalma:
 
 ```js
 <template>
@@ -79,4 +78,4 @@ import MainNavigation from './components/MainNavigation.vue'
 ```
 
 - Futtassuk a `dev` scriptet, és nézzük meg böngészőben az alkalmazást
-- A tartalmat helyezzük középre, adjuk meg a main.css-ben a `position: relative;` beállítást az `#app`-nak
+- A tartalmat helyezzük középre, adjuk meg a main.css-ben a `position: relative;` beállítást az `#app`-nek
