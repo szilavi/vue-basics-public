@@ -25,7 +25,7 @@
 4. Válaszd ki, mire használhatjuk a _readonly()_ proxyt!
    - Kizárólag a _ref()_-el létrehozott változókat csak olvashatóvá tehetünk
    - Kizárólag a _reactive()_-el létrehozott változót csak olvashatóvá tehetünk
-   - Bármilyen objektumot csak olvashatóvá tehetünk
+   - **Bármilyen objektumot csak olvashatóvá tehetünk**
    - Egyik válasz sem igaz
 
 ---
@@ -71,7 +71,7 @@
 ---
 
 10. Válaszd ki a Vue.js-re vonatkozó helyes állítást!
-    - A 
-    - asd
-    - as ad
-    - dsfdf
+    - Buildelés során egy webszerverre feltöltésre kerülnek a legenerált fájlok
+    - A _preview_ script a megadott domain-en lévő kipublikált alkalmazást nyitja meg böngészőben
+    - A build folyamat során a egy új, _dist_ mappába kerülnek az optimalizálatlan fájlok
+    - **A _dev_ script futtatáskor nem kerülnek a lemezre kiírásra a fájlok**

@@ -15,9 +15,9 @@
 ---
 
 3. Válaszd ki az alábbi kódrészletek közül melyik helytelen szintaktikailag Vue.js-ben!
-   - <li v-for="framework in frameworks" :key="${framework.id}">
-   - <li v-for="(framework, index) in frameworks" :key="`framework-${index}`">
-   - <li v-for="{ id, name } in frameworks" :key="id">
+   - `<li v-for="framework in frameworks" :key="${framework.id}">`
+   - `<li v-for="(framework, index) in frameworks" :key="`framework-${index}`">`
+   - `<li v-for="{ id, name } in frameworks" :key="id">`
    - **Mindegyik helyes**
 
 ---

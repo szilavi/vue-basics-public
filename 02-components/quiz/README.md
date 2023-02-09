@@ -72,7 +72,7 @@
 
 ---
 
-10. Válaszd ki, melyik lifecycle hookon belül érdemes az API hívásokat elindítani!
+10. Válaszd ki, melyik életcikluson belül érdemes az API hívásokat elindítani!
     - unmounted
     - updated
     - beforeUpdate
