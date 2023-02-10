@@ -2,7 +2,7 @@
 
 ## Tartalom
 
-- A `reactive()` függvény
+- A template ref
 
 ## Lépések
 
