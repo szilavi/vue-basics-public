@@ -1,6 +1,5 @@
 # A Vue.js alapjai
 
-
 ## Szintaxis
 
 - [A fejlesztőkörnyezet beállítása](01-syntax/lessons/00-settings/)
@@ -110,7 +109,4 @@
 - [A ShoppingCart komponens elkészítése](03-projects/lessons/03-webshop/23-ShoppingCart/)
 - [A ShoppingCart formázása](03-projects/lessons/03-webshop/24-Finalize/)
 - [A felhasználói értesítések megvalósítása kosárba helyezéskor](03-projects/lessons/03-webshop/25)
-
 - [Feladatok](03-projects/exercises/)
-
-
