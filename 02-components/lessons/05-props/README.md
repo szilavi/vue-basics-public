@@ -40,11 +40,11 @@ defineProps({
 
 - Ezután a `MainNavigation` komponens első listaelemének kódját kell kicserélni a következőre:
 
-  ```js
-  <li>
-    <a href="/">{{ title }}</a>
-  </li>
-  ```
+```html
+<li>
+  <a href="/">{{ title }}</a>
+</li>
+```
 
 - A compiler futásidőben validálni fogja a props értékeket
 - Ahhoz, hogy mindig kötelező legyen a `required` megadása, a `.eslintrs.cjs` fájt módosítsuk
