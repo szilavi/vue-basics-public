@@ -17,11 +17,11 @@
   - JavaScript (ES6) code snippets
   - Vue Language Features (Volar)
 
-- Nyissuk meg a VSCode felhasználói beállításainak JSON fájlját
+- Nyissuk meg a VSCode felhasználói beállításainak JSON-fájlját
 
   - F1 (vagy Fn + F1 gyorsbillentyű)
-  - Kezdjük el beírni : _Preferencies Open User settings (JSON)_
-  - A JSON fájl tartalma nálam a következő:
+  - Kezdjük el beírni: _Preferences: Open User settings (JSON)_
+  - A JSON-fájl tartalma nálam a következő:
 
   ```json
   {
@@ -50,5 +50,5 @@
 - Nyissuk meg a VSCode-ot, majd a Beállításokat
   - A Prettier Semi opció ne legyen bepipálva
   - A Prettier Single Quote legyen bepipálva
-- Ezután telepítsük a Chrome (vagy valamilyen Chromium alapú böngésző alá):
+- Ezután telepítsük a Chrome (vagy valamilyen Chromium-alapú böngésző alá) a 
   [Vue.js devtool](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)t

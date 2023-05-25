@@ -8,7 +8,7 @@
 
 - A komponensnek propként meg kell kapnia a gitárt, melyet majd a kosárba akarunk tenni
 - A `count` reaktív változóba tárolom el, hogy hány darabot akarok a kosárba tenni/mennyi van most a termékből a kosárban
-- `handleDescreaseCountClick()` és a `handleIncreaseCountClick()` metódusok eggyel növelik/csökkentik a `count` értékét
+- `handleDecreaseCountClick()` és a `handleIncreaseCountClick()` metódusok eggyel növelik/csökkentik a `count` értékét
 - A `handleCartButtonClick()` a terméket a kosárba helyezi/frissíti a kosarat
 
 ```js
@@ -24,7 +24,7 @@ defineProps({
 
 const count = ref(0)
 
-function handleDescreaseCountClick() {
+function handleDecreaseCountClick() {
   count.value -= 1
 }
 
@@ -40,7 +40,7 @@ function handleCartButtonClick() {}
 ```html
 <template>
   <div class="cart">
-    <button @click="handleDescreaseCountClick">-</button>
+    <button @click="handleDecreaseCountClick">-</button>
     <input v-model="count" type="text" />
     <button @click="handleIncreaseCountClick">+</button>
     <button class="add-to-cart" @click="handleCartButtonClick">
