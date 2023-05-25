@@ -45,7 +45,7 @@ app.mount('#app')
 </div>
 ```
 
-- Az első alias továbbra is egy objektumot fog tartalmazni, azonban megadható egy második is, ami egy automatikusan generált, 0-tól induló egész szám
+- Az első alias továbbra is egy objektumot fog tartalmazni, azonban megadható egy második is, amely egy automatikusan generált, 0-tól induló egész szám
 - Így az előző megoldással ekvivalens lesz a megoldásunk
 - Természetesen az `index` helyett bármilyen más elnevezést (pl.: frameworkIndex) is használhatunk
 - A prefix használata nem kötelező, a lényeg, hogy a `key` értéke egyedi legyen a `v-for`-on belül

@@ -6,7 +6,7 @@
 
 ## Lépések
 
-- Vegyünk fel egy többdimenziós tömbök, ami a különböző nyelveknél használt keretrendszereket tartalmazza
+- Vegyünk fel egy többdimenziós tömböt, amely a különböző nyelveknél használt keretrendszereket tartalmazza:
 
 ```js
 const app = Vue.createApp({
@@ -26,7 +26,7 @@ const app = Vue.createApp({
 app.mount('#app')
 ```
 
-- Szeretnénk 3 darab listát készíteni, és mind a 3 lista tartalmazza egy-egy tömb elemeit, tehát mind a 3 lista 3 elemet fog tartalmazni:
+- Szeretnénk 3 darab listát készíteni: mind a 3 lista tartalmazza egy-egy tömb összes elemét, tehát mind a 3 lista 3 elemet fog tartalmazni:
 
 ```html
 <div id="app">
@@ -44,5 +44,5 @@ app.mount('#app')
 </div>
 ```
 
-- Látható, hogy ugyanúgy, mint VanillaJS-ben itt is lehet beágyazott for ciklust, azaz `v-for` direktívát használni
-- `key`-nek és a generált indexet használtam mind a két esetben egy prefix-szel
+- Látható, hogy ugyanúgy, mint Vanilla JS-ben, itt is lehet beágyazott for ciklust, azaz `v-for` direktívát használni
+- A `key`-t és a generált indexet használtam mind a két esetben egy prefixszel
