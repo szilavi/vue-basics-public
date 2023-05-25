@@ -16,6 +16,7 @@
   - Prettier - Code formatter
   - JavaScript (ES6) code snippets
   - Vue Language Features (Volar)
+  - Vue VSCode Snippets
 
 - Nyissuk meg a VSCode felhasználói beállításainak JSON-fájlját
 

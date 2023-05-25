@@ -96,3 +96,15 @@ const email = toRef(formData.value, 'email')
 ```js
 const { name, email } = toRefs(formData.value)
 ```
+
+- **Megjegyzés**: Ezzel csak az űrlap értékei állnak vissza az alapértelmezettre, de a `userFormData`-n belül az adatok megmaradnak. A való életben a resetelénél a reaktív változó értékét állítjuk:
+
+```js
+function handleSubmit() {
+  console.log(userFormData)
+  formData.value = {
+    name: '',
+    email: '',
+  }
+}
+```

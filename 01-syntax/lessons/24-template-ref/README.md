@@ -64,3 +64,12 @@ app.mount('#app')
 
 - Így a `userForm` nem mást fog tárolni, mint a form elemet
 - Ez az úgynevezett _template ref_
+- **Megjegyzés**: Ezzel csak az űrlap értékei állnak vissza az alapértelmezettre, de a `userFormData`-n belül az adatok megmaradnak. A való életben a resetelénél a reaktív változó értékét állítjuk:
+
+```js
+function handleSubmit() {
+  console.log(userFormData)
+  formData.name = ''
+  formData.email = ''
+}
+```
