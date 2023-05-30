@@ -7,14 +7,14 @@
 ## Lépések
 
 - A `v-model` használata a szülő-gyermek kommunikációnál nagyon hasznos
-- Alakítsuk át a kódot úgy, hogy ne csak egy hanem 3 `InputField` mező legyen:
+- Alakítsuk át a kódot úgy, hogy ne csak egy, hanem 3 `InputField` mező legyen:
   - firstName
   - lastName
   - email
 - Ezeket helyezzük el egy formon belül
-- Legyen egy reaktív `formData` változónk, amiben ezek az értékeket kerülnek
-- Használjuk fel a `v-model`nél
-- Készítsünk egy küldés gombot, ami csak annyit tesz, hogy kilogolja az űrlap adatait JSON formátumban
+- Legyen egy reaktív `formData` változónk, amelybe ezek az értékek kerülnek
+- Használjuk fel a `v-model`-nél
+- Készítsünk egy küldés gombot, amely csak annyit tesz, hogy kilogolja az űrlap adatait JSON-formátumban:
 
 ```js
 <script setup>
@@ -60,5 +60,5 @@ function submitForm() {
 </template>
 ```
 
-- Így van egy komplett űrlapom, melynek az adatait már küldhetem is el a backendnek
-- A `InputField` pedig egy szép újra felhasználható komponens
+- Így van egy komplett űrlapom, amelynek az adatait már küldhetem is el a backendnek
+- A `InputField` pedig egy szép újrafelhasználható komponens
