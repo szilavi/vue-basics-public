@@ -7,7 +7,7 @@
 ## Lépések
 
 - Hozzunk létre egy új alkalmazást
-- 3 komponenst fogunk készíteni, melyek az oldal 3 szekcióját (nav, main, footer) fogják reprezentálni
+- 3 komponenst fogunk készíteni, amelyek az oldal 3 szekcióját (nav, main, footer) fogják reprezentálni
 - A `assets` mappából csak a main.css-t tartsuk meg az alábbi tartalommal:
 
 ```css
@@ -21,8 +21,8 @@ body {
 }
 ```
 
-- A `componenst` mappa tartalmát töröljük
-- Az `App.vue` fájlon belül csak az üres `script`, `template` és `style` tag-eket hagyjuk meg
+- A `components` mappa tartalmát töröljük
+- Az `App.vue` fájlon belül csak az üres `script`, `template` és `style` tageket hagyjuk meg
 - Hozzunk benne létre 3 saját komponenst az alábbi névvel:
   - `MainNavigation.vue`
   - `SiteContent.vue`
@@ -30,7 +30,7 @@ body {
 - Alapértelmezés szerint a komponensek nevei legalább két szóból álljanak
 - A `vbase-3-setup` code snippet segítségével le tudjuk generálni az SFC kiinduló kódját
 - A kiinduló kódban a `template` és `script` helyzetét cseréljük fel
-- Míg a Vue.js v2 esetében a `template` volt felül, addig Vue.js v3-ban a scriptet helyezzük konvenció szerint felülre, igaz a sorrend az alkalmazás működését nem befolyásolja
+- Míg a Vue.js v2 esetében a `template` volt felül, addig Vue.js v3-ban a scriptet helyezzük konvenció szerint felülre, igaz, a sorrend az alkalmazás működését nem befolyásolja
 
 - A `MainNavigation.vue` fájl tartalma:
 
