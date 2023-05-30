@@ -2,14 +2,14 @@
 
 ## Tartalom
 
-- `events`: gyermek szülő közötti kommunikáció
+- `events`: gyermek-szülő közötti kommunikáció
 
 ## Lépések
 
 - Amennyiben nem a szülőből szeretnénk a gyermeknek adatot átadni, hanem a gyermekből a szülőnek, azt egyedi események létrehozásával tudjuk megtenni
-- A gyermekben egyedi eseményeket definiálunk, melyek bekövetkezésétől a szülő értesül, és lefuttathatja a szükséges kódot
+- A gyermekben egyedi eseményeket definiálunk, amelyek bekövetkezéséről a szülő értesül, és lefuttathatja a szükséges kódot
 - Hozzunk létre egy új alkalmazást
-- A _assets_ mappából csak a _main.css_-t tartsuk meg az alábbi tartalommal:
+- Az _assets_ mappából csak a _main.css_-t tartsuk meg az alábbi tartalommal:
 
 ```css
 body {
@@ -21,7 +21,7 @@ body {
   font-weight: normal;
 ```
 
-- A `componenst` mappa tartalmát töröljük
+- A `components` mappa tartalmát töröljük
 - Hozzunk létre egy új komponenst: `InputField.vue`
 - A komponens kódja a következő:
 
@@ -35,9 +35,9 @@ defineEmits(['on-focus'])
 </template>
 ```
 
-- Van egy `defineEmits()` compiler-macro, mely egy tömb paramétert vár, melyben felsorolhatjuk a komponensünk által kibocsájtott egyedi eseményeket
-- Ezután az inputon belül felvesszük a `@click` eseményfigyelőt, tehát amikor belekattintunk az űrlapelembe, akkor kibocsájtja az egyedi `on-focus` eseményt, melyről a szülő értesül
-- Az esemény neve bármi lehetne, kebabCase névmegadást használunk
+- Van egy `defineEmits()` compiler macro, amely egy tömb paramétert vár, amelyben felsorolhatjuk a komponensünk által kibocsájtott egyedi eseményeket
+- Ezután az inputon belül felvesszük a `@click` eseményfigyelőt, tehát amikor belekattintunk az űrlapelembe, akkor kibocsájtja az egyedi `on-focus` eseményt, amelyről a szülő értesül
+- Az esemény neve bármi lehetne, kebab-case névmegadást használunk
 - Az _App.vue_ kódja legyen a következő:
 
 ```js

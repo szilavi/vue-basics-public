@@ -7,7 +7,7 @@
 ## Lépések
 
 - Kicsit módosítsuk a kódot
-- Használjuk a `v-model` direktívát a dolgok egyszerűsítésére:
+- Használjuk a `v-model` direktívát a dolgok egyszerűsítésére
 - Az `email` értékét rögtön a `template`-be bele is írom, hogy látszódjon a változás
 
 ```js
@@ -30,11 +30,11 @@ const email = ref('')
 </template>
 ```
 
-- Nincs egyedi esemény, amit mi magunk írtunk volna, azonban lehetőségünk van mégis összekapcsolni az `InputField`ben lévő értéket az `App`ban lévő változóval
-- A `v-model` segítségével a tárolt érték a `modelValue` keresztül elérhető
-- Amikor egy gyermek komponensnél használjuk, akkor ezt az értéket a propként is elérhetjük
-- Csak vegyük fel a `modelValue`t a gyermekben
-- Majd, amikor frissül az adat, erről a szülőt értesíteni kell, ehhez pedig a `update:modelValue` eseményt használhatjuk:
+- Nincs egyedi esemény, amelyet mi magunk írtunk volna, azonban lehetőségünk van mégis összekapcsolni az `InputField`ben lévő értéket az `App`ban lévő változóval
+- A `v-model` segítségével a tárolt érték a `modelValue`-n keresztül elérhető
+- Amikor egy gyermek komponensnél használjuk, akkor ezt az értéket propként is elérhetjük
+- Csak vegyük fel a `modelValue`-t a gyermekben
+- Majd, amikor frissül az adat, erről a szülőt értesíteni kell, ehhez pedig az `update:modelValue` eseményt használhatjuk:
 
 ```js
 <script setup>
@@ -84,4 +84,4 @@ label {
 </style>
 ```
 
-- Ahogy szerkesztjük a mező értékét, az adat rögtön módosul is
+- Ahogyan szerkesztjük a mező értékét, az adat rögtön módosul is
