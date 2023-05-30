@@ -6,8 +6,8 @@
 
 ## Lépések
 
-- Amennyiben azt szeretnénk, hogy a prop értéke reaktív legyen, a következőt kell tennünk
-- Az `App.vue`ban létrehozunk egy reaktív változót:
+- Amennyiben azt szeretnénk, hogy a props értéke reaktív legyen, a következőt kell tennünk
+- Az `App.vue`-ban létrehozunk egy reaktív változót:
 
 ```js
 const title = ref()
@@ -19,8 +19,8 @@ const title = ref()
 <MainNavigation :title="title" />
 ```
 
-- Így amennyiben a szülőben változik a `title` értéke, az meg fog jelenni a gyermekben is:
-- Ellenőrizzük is le egy `setTiemout()` segítségével, ami 5 másodperc múlva megváltoztatja a `title` értékét:
+- Így amennyiben a szülőben változik a `title` értéke, az meg fog jelenni a gyermekben is
+- Ellenőrizzük is le egy `setTimeout()` segítségével, amely 5 másodperc múlva megváltoztatja a `title` értékét:
 
 ```js
 setTimeout(() => {

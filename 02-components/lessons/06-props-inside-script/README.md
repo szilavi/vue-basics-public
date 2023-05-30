@@ -6,9 +6,9 @@
 
 ## Lépések
 
-- Lehetőségünk van nem csak a `tempalte`-ben, hanem a scriptben is felhasználni a `props`okat
-- A legelső menü elemre kattintva egyszerűen csak egy alert ablakban jelenítsük meg a `title` értékét
-- Írjuk meg a függvényt, amely lefut majd kattintása:
+- Lehetőségünk van nemcsak a `template`-ben, hanem a scriptben is felhasználni a `props`-okat
+- A legelső menüelemre kattintva egyszerűen csak egy alert ablakban jelenítsük meg a `title` értékét
+- Írjuk meg a függvényt, amely lefut majd kattintásra:
 
 ```js
 function alertTitle() {
@@ -17,7 +17,7 @@ function alertTitle() {
 ```
 
 - Rögtön látjuk is, hogy a VSCode hibát fog jelezni, hogy nincs `title` nevű változó
-- Ha a scripten belül el akarjuk érni a props értékeket, akkor egy változóhoz kell hozzárendelni:
+- Ha a scripten belül el akarjuk érni a props-értékeket, akkor egy változóhoz kell hozzárendelni:
 
 ```js
 const props = defineProps({
@@ -28,7 +28,7 @@ const props = defineProps({
 })
 ```
 
-- Így a `props`on keresztül már elérhető lesz a `title`:
+- Így a `props`-on keresztül már elérhető lesz a `title`:
 
 ```js
 function alertTitle() {
@@ -36,7 +36,7 @@ function alertTitle() {
 }
 ```
 
-- Módosítsuk a legelső menü elemet:
+- Módosítsuk a legelső menüelemet:
 
 ```js
 <li>
@@ -46,5 +46,5 @@ function alertTitle() {
 </li>
 ```
 
-- A `title` helyett a `props.title` is írhatjuk, de a tempalte-ben ez nem kötelező,
+- A `title` helyett a `props.title`-t is írhatjuk, de a template-ben ez nem kötelező;
   azonban ha lenne egy `title` nevű reaktív változónk, akkor a kettő megkülönböztetése végett már muszáj a `props.title`-t használni

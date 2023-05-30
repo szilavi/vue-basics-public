@@ -32,7 +32,7 @@ const videoSrc = computed(() => {
 ```
 
 - Mivel lejátszási lista esetében nincs `videoId` csak `playlistId`
-- EMiatta `VideoList` tempalte-jét is módosítani kell:
+- EMiatta `VideoList` template-jét is módosítani kell:
 
 ```html
 <template>

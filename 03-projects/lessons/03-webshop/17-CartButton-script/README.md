@@ -35,7 +35,7 @@ function handleCartButtonClick() {}
 </script>
 ```
 
-- Használjuk fel a metódusokat a tempalte-ben
+- Használjuk fel a metódusokat a template-ben
 
 ```html
 <template>
