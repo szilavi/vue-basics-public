@@ -2,18 +2,18 @@
 
 ## Tartalom
 
-- bootstrap css importálása
+- Bootstrap CSS importálása
 
 ## Lépések
 
-- Importáljuk a main.js fájlba a bootstrap css fájlját:
+- Importáljuk a main.js fájlba a Bootstrap CSS-fájlját:
 
 ```js
 import 'bootstrap/dist/css/bootstrap.min.css'
 ```
 
-- Az _App.vue_ fájlon belül készítsünk egy alap template-et, amin belül ki tudjuk a felhasználókat
-- Egyelőre a táblázat fejrészét hozom létre:
+- Az _App.vue_ fájlon belül készítsünk egy alap template-et, amelyen belül ki tudjuk írni a felhasználókat
+- Egyelőre a táblázat fejlécét hozom létre:
 
 ```js
 <template>
@@ -31,8 +31,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 ```
 
 - Megírom a scriptet
-- Importálom a `getUsers`-t a `usersAPI`-ból, és az `onMounted`en belül lekérdezem a felhasználókat, és beleteszem egy `users` nevű reaktív változóba
-- **Megjegyzés:**: a `getUser`t itt neveztem át `getUsers`re
+- Importálom a `getUsers`-t a `usersAPI`-ból, az `onMounted`-ön belül lekérdezem a felhasználókat, és beleteszem egy `users` nevű reaktív változóba
+- **Megjegyzés:**: a `getUser`-t itt neveztem át `getUsers`-re
 
 ```js
 import { ref, onMounted } from 'vue'
