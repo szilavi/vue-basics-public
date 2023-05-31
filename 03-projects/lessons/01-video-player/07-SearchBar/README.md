@@ -6,13 +6,13 @@
 
 ## Lépések
 
-- A `SearchBar` komponensen belül tárolnunk kell, hogy mi a keresőszó, amit el akarunk majd küldeni
+- A `SearchBar` komponensen belül tárolnunk kell, hogy mi a keresőszó, amelyet el akarunk majd küldeni
 - Ehhez egy `query` nevű reaktív változót hozok létre
 - Ezt a `v-model` direktíva segítségével összekötöm egy input mezővel
-- A `SearcBar`nál az enter billentyű leütésére fog elindulni a keresés
+- A `SearchBar`-nál az Enter billentyű leütésére fog elindulni a keresés
 - Ilyenkor kerül a form elküldésre
-- Szükségem lesz még egy egyedi eseményre, mely a küldésnél a `queryt` megkapja második paraméterként
-- Az egyedi esemény neve legyen `form-submit`
+- Szükségem lesz még egy egyedi eseményre, amely a küldésnél a `query`-t megkapja második paraméterként
+- Az egyedi esemény neve legyen `form-submit`:
 
 ```js
 <script setup>
@@ -42,8 +42,8 @@ defineEmits(['form-submit'])
 <style scoped></style>
 ```
 
-- Ezt az egyedi esemény figyeljük az `App`on belül
-- Amikor bekövetkezik, meghívjuk a `searchVideos` függvényt
+- Ezt az egyedi eseményt figyeljük az `App`-on belül
+- Amikor bekövetkezik, meghívjuk a `searchVideos` függvényt:
 
 ```html
 <header>

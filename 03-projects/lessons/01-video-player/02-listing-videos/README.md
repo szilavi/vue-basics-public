@@ -6,8 +6,8 @@
 
 ## Lépések
 
-Jelenleg az adatok még csak a konzolra vannak kilogolva. Ezt módosítsuk, méghozzá úgy, hogy létrehozok egy reaktív változót, `videos` névvel a `ref`-el, a kezdő érték pedig `null`-ra állítom.
-Az `onMounted` hookban lévő kódot kiemelem egy `searchFunction` függvénybe, ami a `queryt` paraméterként kapja majd meg. Ezen függvényen fogom beállítani a `videos` értékét. Majd ezt a függvény hívom csak meg az `onMounted` hookon belül.
+Jelenleg az adatok még csak a konzolra vannak kilogolva. Ezt módosítsuk, méghozzá úgy, hogy létrehozok egy reaktív változót `videos` névvel a `ref`-fel, a kezdő értéket pedig `null`-ra állítom.
+Az `onMounted` hookban lévő kódot kiemelem egy `searchVideos` függvénybe, amely a `query`-t paraméterként kapja majd meg. Ezen a függvényen belül fogom beállítani a `videos` értékét. Majd ezt a függvényt hívom csak meg az `onMounted` hookon belül.
 
 ```js
 import { onMounted, ref } from 'vue'

@@ -8,10 +8,10 @@
 
 - Az `App.vue`-ból szervezzük ki a videók kilistázását
 - Maga a lista a `VideosList` komponensen belül lesz
-- A `VideosList` komponens pedig nem másokat, mint `VideoItem`-eket fog tartalmazni.
-- A `VideosList` komponens props-ként megkapja a videos tümböt
+- A `VideosList` komponens pedig nem másokat, mint a `VideoItem`-eket fogja tartalmazni
+- A `VideosList` komponens props-ként megkapja a videos tömböt
 - A template-en belül pedig a `VideoItem` komponensen magán használom a `v-for` direktívát
-- A `VideoItem` propsként mindig egy videót fog kapni
+- A `VideoItem` props-ként mindig egy videót fog kapni:
 
 ```js
 <script setup>
@@ -32,7 +32,7 @@ defineProps({
 <style scoped></style>
 ```
 
-- A `VideoItem` a videó címét, és a bélyegképét fogja megjeleníteni:
+- A `VideoItem` a videó címét és a bélyegképét fogja megjeleníteni:
 
 ```js
 <script setup>

@@ -7,9 +7,9 @@
 
 ## Lépések
 
-- Amikor rákattintunk egy videóra, vagy amikor rajta van a fókusz és lenyomjuk az enter billentyűt, be kell töltődnie a bal oldalra
-- Ehhez tudnunk kell, melyik videó van kiválasztva, és ezt a kiválasztott videót kell a `VideoDetails` komponensnek megkapnia
-- Ami eddig kimarad, hogy ahhoz, hogy a videó fókuszálható legyen, még a `tabindex`et is meg kell adnunk a `VideoItem`-en:
+- Amikor rákattintunk egy videóra, vagy amikor rajta van a fókusz és lenyomjuk az Enter billentyűt, be kell töltődnie a bal oldalra
+- Ehhez tudnunk kell, hogy melyik videó van kiválasztva, és ezt a kiválasztott videót kell a `VideoDetails` komponensnek megkapnia
+- Ami eddig kimaradt, az az, hogy ahhoz, hogy a videó fókuszálható legyen, még a `tabindex`et is meg kell adnunk a `VideoItem`-en:
 
 ```js
 <div
@@ -33,15 +33,15 @@
   </div>
 ```
 
-- Az App-ban hozzunk létre egy reaktív változót, ami a kiválasztott video objectet fogja majd tartalmazni
+- Az App-ban hozzunk létre egy reaktív változót, amely a kiválasztott video object-et fogja majd tartalmazni:
 
 ```js
 const selectedVideo = ref(null)
 ```
 
-- Azt, hogy melyik videóra kattintottunk a `VideosList`ből tudjuk meg
-- Hozzunk létre a `VideosList`en belül egy egyedi eseményt, melynek legyen a neve `select-video`
-- Amikor a `VideoItem`en kattintunk, vagy entert ütünk, akkor bocsájtja majd ki az eseményt, mindek a második paramétere az adott video object lesz:
+- Azt, hogy melyik videóra kattintottunk, a `VideosList`-ből tudjuk meg
+- Hozzunk létre a `VideosList`-en belül egy egyedi eseményt, amelynek legyen a neve `select-video`
+- Amikor a `VideoItem`-en kattintunk vagy entert ütünk, akkor bocsájtja majd ki az eseményt, amelynek a második paramétere az adott video object lesz:
 
 ```js
 <script setup>
@@ -67,7 +67,7 @@ defineEmits(['select-video'])
 </template>
 ```
 
-- Majd pedig az `App`on belül rendeljünk ehhez az eseményhez egy függvényt
+- Majd pedig az `App`-on belül rendeljünk ehhez az eseményhez egy függvényt:
 
 ```js
 <script setup>
@@ -116,6 +116,6 @@ onMounted(() => searchVideos('vuejs'))
 </template>
 ```
 
-- Tehát amikor bekövetkezik a `select-video` esemény meghívódik a `selectVideo` függvény, ami paraméterként automatikusan megkapja a video objektumot, és ezt adja értékül a `selectedVideo`nak
-- A `VideoDetails` pedig ezt a `selectedVideo`t fogja propként megkapni
-- A `selectedVideo`nak, hogy ne a `null` maradjon az értéke, már a `searchVideos`on belül beállítom az értékét, ami nem lesz más, mint az első megtalált videó
+- Tehát amikor bekövetkezik a `select-video` esemény, meghívódik a `selectVideo` függvény, amely paraméterként automatikusan megkapja a video objektumot, és ezt adja értékül a `selectedVideo`-nak
+- A `VideoDetails` pedig ezt a `selectedVideo`-t fogja propként megkapni
+- A `selectedVideo`-nak, hogy ne a `null` maradjon az értéke, már a `searchVideos`-on belül beállítom az értékét, amely nem lesz más, mint az első megtalált videó
