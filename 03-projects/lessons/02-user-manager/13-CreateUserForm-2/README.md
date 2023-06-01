@@ -7,10 +7,10 @@
 ## Lépések
 
 - Formázzuk az input űrlapelemeket
-- Amennyiben valid lesz, a keret legyen zöld, ha fókuszba kerül, akkor a `box-shadow` is legyen zöld
-- Amennyiben invalid lesz, a keret legyen piros, ha fókuszba kerül, akkor a `box-shadow` is legyen piros
+- Amennyiben valid lesz, a keret legyen zöld; ha fókuszba kerül, akkor a `box-shadow` is legyen zöld
+- Amennyiben invalid lesz, a keret legyen piros; ha fókuszba kerül, akkor a `box-shadow` is legyen piros
 - Ehhez a `main.css` fájlt kell szerkeszteni
-- Mivel a `main.css` már nem üres lesz, ezért a bootstrap css fájlját is ebbe importálom, nem a `main.js`-be
+- Mivel a `main.css` már nem üres, a Bootstrap CSS-fájlját is ebbe importálom, nem a `main.js`-be:
 
 ```css
 @import 'bootstrap/dist/css/bootstrap.min.css';

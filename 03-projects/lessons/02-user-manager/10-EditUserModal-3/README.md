@@ -4,13 +4,13 @@
 
 - A felhasználó kiválasztása
 - A modal megnyitása
-- watch, mint getter és setter
+- watch mint getter és setter
 
 ## Lépések
 
-- Amikor rákattintok egy felhasználónál az edit gombra, akkor el kell menteni, melyik felhasználóról is van szó, és ezt a felhasználót kell átadni az `EditUserModal` komponensnek
-- Ehhez létrehozok egye reaktív változót `selectedUser` névvel, ami kezdetben egy üres object legyen
-- Valamint kell egy függvény, ami a `selectedUser` értékét módosítja a paraméterként kapott értékre
+- Amikor rákattintok egy felhasználónál az edit gombra, akkor el kell menteni, hogy melyik felhasználóról is van szó, és ezt a felhasználót kell átadni az `EditUserModal` komponensnek
+- Ehhez létrehozok egy reaktív változót `selectedUser` névvel, amely kezdetben legyen egy üres object
+- Valamint kell egy függvény, amely a `selectedUser` értékét módosítja a paraméterként kapott értékre:
 
 ```js
 const selectedUser = ref({})
@@ -21,7 +21,7 @@ function handleSelectUser(user) {
 ```
 
 - Ezt a függvényt fogom felhasználni a template-en belül
-- Hogy a modal meg is nyíljon a `data-bs-toggle` és a `data-bs-target`-et
+- Hogy a modal meg is nyíljon, használom a `data-bs-toggle`-t és a `data-bs-target`-et:
 
 ```js
   <button
@@ -34,14 +34,14 @@ function handleSelectUser(user) {
   </button>
 ```
 
-- Valamint a table alatt az `EditUserModal`-t is megadom, ami propként megkapja a `selectedUser`t
+- Valamint a table alatt az `EditUserModal`-t is megadom, amely propként megkapja a `selectedUser`-t:
 
 ```js
   <EditUserModal :user="selectedUser" />
 ```
 
-- Mivel az `EditUserModal` megkapja a usert, ami egy üres objektum, ezért a prop validationnel nem lesz baj
-- A prop eredendően reaktív, azonban mi egy másolatot készítettünk róla, a másolat viszont nem fogja a prop módosulásait figyelni, ezért szükségünk van egy `watch`-ra az `EditUserModalon` belül
+- Mivel az `EditUserModal` megkapja a user-t, amely egy üres objektum, a prop validation-nel nem lesz baj
+- A prop eredendően reaktív, azonban mi egy másolatot készítettünk róla, a másolat viszont nem fogja a prop módosulásait figyelni, ezért szükségünk van egy `watch`-ra az `EditUserModalon` belül:
 
 ```js
 watch(
@@ -50,5 +50,5 @@ watch(
 )
 ```
 
-- Az első paraméter egy getter a második a setter
+- Az első paraméter egy getter, a második a setter
 - Így ha a prop változik, a `userFormData` is fog
