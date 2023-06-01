@@ -18,4 +18,4 @@
 </template>
 ```
 
-- A `router-link`re kattintva a `router-view`ba töltődik be az adott View komponens
+- A `router-link`-re kattintva a `router-view`-ba töltődik be az adott view-komponens
