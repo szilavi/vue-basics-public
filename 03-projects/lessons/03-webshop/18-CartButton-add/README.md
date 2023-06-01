@@ -9,7 +9,7 @@
 
 - A kosár módosításához kell egy új store
 - A `store` mappán belül hozzuk létre a _cart.js_ fájlt
-- A `cart` egy reaktív változó lesz, ezt `readonly`vá teszem, hogy kívülről csak a függvények tudják módosítani
+- A `cart` egy reaktív változó lesz, ezt `readonly`-vá teszem, hogy kívülről csak a függvények tudják módosítani
 - A `addItemToCart()` egy adott termékből x darabot a kosárba helyez
 
 ```js
@@ -30,10 +30,10 @@ export function useCartStore() {
 ```
 
 - Most módosítsuk a `CartButton` komponenst
-- Importáljuk a `useCartStore`t, ebből a `cart` és az `addItemToCart()`re lesz szükségünk
-- A `handleCartButtonClick` paraméterként kaja meg a gitárt - ne felejtsétek el a template-be átadni - és hívja meg a `addItemToCart()`ot, átadva neki a gitárt és a darabszámot
-- Abban esetben, ha egy terméket beletettünk a kosárba a gomb felirata _Add to cart_-ról _Update cart_-ra kell, hogy változzon
-- Ehhez szükséges egy reaktív változó a `buttonText` melybe eltároljuk a kezdeti értéket, és módosítjuk, ha a terméket a kosárba helyeztük
+- Importáljuk a `useCartStore`-t, ebből a `cart`ra és az `addItemToCart()`-ra lesz szükségünk
+- A `handleCartButtonClick` paraméterként kapja meg a gitárt - ne felejtsétek el a template-ben átadni -, és hívja meg a `addItemToCart()`-ot átadva neki a gitárt és a darabszámot
+- Abban az esetben, ha egy terméket beletettünk a kosárba, a gomb felirata _Add to cart_-ról _Update cart_-ra kell, hogy változzon
+- Ehhez szükséges egy reaktív változó, a `buttonText`, amelyben eltároljuk a kezdeti értéket, és módosítjuk, ha a terméket a kosárba helyeztük
 - A `buttonText` értékét kell a gomb felirataként megjeleníteni
 
 ```js
@@ -79,8 +79,8 @@ function handleCartButtonClick(guitar) {
 </template>
 ```
 
-- A `CartButton` komponenst akkor kell csak megjeleníteni a `GuitarItem`-en belül, ha az adott gitárból van készleten:
-- Ezért egy `v-if` direktívát helyezek el rajta
+- A `CartButton` komponenst akkor kell csak megjeleníteni a `GuitarItem`-ön belül, ha az adott gitárból van készleten
+- Ezért egy `v-if` direktívát helyezek el rajta:
 
 ```html
 <CartButton v-if="guitar.stock > 0" :guitar="guitar" />
