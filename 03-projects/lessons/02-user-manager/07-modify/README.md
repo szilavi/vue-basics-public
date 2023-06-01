@@ -7,7 +7,7 @@
 
 ## Lépések
 
-- A törléshez hasonlóan most is először módosítom a usersAPI-t
+- A törléshez hasonlóan most is először módosítom a usersAPI-t:
 
 ```js
 async function updateUser(id, updatedUser) {
@@ -18,8 +18,8 @@ async function updateUser(id, updatedUser) {
 export default { getUsers, deleteUser, updateUser }
 ```
 
-- Az `updateUser` kap egy id-t és az új, módosított felhasználói adatokat
-- Majd módosítom a store-t
+- Az `updateUser` kap egy Id-t és az új, módosított felhasználói adatokat
+- Majd módosítom a store-t:
 
 ```js
 async function modifyUser(updatedUser) {
@@ -29,4 +29,4 @@ async function modifyUser(updatedUser) {
 }
 ```
 
-- Az API hívás után frissíti a `users` tömböt
+- Az API-hívás után frissíti a `users` tömböt

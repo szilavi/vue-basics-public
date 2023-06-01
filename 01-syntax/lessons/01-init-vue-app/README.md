@@ -60,7 +60,7 @@ app.mount('#app')
 - Ezen belül létrehozunk egy `message` változót és értéket adunk neki
 - A `setup()` visszatérési értéke egy objektum, amely azokat az adatokat tartalmazza, amelyeket a komponensen belül globálisan el szeretnénk érni
 - Ez jelenleg csak a `message` lesz, amelynek az értékét meg akarom jeleníteni
-- Ezt fel kell csatolnunk a DOM-ba, hogy valahol az oldalon belül megjelenjen, és működjön az alkalmazás. Egész pontosan az `app` id-jű elemben helyezzük el
+- Ezt fel kell csatolnunk a DOM-ba, hogy valahol az oldalon belül megjelenjen, és működjön az alkalmazás. Egész pontosan az `app` Id-jű elemben helyezzük el
 - Ezután adjuk hozzá a body-hoz a következőt:
 
 ```html

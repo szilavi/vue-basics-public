@@ -31,7 +31,7 @@ onMounted(() => {
 </template>
 ```
 
-- Az `App`-ot lepucolom:
+- Az `App.vue`-t lepucolom:
 
 ```js
 <script setup>

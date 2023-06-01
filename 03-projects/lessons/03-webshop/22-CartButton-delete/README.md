@@ -6,7 +6,7 @@
 
 ## Lépések
 
-- Bővítem a cart store, a `removeFromCart()`al, ami adott id-jú elemet töröl a kosárból
+- Bővítem a cart store, a `removeFromCart()`al, ami adott Id-jű elemet töröl a kosárból
 
 ```js
 function removeFromCart(id) {

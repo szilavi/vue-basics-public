@@ -33,7 +33,7 @@ input:focus:valid {
 ```
 
 - Így már csak ezt a fájlt kell a `main.js`-be importálni
-- Valamint az `App`-ba a `CreateUserForm` komponenst is beimportálom, és elhelyezem a táblázat fölé:
+- Valamint az `App.vue`-be a `CreateUserForm` komponenst is beimportálom, és elhelyezem a táblázat fölé:
 
 ```html
 <template>

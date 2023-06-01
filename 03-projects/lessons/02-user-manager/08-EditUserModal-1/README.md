@@ -7,7 +7,7 @@
 ## Lépések
 
 - Hozzunk létre egy új komponenst `EditUserModal` névvel
-- Itt fel fogjuk használni a bootstrap modal komponensét
+- Itt fel fogjuk használni a Bootstrap modal komponensét
 
 ```js
 <template>
@@ -55,7 +55,7 @@
 
 - A modal egy user objektumot fog kapni propként
 - Ennek a felhasználónak kell az adatait egy formon belül megjeleníteni
-- A modal save gombjára kattintva el kell mentenünk az adatokat, ekkor hívódik meg a `handleSaveButtonClick` függvény
+- A modal save gombjára kattintva el kell mentenünk az adatokat, ekkor hívódik meg a `handleSaveButtonClick` függvény:
 
 ```js
 <script setup>
@@ -87,4 +87,4 @@ async function handleSaveButtonClick() {
 
 - A propként kapott userről készítek egy reaktív másolatot
 - Ezt már bármikor módosíthatom
-- HA a módosítás sikeres lesz akkor be kell zárni a modalt, így egy template ref-be elmentem a bezárás gombot, így manuálisan ki fogom tudni váltani a click eseményt
+- Ha a módosítás sikeres lesz, akkor be kell zárni a modalt: egy template ref-be elmentem a bezárás gombot, így manuálisan ki fogom tudni váltani a click-eseményt

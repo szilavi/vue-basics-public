@@ -53,7 +53,7 @@ app.mount('#app')
 </div>
 ```
 
-- Természetesen, ha szükségünk van az indexre valamilyen okból, mondjuk, ezt szeretnénk használni az objektum id-je helyett key-ként, akkor ilyenkor is megadhatunk egy második alias-t:
+- Természetesen, ha szükségünk van az indexre valamilyen okból, mondjuk, ezt szeretnénk használni az objektum `id`-je helyett key-ként, akkor ilyenkor is megadhatunk egy második alias-t:
 
 ```js
  <li v-for="({name}, index) of frameworks" :key="`framework-${index}`">

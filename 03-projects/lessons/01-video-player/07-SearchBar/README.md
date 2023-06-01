@@ -42,7 +42,7 @@ defineEmits(['form-submit'])
 <style scoped></style>
 ```
 
-- Ezt az egyedi eseményt figyeljük az `App`-on belül
+- Ezt az egyedi eseményt figyeljük az `App.vue`-n belül
 - Amikor bekövetkezik, meghívjuk a `searchVideos` függvényt:
 
 ```html

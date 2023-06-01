@@ -9,7 +9,7 @@
 - Abban az esetben, ha a termák már a kosárban van, és a `count` jelenleg nem 0, akkor módosítanunk kell a kosárban lévő darabszámot
 - Két függvényt adok a cart storehoz:
 - A `getItemIndexById()` visszaadja a kosárban lévő termék indexét
-- A `changeItemCount()` frissíti az adott id-jú elem darabszámát a kosárban
+- A `changeItemCount()` frissíti az adott Id-jű elem darabszámát a kosárban
 
 ```js
 function getItemIndexById(id) {

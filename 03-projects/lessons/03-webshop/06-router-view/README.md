@@ -7,7 +7,7 @@
 ## Lépések
 
 - Még meg kell adnunk, hogy a belső navigáció esetében hova töltődjön be az adott view
-- Ezt az App-on belül adom meg:
+- Ezt az App.vue-n belül adom meg:
 
 ```html
 <template>

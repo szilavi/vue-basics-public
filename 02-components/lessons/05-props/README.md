@@ -6,9 +6,9 @@
 
 ## Lépések
 
-- Amennyiben azt szeretnénk, hogy a `MainNavigation` komponens ne statikusan a `Vue app `feliratot jelenítse meg, hanem a szülőből, azaz az `App`-ből kapja azt a string-et, amelyet meg akarunk jeleníteni, megtehetjük ezt a `props` segítségével
+- Amennyiben azt szeretnénk, hogy a `MainNavigation` komponens ne statikusan a `Vue app `feliratot jelenítse meg, hanem a szülőből, azaz az `App.vue`-ből kapja azt a string-et, amelyet meg akarunk jeleníteni, megtehetjük ezt a `props` segítségével
 - A `props` segítségével egy komponensnek adatokat tudunk átadni a szülő komponensből
-- Ha az `App`-ből mint szülő komponensből szeretnénk adatot átadni a `MainNavigation`-nek mint gyermek komponensnek, ezt megtehetjük:
+- Ha az `App.vue`-ből mint szülő komponensből szeretnénk adatot átadni a `MainNavigation`-nek mint gyermek komponensnek, ezt megtehetjük:
 
 ```js
 <MainNavigation title="Vue app" />

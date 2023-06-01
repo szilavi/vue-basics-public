@@ -33,7 +33,7 @@
   </div>
 ```
 
-- Az App-ban hozzunk létre egy reaktív változót, amely a kiválasztott video object-et fogja majd tartalmazni:
+- Az App.vue-ben hozzunk létre egy reaktív változót, amely a kiválasztott video object-et fogja majd tartalmazni:
 
 ```js
 const selectedVideo = ref(null)
@@ -67,7 +67,7 @@ defineEmits(['select-video'])
 </template>
 ```
 
-- Majd pedig az `App`-on belül rendeljünk ehhez az eseményhez egy függvényt:
+- Majd pedig az `App.vue`on belül rendeljünk ehhez az eseményhez egy függvényt:
 
 ```js
 <script setup>
