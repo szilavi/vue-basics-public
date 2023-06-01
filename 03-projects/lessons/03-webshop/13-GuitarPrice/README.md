@@ -2,14 +2,14 @@
 
 ## Tartalom
 
-- A `GuitarsPrice` komponens
+- A `GuitarPrice` komponens
 
 ## Lépések
 
 - A gitárok árát formázva kell megjeleníteni
 - Hozzunk létre egy mappát az _src_-n belül _utils_ névvel
 - Ezen belül legyen egy _formatPrice.js_ fájl
-- Itt egy függvény, ami a paraméterként kapott számot angol formátum szerint, euró jellel ellátva formázottan visszaadja
+- Itt egy függvény, amely a paraméterként kapott számot angol formátum szerint, eurójellel ellátva formázottan visszaadja:
 
 ```js
 export default function formatPrice(price) {
@@ -18,7 +18,7 @@ export default function formatPrice(price) {
 ```
 
 - A `GuitarPrice` propként megkapja az árat
-- A formázott árat egy computed propertybe fogom letárolni, és ezt fogom kiíratni
+- A formázott árat egy computed property-ben fogom letárolni, és ezt fogom kiíratni:
 
 ```js
 <script setup>

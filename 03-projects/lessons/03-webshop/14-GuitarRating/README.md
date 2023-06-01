@@ -2,16 +2,16 @@
 
 ## Tartalom
 
-- A `GuitarsRating` komponens
+- A `GuitarRating` komponens
 
 ## Lépések
 
 - A gitárok értékelése egy 1-5 közötti egész szám
-- Annyi tele csillagot kell megjeleníteni amennyi az értékelés
+- Annyi tele csillagot kell megjeleníteni, amennyi az értékelés
 - Ha 5-nél kevesebb, akkor üres csillagokkal kall feltölteni a helyeket, hogy pontosan 5 darab csillag legyen
-- Mögöttük zárójelben még a számserű értéket is meg kell jeleníteni
-- A `ratingStars` computed property tartalmazza majd az a stringet, amit meg kell jeleníteni
-- Ha egy gitár esetében az értékelés 0, az azt jelenti, hogy nem érkezett még rá értékelés, ilyenkor a _Not rated_ text legyen megjelenítve
+- Mögöttük zárójelben még a számszerű értéket is meg kell jeleníteni
+- A `ratingStars` computed property tartalmazza majd azt a string-et, amelyet meg kell jeleníteni
+- Ha egy gitár esetében az értékelés 0, az azt jelenti, hogy nem érkezett még rá értékelés, ilyenkor a _Not rated_ text legyen megjelenítve:
 
 ```js
 <script setup>
@@ -47,7 +47,7 @@ const ratingStars = computed(
 </style>
 ```
 
-- Használjuk fel ezt a komponenst is a `GuitarItem`-en belül:
+- Használjuk fel ezt a komponenst is a `GuitarItem`-ön belül:
 
 ```html
 <div class="right-column">

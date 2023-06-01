@@ -2,12 +2,12 @@
 
 ## Tartalom
 
-- A `GuitarsImage` komponens
+- A `GuitarImage` komponens
 
 ## Lépések
 
 - Módosítsuk még a `GuitarItem` kinézetét
-- A _main.css_ fájlban létrehozok két classt:
+- A _main.css_ fájlban létrehozok két class-t:
 
 ```css
 .container {
@@ -35,7 +35,7 @@ import GuitarsList from '../components/GuitarsList.vue'
 <style scoped></style>
 ```
 
-- Az `App` komponensnél pedig felhasználom a `container`-t
+- Az `App` komponensnél pedig felhasználom a `container`-t:
 
 ```html
 <template>
@@ -47,7 +47,7 @@ import GuitarsList from '../components/GuitarsList.vue'
 ```
 
 - Hozzuk létre a `GuitarImage` komponenst
-- propként elég a `title`t megkapnia, ez megegyezik a kép nevével
+- propként elég a `title`-t megkapnia, ez megegyezik a kép nevével
 - Megjelenítem a képet és formázom:
 
 ```js
