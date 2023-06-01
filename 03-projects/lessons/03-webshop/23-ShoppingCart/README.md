@@ -3,14 +3,14 @@
 ## Tartalom
 
 - A `ShoppingCart` komponens
-- Kosár tartalmának össz ára
+- Kosár tartalmának összára
 
 ## Lépések
 
-- A `ShoppingCart` komponens fogja egy táblázatba kilistázni a kosárban lévő termékeket, a darabszámot, az árat, és egy össz árat
+- A `ShoppingCart` komponens fogja egy táblázatba kilistázni a kosárban lévő termékeket, a darabszámot, az árat és egy összárat
 - A termékenkénti összesített árat egyszerűen ki tudjuk számolni, az a kosárban lévő darabszám és egységár szorzata
-- A kosár teljes tartalmának össz ár egy kicsit bonyolultabb
-- Ezt célszerű akár a cart store-on belül kiszámolni egy computed propertybe:
+- A kosár teljes tartalmának összára egy kicsit bonyolultabb
+- Ezt célszerű akár a cart store-on belül kiszámolni egy computed property-ben:
 
 ```js
 const totalPrice = computed(() =>
@@ -18,7 +18,7 @@ const totalPrice = computed(() =>
 )
 ```
 
-- Ezt a `totalPrice`t aztán fel tudjuk már használni:
+- Ezt a `totalPrice`-t aztán fel tudjuk már használni:
 
 ```js
 <script setup>
@@ -55,7 +55,7 @@ const { cart, totalPrice } = useCartStore()
 </template>
 ```
 
-- Már csak a `CartView` komponensen belül kell importálnom
+- Már csak a `CartView` komponensen belül kell importálnom:
 
 ```js
 <script setup>

@@ -6,10 +6,10 @@
 
 ## Lépések
 
-- Abban az esetben, ha a termák már a kosárban van, és a `count` jelenleg nem 0, akkor módosítanunk kell a kosárban lévő darabszámot
-- Két függvényt adok a cart storehoz:
+- Abban az esetben, ha a termék már a kosárban van és a `count` jelenleg nem 0, akkor módosítanunk kell a kosárban lévő darabszámot
+- Két függvényt adok a cart store-hoz:
 - A `getItemIndexById()` visszaadja a kosárban lévő termék indexét
-- A `changeItemCount()` frissíti az adott Id-jű elem darabszámát a kosárban
+- A `changeItemCount()` frissíti az adott Id-jű elem darabszámát a kosárban:
 
 ```js
 function getItemIndexById(id) {
@@ -22,7 +22,7 @@ function changeItemCount(id, count) {
 }
 ```
 
-- Módosítom a `handleCartButtonClick()`-et, hogy a megfelelő feltételek mellett ne hozzáadja, hanem módosítsa a termék darabszámát a kosárban
+- Módosítom a `handleCartButtonClick()`-et, hogy a megfelelő feltételek mellett ne hozzáadja, hanem módosítsa a termék darabszámát a kosárban:
 
 ```js
 function handleCartButtonClick(guitar) {
