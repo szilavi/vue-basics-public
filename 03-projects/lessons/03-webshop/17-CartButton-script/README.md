@@ -2,13 +2,13 @@
 
 ## Tartalom
 
-- A `CartButton` komponens script-je
+- A `CartButton` komponens scriptje
 
 ## Lépések
 
-- A komponensnek propként meg kell kapnia a gitárt, melyet majd a kosárba akarunk tenni
-- A `count` reaktív változóba tárolom el, hogy hány darabot akarok a kosárba tenni/mennyi van most a termékből a kosárban
-- `handleDecreaseCountClick()` és a `handleIncreaseCountClick()` metódusok eggyel növelik/csökkentik a `count` értékét
+- A komponensnek propként meg kell kapnia a gitárt, amelyet majd a kosárba akarunk tenni
+- A `count` reaktív változóban tárolom el, hogy hány darabot akarok a kosárba tenni/mennyi van most a termékből a kosárban
+- a `handleDecreaseCountClick()` és a `handleIncreaseCountClick()` metódusok eggyel növelik/csökkentik a `count` értékét
 - A `handleCartButtonClick()` a terméket a kosárba helyezi/frissíti a kosarat
 
 ```js
@@ -35,7 +35,7 @@ function handleCartButtonClick() {}
 </script>
 ```
 
-- Használjuk fel a metódusokat a tempalte-ben
+- Használjuk fel a metódusokat a template-ben:
 
 ```html
 <template>

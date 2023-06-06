@@ -15,7 +15,7 @@ const formData = reactive({
 })
 ```
 
-- `reactive()` esetében nincs lehetőségünk a reassignementre, ez hibát fog eredményezni:
+- `reactive()` esetében nincs lehetőségünk a reassignmentre, ez hibát fog eredményezni:
 
 ```js
 // NOT VALID
@@ -43,7 +43,7 @@ const name = ref(formData.name)
 const email = ref(formData.email)
 ```
 
-- A `reactive()` paraméterként mindig objektumot kell kapjon, primitívvel nem működik, ez hibát eredményez:
+- A `reactive()` paraméterként mindig objektumot kell, hogy kapjon, primitívvel nem működik, ez hibát eredményez:
 
 ```js
 // NOT VALID
@@ -55,8 +55,8 @@ const email = reactive(formData.email)
 
 ```js
 // VALID, REACTIVE, UPDATE, UGLY
-// const name = toRef(formData, 'name')
-// const email = toRef(formData, 'email')
+const name = toRef(formData, 'name')
+const email = toRef(formData, 'email')
 ```
 
 - Amennyiben több értéket szeretnénk kimenteni külön változókba, úgy a `toRef()` helyett célszerűbb a `toRefs()` használata:

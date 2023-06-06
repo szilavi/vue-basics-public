@@ -6,9 +6,9 @@
 
 ## Lépések
 
-- A következő hasznos direktíva a `v-bind` direktíva, aminek a segítségével html attribútumoknak tudunk értéket adni JavScriptből (_attribute binding_)
-- A Vue direktívák neve mindig a _v-_ előtaggal kezdődik
-- Az _main.js_ tartalma legyen a következő:
+- A következő hasznos direktíva a `v-bind` direktíva, amelynek a segítségével HTML-attribútumoknak tudunk értéket adni JavaScriptből (_attribute binding_)
+- A Vue-direktívák neve mindig a _v-_ előtaggal kezdődik
+- A _main.js_ tartalma legyen a következő:
 
 ```js
 const app = Vue.createApp({
@@ -29,8 +29,8 @@ app.mount('#app')
 <h1 v-bind:title="title">Vue.js</h1>
 ```
 
-- A v-bind attribútum után kettősponttal megadjuk, melyik html attribútumhoz szeretnék értéket hozzárendelni, majd megadom értéknek a JavaScript változó nevét
-- Ezzel azt értem el, hogy a böngészőben ha a címsor fölé viszem a kurzort megjelenik a _Long live Vue!_ szöveg, a devtoolban pedig az elemet megvizsgálva a következő látható:
+- A v-bind attribútum után kettősponttal megadom, hogy melyik HTML-attribútumhoz szeretnék értéket hozzárendelni, majd megadom értéknek a JavaScript-változó nevét
+- Ezzel azt értem el, hogy ha a böngészőben a címsor fölé viszem a kurzort, megjelenik a _Long live Vue!_ szöveg, a devtoolban pedig az elemet megvizsgálva a következő látható:
 
 ```html
 <h1 title="Long live Vue!"></h1>

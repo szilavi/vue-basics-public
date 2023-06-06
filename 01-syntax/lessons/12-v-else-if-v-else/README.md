@@ -7,9 +7,9 @@
 
 ## Lépések
 
-- Ahogy VanillaJS-ben esetében a feltételvizsgálatnak nem csak `if`, hanem `else if` és `else` ága is van, úgy mindez megvalósítható Vue-ban is
-- A raktárkészlet számától tesszük függővé, hogy mi legyen az a kód, ami szeretnénk megjeleníteni az oldalon
-- Mind a szöveg, mind a színe legyen eltérő, ha 0, ha háromnál kevesebb, vagy háromnál több van raktáron:
+- Ahogyan Vanilla JS esetében a feltételvizsgálatnak nemcsak `if`, hanem `else if` és `else` ága is van, úgy mindez megvalósítható Vue-ban is
+- A raktárkészlet számától tesszük függővé, hogy mi legyen az a kód, amelyet szeretnénk megjeleníteni az oldalon
+- Mind a szöveg, mind a szín legyen eltérő, ha 0, háromnál kevesebb vagy háromnál több van raktáron:
 
 ```html
 <div id="app">

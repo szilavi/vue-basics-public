@@ -7,8 +7,8 @@
 ## Lépések
 
 - Létrehozok egy új komponenst `UsersTable` névvel
-- Itt fel fogom használni a storeból a `users`t
-- Az `App`ból átmásolom a template-et
+- Itt fel fogom használni a store-ból a `users`-t
+- Az `App.vue`-ből átmásolom a template-et:
 
 ```js
 <script setup>
@@ -44,7 +44,7 @@ const { users } = useUserStore()
 <style scoped></style>
 ```
 
-- Az `App`on belül már csak a `fetchUsers`re van szükség, és a template helyett a `UsersTable` komponenst fogom használni, amit egy `container` osztályú div-be helyezek el
+- Az `App.vue`-n belül már csak a `fetchUsers`-re van szükség, és a template helyett a `UsersTable` komponenst fogom használni, amelyet egy `container` osztályú divben helyezek el
 
 ```js
 <script setup>

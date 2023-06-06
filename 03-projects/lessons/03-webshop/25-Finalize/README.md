@@ -2,8 +2,8 @@
 
 ## Tartalom
 
-- A CartButton módosítása, kezdeti érték beállíltása a kosárban lévő darabszámhoz
-- A kosárban lévő termékek össz darabszámának kalkulálása
+- A kosárban lévő termékek összdarabszámának kalkulálása
+- A CartButton módosítása, kezdeti érték beállítása a kosárban lévő darabszámhoz
 - Kosár tartalmának módosításakor notification megjelenítése a felhasználónak
 
 ## Lépések
@@ -21,7 +21,7 @@ const buttonText = ref(!basketItem ? 'Add to cart' : 'Udpate cart')
 ```
 
 - A felső menüben a Cart mellett zárójelben meg kell jeleníteni a kosárban lévő termékek darabszámát
-- A `totalPrice`hoz hasonlóan egy `totalCount` computed propertyt is létrehozok
+- A `totalPrice`-hoz hasonlóan egy `totalCount` computed property-t is létrehozok:
 
 ```js
 const totalCount = computed(() =>
@@ -56,8 +56,8 @@ const { totalCount } = useCartStore()
 ```
 
 - Még nem kapunk visszajelzést arról, ha a kosár tartalma módosul
-- Használjuk a `CartButton` komponensél is a Toast-ot
-- Importáljuk a `useToast` függvényt, hozzuk létre a `toast` változót
+- Használjuk a `CartButton` komponensnél is a toastot
+- Importáljuk a `useToast` függvényt, hozzuk létre a `toast` változót:
 
 ```js
 import { useToast } from 'vue-toastification'

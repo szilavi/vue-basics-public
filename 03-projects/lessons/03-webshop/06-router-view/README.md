@@ -7,7 +7,7 @@
 ## Lépések
 
 - Még meg kell adnunk, hogy a belső navigáció esetében hova töltődjön be az adott view
-- Ezt az App-on belül adom meg:
+- Ezt az App.vue-n belül adom meg:
 
 ```html
 <template>
@@ -18,4 +18,4 @@
 </template>
 ```
 
-- A `router-link`re kattintva a `router-view`ba töltődik be az adott View komponens
+- A `router-link`-re kattintva a `router-view`-ba töltődik be az adott view-komponens

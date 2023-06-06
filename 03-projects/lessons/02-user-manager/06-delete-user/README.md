@@ -8,7 +8,7 @@
 
 ## Lépések
 
-- A törléshez a `userAPI`t egészítsük ki:
+- A törléshez a `userAPI`-t egészítsük ki:
 
 ```js
 async function deleteUser(id) {
@@ -18,9 +18,9 @@ async function deleteUser(id) {
 export default { getUsers, deleteUser }
 ```
 
-- Így adott id-jú usert ki fogunk tudni törölni
+- Így az adott `id`-jű usert ki fogunk tudni törölni
 - Használjuk fel ezt a függvényt a store-on belül
-- importáljuk, majd hozzuk létre a `removeUser` függvényt, amit ne felejtsünk el megadni a return-nél is:
+- Importáljuk, majd hozzuk létre a `removeUser` függvényt, amelyet ne felejtsünk el megadni a returnnél is:
 
 ```js
 async function removeUser(id) {
@@ -39,9 +39,9 @@ async function removeUser(id) {
   </button>
 ```
 
-- A `handleDeleteClick` megkapja majd az adott user id-ját
-- Írjuk meg a függvény, a `removeUser`re is szükség lesz a store-ból
-- Törlés előtt kérjünk megerősítést a felhasználótól
+- A `handleDeleteClick` megkapja majd az adott user `id`-jét
+- Írjuk meg a függvényt, a `removeUser`-re is szükség lesz a store-ból
+- Törlés előtt kérjünk megerősítést a felhasználótól:
 
 ```js
 const { users, removeUser } = useUserStore()

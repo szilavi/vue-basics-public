@@ -41,7 +41,7 @@ const app = Vue.createApp({
 app.mount('#app')
 ```
 
-- Amennyiben nem akarjuk az objektumok össze tulajdonságát kiírni, vagy nem szeretnék kiírni például, hogy `framework.name`, `framework.relaseDate` stb., egyszerűen csak a tulajdonság nevével akarunk a template-ben hivatkozni, akkor használhatjuk a átstruktúrálást a `v-for` esetében is:
+- Amennyiben nem akarjuk az objektumok összes tulajdonságát kiírni, vagy nem szeretnénk kiírni például azt, hogy `framework.name`, `framework.relaseDate` stb., és egyszerűen csak a tulajdonság nevével akarunk a template-ben hivatkozni ezekre, akkor használhatjuk az átstrukturálást a `v-for` esetében is:
 
 ```html
 <div id="app">
@@ -53,7 +53,7 @@ app.mount('#app')
 </div>
 ```
 
-- Természetesen, ha szükségünk van az indexre valamilyen okból, mondjuk ezt szeretnénk használni az objektum id-ja helyett key-ként, akkor ilyenkor is megadhatunk egy második alias-t:
+- Természetesen, ha szükségünk van az indexre valamilyen okból, mondjuk, ezt szeretnénk használni az objektum `id`-je helyett key-ként, akkor ilyenkor is megadhatunk egy második alias-t:
 
 ```js
  <li v-for="({name}, index) of frameworks" :key="`framework-${index}`">

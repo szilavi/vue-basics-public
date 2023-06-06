@@ -7,8 +7,8 @@
 
 ## Lépések
 
-- Nézzük meg, hogyan lehetséges egy JS változó értékét, és egy űrlapelemet összekötni
-- Egyetlen egy reaktív változót hozok csak létre `name` névvel
+- Nézzük meg, hogyan lehetséges egy JS-változó értékét és egy űrlapelemet összekötni
+- Egyetlenegy reaktív változót hozok csak létre `name` névvel
 
 ```js
 const { createApp, ref } = Vue
@@ -26,7 +26,7 @@ const app = createApp({
 app.mount('#app')
 ```
 
-- Az input elem esetében a `value`t *attribute binding*gal össze kell kötnöm a `name` változóval
+- Az input elem esetében a `value`-t *attribute binding* segítségével össze kell kötnöm a `name` változóval
 - A `name` értékét az input alá ki is íratom:
 
 ```html
@@ -42,7 +42,7 @@ app.mount('#app')
 ```
 
 - Jelenleg ha a `name` értéke változik, az input value-ja is változni fog
-- Hogy erről megbizonyosodjuk, tegyünk, egy `setInterval()`-t a kódba:
+- Hogy erről megbizonyosodjunk, tegyünk egy `setInterval()`-t a kódba:
 
 ```js
 const { createApp, ref, watch } = Vue
@@ -62,10 +62,10 @@ const app = createApp({
 app.mount('#app')
 ```
 
-- **Megjegyzés**: Valós alkalmazásban így ne használjuk , mindig burkoljuk egy függvénybe, ha szükség van rá!
-- Másodpercenként változik a `name` értéke és egy a DOM-ban is megjelenik
-- Már csak azt kell elérnünk, hogy ez az adatkötés ne egyirányú legyen, azaz, ha az inputba beírok valami, akkor a `name` vegye azt fel értéknek
-- Ehhez egészítsük ki a HTML kódot:
+- **Megjegyzés**: Valós alkalmazásban így ne használjuk, mindig burkoljuk egy függvénybe, ha szükség van rá!
+- Másodpercenként változik a `name` értéke, és a DOM-ban is megjelenik
+- Már csak azt kell elérnünk, hogy ez az adatkötés ne egyirányú legyen, azaz ha az inputba beírok valamit, akkor a `name` vegye azt fel értéknek
+- Ehhez egészítsük ki a HTML-kódot:
 
 ```html
 <div id="app">
@@ -85,11 +85,11 @@ app.mount('#app')
 </div>
 ```
 
-- Egy egyszerű event bindingot használtam
-- Az árlapelem input eseményére beállítom a `name` értékét, tehát ha az őrlapelem értéke módosul, akkor a `name` értéke is, és azt is láthatjuk, hogy a `setInterval` ha módosítja a `name` értékét, akkor az input `value`-ja is módosul
+- Egy egyszerű event binding-ot használtam
+- Az űrlapelem inputeseményére beállítom a `name` értékét, tehát ha az űrlapelem értéke módosul, akkor a `name` értéke is, és azt is láthatjuk, hogy ha a `setInterval` módosítja a `name` értékét, akkor az input `value`-ja is módosul
 - Ezt hívjuk kétirányú adatkötésnek
-- Hogy ne legyen zavaró, töröljük a JS kódból a `setInterval`t
-- Ami még nem szép, hogy az input eseményhez inline rendeltem a függvényt ezt kiszervezhetjük külön függvénybe
+- Hogy ne legyen zavaró, töröljük a JS-kódból a `setInterval`t
+- Ami még nem szép, hogy az inputeseményhez inline rendeltem a függvényt, ezt kiszervezhetjük külön függvénybe
 
 ```js
 const { createApp, ref } = Vue
@@ -132,7 +132,7 @@ app.mount('#app')
 </div>
 ```
 
-- Az event object paraméterként történő átadásánál `$event`ként hivatkozunk rá, egy speciális változóként kezeli a Vue
+- Az event object paraméterként történő átadásánál `$event`ként hivatkozunk rá, ezt egy speciális változóként kezeli a Vue
 - A Vue lehetőséget biztosít a kétirányú adatkötés egyszerűbb megvalósítására a `v-model` direktívával
 - Nincs szükség a `handleNameChange` függvényre:
 
@@ -152,7 +152,7 @@ const app = createApp({
 app.mount('#app')
 ```
 
-- A HTMNL kódnál pedig a `v-model` direktívát használom a `value`, és az `input` binding kiváltására
+- A HTML-kódban pedig a `v-model` direktívát használom a `value` és az `input` binding kiváltására
 
 ```html
 <div id="app">

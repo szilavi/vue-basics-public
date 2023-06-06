@@ -7,7 +7,7 @@
 ## Lépések
 
 - Az alkalmazás tetején egy formázott címsornak kell megjelennie
-- Ehhez hozzunk létre egy `AppTitle` nevű komponenst
+- Ehhez hozzunk létre egy `AppTitle` nevű komponenst:
 
 ```html
 <template>
@@ -17,7 +17,7 @@
 </template>
 ```
 
-- Használjuk fel az `App`on belül:
+- Használjuk fel az `App-vue-`n belül:
 
 ```html
 <template>

@@ -7,17 +7,17 @@
 
 ## Lépések
 
-- Készítsük egy új komponenst: `CreateUserForm`
+- Készítsünk egy új komponenst: `CreateUserForm`
 - Ez a komponens egy űrlap, ahol az új felhasználó adatait meg kell adni
-- A scriptben az űrlapelemek kezdőértékeit egy `userFormDataInitialState` nveű objektumba helyezem el
-- Létrehozom a `userFormData` reaktív változót, ezúttal nem a `ref()` hanem a `reactive()` segítségével
-- A `reative()`-nek paraméterként megadom a `userFormDataInitialState`-et
+- A scriptben az űrlapelemek kezdőértékeit egy `userFormDataInitialState` nevű objektumban helyezem el
+- Létrehozom a `userFormData` reaktív változót, ezúttal nem a `ref()`, hanem a `reactive()` segítségével
+- A `reactive()`-nek paraméterként megadom a `userFormDataInitialState`-et
 - Az űrlap láthatóságát egy boolean típusú reaktív változóhoz kötöm, ez az `isFormVisible`
 - Magát a formot egy template ref-en keresztül elérhetővé teszem, ez a `createUserForm`
-- Két metódusom lesz, a `showForm()`, ami az `isFormVisible` értékét állítja
+- Két metódusom lesz; a `showForm()`, amely az `isFormVisible` értékét állítja
 - Valamint a `handleFormSubmit()`
 - A `handleFormSubmit()` megvizsgálja majd, hogy a form valid-e, amennyiben igen, úgy elküldi az új felhasználó adatait a szervernek, és elrejtésre kerül a form
-- A `Object.assign` segítségével megtehetjük, hogy a `reactive()`-el létrehozott változóknak is új értéket adjunk
+- A `Object.assign` segítségével megtehetjük, hogy a `reactive()`-vel létrehozott változóknak is új értéket adjunk
 
 ```js
 <script setup>
@@ -53,7 +53,7 @@ async function handleFormSubmit() {
 ```
 
 - Maga a template nem bonyolult
-- Egy gombra van szükségünk, amire kattintva az űrlap megjelenik
+- Egy gombra van szükségünk, amelyre kattintva az űrlap megjelenik
 - Valamint az űrlapra magára:
 
 ```html

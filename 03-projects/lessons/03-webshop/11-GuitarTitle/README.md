@@ -2,12 +2,12 @@
 
 ## Tartalom
 
-- A `GuitarsTitle` komponens
+- A `GuitarTitle` komponens
 
 ## Lépések
 
-- A `GuitarsTitle` komponens propként csak a `title`t fogja megkapni
-- Ezt egy címsor kettőn belül fogja megjeleníteni
+- A `GuitarTitle` komponens propként csak a `title`-t fogja megkapni
+- Ezt egy "címsor kettőn" belül fogja megjeleníteni:
 
 ```js
 <script setup>
@@ -30,7 +30,7 @@ defineProps({
 </style>
 ```
 
-- A `GitarItem` komponensen belül használjuk fel:
+- A `GuitarItem` komponensen belül használjuk fel:
 
 ```html
 <div class="right-column">

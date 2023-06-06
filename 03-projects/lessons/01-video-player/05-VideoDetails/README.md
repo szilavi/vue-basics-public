@@ -6,10 +6,10 @@
 
 ## Lépések
 
-- A `VideoDetails` komponens tartalmazza a nagyméretű videót bal oldalt, valamint alatta a videó címét és rövid elírását
-- Amire oda kell figyelni, hogy keresésnél nem csak videókat, hanem lejátszási listákat is visszakaphatunk
+- A `VideoDetails` komponens tartalmazza a nagyméretű videót bal oldalt, valamint alatta a videó címét és rövid leírását
+- Amire oda kell figyelni, hogy keresésnél nemcsak videókat, hanem lejátszási listákat is visszakaphatunk
 - Lejátszási listák esetében a video object paraméterei másként alakulnak
-- Hogy mindig a megfelelő link legen létrehozva, videó esetén a videóra, lejátszási lista esetén a lejátszási listára, szükségünk van egy computed propertyre is:
+- Hogy mindig a megfelelő link legyen létrehozva (videó esetén a videóra, lejátszási lista esetén a lejátszási listára mutató), szükségünk van egy computed property-re is:
 
 ```js
 <script setup>
@@ -31,8 +31,7 @@ const videoSrc = computed(() => {
 </script>
 ```
 
-- Mivel lejátszási lista esetében nincs `videoId` csak `playlistId`
-- EMiatta `VideoList` tempalte-jét is módosítani kell:
+- Mivel lejátszási lista esetében nincs `videoId`, csak `playlistId`, emiatt a `VideoList` template-jét is módosítani kell:
 
 ```html
 <template>

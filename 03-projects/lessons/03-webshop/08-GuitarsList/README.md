@@ -7,10 +7,10 @@
 ## Lépések
 
 - Hozzuk létre a _components_ mappán belül a `GuitarsList` komponenst
-- Ez nem mást fog tartalmazni, mit `GuitarItem`eket
+- Ez nem mást fog tartalmazni, mint `GuitarItem`-öket
 - A `GuitarItem` komponensen használom a `v-for` direktívát, így annyi `GuitarItem` komponensünk lesz, amennyi gitár van a kínálatban
 - A `GuitarItem` propként meg fogja kapni az adott gitárt
-- Valamint az App helyett itt fogom a `fetchGuitars()` metódust meghívni
+- Valamint az App helyett itt fogom a `fetchGuitars()` metódust meghívni:
 
 ```js
 <script setup>
@@ -31,7 +31,7 @@ onMounted(() => {
 </template>
 ```
 
-- Az `App`-ot lepucolom:
+- Az `App.vue`-t lepucolom:
 
 ```js
 <script setup>
