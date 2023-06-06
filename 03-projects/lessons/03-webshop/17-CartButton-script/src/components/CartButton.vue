@@ -10,7 +10,7 @@ defineProps({
 
 const count = ref(0)
 
-function handleDescreaseCountClick() {
+function handleDecreaseCountClick() {
   count.value -= 1
 }
 
@@ -22,7 +22,7 @@ function handleCartButtonClick() {}
 
 <template>
   <div class="cart">
-    <button @click="handleDescreaseCountClick">-</button>
+    <button @click="handleDecreaseCountClick">-</button>
     <input v-model="count" type="text" />
     <button @click="handleIncreaseCountClick">+</button>
     <button class="add-to-cart" @click="handleCartButtonClick">
