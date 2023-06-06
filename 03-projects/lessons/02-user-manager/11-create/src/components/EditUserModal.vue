@@ -1,6 +1,6 @@
 <script setup>
 import { ref, watch } from 'vue'
-import { useUserStore } from '../../store/user'
+import { useUserStore } from '../store/user'
 import 'bootstrap/js/dist/modal'
 
 const props = defineProps({

@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import { getUsers } from '../apis/usersAPI.js'
+import { getUsers } from './apis/usersAPI.js'
 
 const users = ref([])
 

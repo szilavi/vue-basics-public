@@ -1,5 +1,5 @@
 <script setup>
-import { useCartStore } from '../../store/cart'
+import { useCartStore } from '../store/cart'
 
 const { totalCount } = useCartStore()
 </script>

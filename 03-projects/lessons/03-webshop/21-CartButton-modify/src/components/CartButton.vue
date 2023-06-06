@@ -1,6 +1,6 @@
 <script setup>
 import { ref, watch } from 'vue'
-import { useCartStore } from '../../store/cart'
+import { useCartStore } from '../store/cart'
 
 const props = defineProps({
   guitar: {

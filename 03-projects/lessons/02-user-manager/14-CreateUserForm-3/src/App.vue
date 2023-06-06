@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted } from 'vue'
-import { useUserStore } from '../store/user'
+import { useUserStore } from './store/user'
 import CreateUserForm from './components/CreateUserForm.vue'
 import UsersTable from './components/UsersTable.vue'
 

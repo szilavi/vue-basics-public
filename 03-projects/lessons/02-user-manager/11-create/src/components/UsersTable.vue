@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { useUserStore } from '../../store/user'
+import { useUserStore } from '../store/user'
 import EditUserModal from './EditUserModal.vue'
 
 const { users, removeUser } = useUserStore()

@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted } from 'vue'
-import { useGuitarsStore } from '../store/guitars'
+import { useGuitarsStore } from './store/guitars'
 import MainNavigation from './components/MainNavigation.vue'
 
 const { guitars, fetchGuitars } = useGuitarsStore()

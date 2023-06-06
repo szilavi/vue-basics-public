@@ -1,5 +1,5 @@
 <script setup>
-import { useCartStore } from '../../store/cart.js'
+import { useCartStore } from '../store/cart.js'
 import formatPrice from '../utils/formatPrice.js'
 
 const { cart, totalPrice } = useCartStore()
