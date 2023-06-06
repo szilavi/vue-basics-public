@@ -10,11 +10,12 @@ const props = defineProps({
   },
 })
 
-const count = ref(0)
-const buttonText = ref('Add to cart')
+const toast = useToast()
 const { addItemToCart, getItemById, changeItemCount, removeFromCart } =
   useCartStore()
-const toast = useToast()
+const basketItem = getItemById(props.guitar.id)
+const count = ref(basketItem?.count || 0)
+const buttonText = ref(!basketItem ? 'Add to cart' : 'Udpate cart')
 
 watch(count, () => {
   const minCount = 0
@@ -35,19 +36,22 @@ function handleIncreaseCountClick() {
 }
 
 function handleCartButtonClick(guitar) {
-  const { id } = guitar
-  const item = getItemById(id)
-  if (!item && count.value > 0) {
+  const basketItem = getItemById(guitar.id)
+  if (!basketItem && count.value > 0) {
     addItemToCart(guitar, count.value)
     buttonText.value = 'Update cart'
     toast.success('Item has been added to the cart')
-  } else if (item?.stock !== count.value && count.value > 0) {
-    changeItemCount(id, count.value)
-    toast.success('Item count has been changed')
-  } else if (item && count.value === 0) {
-    removeFromCart(id)
+  } else if (
+    basketItem?.count != count.value &&
+    basketItem?.stock >= count.value &&
+    count.value > 0
+  ) {
+    changeItemCount(guitar.id, count.value)
+    toast.success('Item count has changed')
+  } else if (basketItem && count.value === 0) {
+    removeFromCart(guitar.id)
     buttonText.value = 'Add to cart'
-    toast.success('Item has been deleted form cart')
+    toast.success('Item has been deleted from the cart')
   }
 }
 </script>
@@ -76,7 +80,7 @@ button:active {
   color: var(--dark);
 }
 
-buttom:hover {
+button:hover {
   cursor: pointer;
 }
 

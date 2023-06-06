@@ -26,13 +26,16 @@ function changeItemCount(id, count) {
 
 ```js
 function handleCartButtonClick(guitar) {
-  const { id } = guitar
-  const item = getItemById(id)
-  if (!item && count.value > 0) {
+  const basketItem = getItemById(guitar.id)
+  if (!basketItem && count.value > 0) {
     addItemToCart(guitar, count.value)
     buttonText.value = 'Update cart'
-  } else if (item?.stock !== count.value && count.value > 0) {
-    changeItemCount(id, count.value)
+  } else if (
+    basketItem?.count != count.value &&
+    basketItem?.stock >= count.value &&
+    count.value > 0
+  ) {
+    changeItemCount(guitar.id, count.value)
   }
 }
 ```
