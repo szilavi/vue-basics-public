@@ -22,12 +22,12 @@ const { cart, totalPrice } = useCartStore()
           <td>{{ formatPrice(item.count * item.price) }}</td>
         </tr>
       </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">{{ formatPrice(totalPrice) }}</td>
+        </tr>
+      </tfoot>
     </table>
-    <tfoot>
-      <tr>
-        <td colspan="3">{{ formatPrice(totalPrice) }}</td>
-      </tr>
-    </tfoot>
   </div>
 </template>
 

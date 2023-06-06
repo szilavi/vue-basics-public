@@ -10,7 +10,7 @@ const props = defineProps({
 })
 
 const count = ref(0)
-const { addItemToCart, getItemById, changeItemCount } = useCartStore()
+const { cart, addItemToCart, getItemById, changeItemCount } = useCartStore()
 const buttonText = ref('Add to cart')
 
 watch(count, () => {
@@ -40,18 +40,23 @@ function handleCartButtonClick(guitar) {
    *  - ha már a kosárban van
    *  - a count nem 0
    *  - ha a count nem egyenlő a kosárban lévő darabszámmal
+   *  - ha van még készleten
    * delete:
    *  - ha a kosárban van
    *  - a count === 0
    */
-  const { id } = guitar
-  const item = getItemById(id)
-  if (!item && count.value > 0) {
+  const basketItem = getItemById(guitar.id)
+  if (!basketItem && count.value > 0) {
     addItemToCart(guitar, count.value)
     buttonText.value = 'Update cart'
-  } else if (item?.stock !== count.value && count.value > 0) {
-    changeItemCount(id, count.value)
+  } else if (
+    basketItem?.count != count.value &&
+    basketItem?.stock >= count.value &&
+    count.value > 0
+  ) {
+    changeItemCount(guitar.id, count.value)
   }
+  console.log(cart.value)
 }
 </script>
 
@@ -79,7 +84,7 @@ button:active {
   color: var(--dark);
 }
 
-buttom:hover {
+button:hover {
   cursor: pointer;
 }
 

@@ -52,7 +52,7 @@ button:active {
   color: var(--dark);
 }
 
-buttom:hover {
+button:hover {
   cursor: pointer;
 }
 
