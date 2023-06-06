@@ -33,7 +33,7 @@ const app = createApp({
 app.mount('#app')
 ```
 
-- A HTMl kódban így az objektum egyes tulajdonságaira kell hivatkozni:
+- A HTML-kódban így az objektum egyes tulajdonságaira kell hivatkozni:
 
 ```html
 <div id="app">
@@ -55,10 +55,10 @@ app.mount('#app')
 </div>
 ```
 
-- A küldésnél látjuk, hogy a konzolon ott lesz az összes adat egy Proxy-n belül
+- A küldésnél látjuk, hogy a konzolon ott lesz az összes adat egy proxy-n belül
 - Azonban amennyiben objektumot akarunk használni az összetartozó adatok tárolására, a `ref()` helyett használhatjuk a `reactive()` függvényt is
 - A `reactive()` a `ref()`-hez hasonlóan reaktív változót hoz létre, azonban van néhány különbség
-- A `reactive()` értéke mindig egy objektum kell legyen, valamint nem kell a `value`-t kiírni, ha el akarjuk érni a benne tárolt adatot:
+- A `reactive()` értéke mindig egy objektum kell, hogy legyen, valamint nem kell a `value`-t kiírni, ha el akarjuk érni a benne tárolt adatot:
 
 ```js
 const { createApp, reactive } = Vue

@@ -8,15 +8,15 @@
 ## Lépések
 
 - A _database/guitars.json_ fájlban lesz néhány gitár, ezek lesznek a webshop termékei
-- Most is telepítsük a json szervert: `npm i json-server`
-- A _package.json_ fájlba hozzunk létre most is egy új scriptet: `"db": "json-server --watch database/guitars.json --port 3002"`
-- Indítsuk is el, és így a szerveroldali résszel meg is vagyunk: `npm run db`
+- Most is telepítsük a json-server-t: `npm i json-server`
+- A _package.json_ fájlban hozzunk létre most is egy új scriptet: `"db": "json-server --watch database/guitars.json --port 3002"`
+- Indítsuk el, és így a szerveroldali résszel meg is vagyunk: `npm run db`
 - Létrehozok egy _store_ mappát
 - **Megjegyzés**: én az _src_ mellett hoztam létre, de az belül szebb
 - A mappán belül létrehozok egy _guitars.js_ fájlt
-- Külön API klienst, és apikat nem használok, ugyanis csak egy darab kérés lesz
-- A `useGuitarsStore` függvényen belül megírom a `fetchGuitars`-t, ami a gitárokat fogja lekérdezni
-- Itt a függvényen belül valósítom meg a hibakezelést, és a felhasználó értesítését az esetleges hibáról
+- Külön API-klienst és API-kat nem használok, ugyanis csak egy kérés lesz
+- A `useGuitarsStore` függvényen belül megírom a `fetchGuitars`-t, amely a gitárokat fogja lekérdezni
+- Itt a függvényen belül valósítom meg a hibakezelést és a felhasználó értesítését az esetleges hibáról
 - Az értesítéshez nem alert ablakot használok, hanem a `vue-toastification` plugint
 - Telepítsük fel: `npm i vue-toastification`
 - A `guitars` reaktív változó `readonly` lesz, nem akarom módosítani

@@ -7,7 +7,7 @@
 
 ## Lépések
 
-- Amennyiben egy html elemnél több *attribute binding*ot is szeretnénk használni, azt megtehetjük
+- Egy HTML-elemnél több *attribute binding*-ot is tudunk használni
 - Újfent egészítsük ki a `main.js` fájlt:
 
 ```js
@@ -29,7 +29,7 @@ const app = Vue.createApp({
 app.mount('#app')
 ```
 
-- Használjunk ebben az esetben több *attribute binding*ot az elemen:
+- Használjunk ebben az esetben több *attribute binding*-ot az elemen:
 
 ```html
 <div id="app">
@@ -37,7 +37,7 @@ app.mount('#app')
 </div>
 ```
 
-- A tulajdonságokat akár egy objektumba is elhelyezhetjük:
+- A tulajdonságokat akár egy objektumban is elhelyezhetjük:
 
 ```js
 const app = Vue.createApp({
@@ -57,7 +57,7 @@ const app = Vue.createApp({
 app.mount('#app')
 ```
 
-- Majd módosítsuk a a html fájlt:
+- Majd módosítsuk a HTML-fájlt:
 
 ```html
 <div id="app">
@@ -65,7 +65,7 @@ app.mount('#app')
 </div>
 ```
 
-- Jelen esetben mind az `src`, az `alt`, és a `width` a logo objektum egy-egy tulajdonságát kapják értéknek
+- Jelen esetben mind az `src`, az `alt` és a `width` a logo objektum egy-egy tulajdonságát kapja meg értéknek
 - Ilyen esetben, ha az attribútumok értékeit nem külön 3 darab változóban tároljuk, hanem egy objektumban (bevált gyakorlat), akkor a következőképp egyszerűsíthetjük a kódot:
 
 ```html
@@ -73,4 +73,4 @@ app.mount('#app')
 ```
 
 - Ebben az esetben az `src` attribútum az `src` tulajdonság, az `alt` attribútum az `alt` tulajdonság, a `width` attribútum a `width` tulajdonság értékét kapja meg
-- Csak arra kell figyelni, hogy az objektum tulajdonságok nevei megeggyezzenek a html attribútumok neveivel
+- Csak arra kell figyelni, hogy az objektum tulajdonságainak elnevezései egyezzenek meg a HTML-attribútumok elnevezéseivel

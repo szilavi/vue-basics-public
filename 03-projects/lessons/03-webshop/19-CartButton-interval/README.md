@@ -2,7 +2,7 @@
 
 ## Tartalom
 
-- Kosárba helyezhető termékek darabszám intervallumának megadása
+- Kosárba helyezhető termékek darabszám-intervallumának megadása
 
 ## Lépések
 

@@ -6,7 +6,7 @@
 
 ## Lépések
 
-- Láthattuk, hogy a `v-for` direktíva esetében egy vagy két aliast is megadhattunk
+- Láthattuk, hogy a `v-for` direktíva esetében egy vagy két alias-t is megadhattunk
 - Lehetőségünk van azonban egy harmadik használatára is
 - A három alias sorban a következő: `value`, `key`, `index`
 - Legyen a következő a `main.js` tartalma:
@@ -30,8 +30,8 @@ const app = Vue.createApp({
 app.mount('#app')
 ```
 
-- Az _index.html_-be írjuk ki a `framework` objektum összes kulcsát, és kettősponttal utána az értékét
-- Mindegyik kulcs érték pár egy listaelem legyen:
+- Az _index.html_-be írjuk ki a `framework` objektum összes kulcsát és kettősponttal utána az értékét
+- Mindegyik kulcs-érték pár egy listaelem legyen:
 
 ```html
 <div id="app">
@@ -44,5 +44,5 @@ app.mount('#app')
 ```
 
 - A `key` alias (nem összekeverendő a `key` attribútummal) a kulcsokat, a `value` pedig az értékeket tartalmazza
-- Az egyedi `key` attribútum esetében használom az automatikusan generált index-et
-- Az `index` helyett lehetne használni akár a `key` aliast értékét is a key attribútumnál, ha biztosak vagyunk abban, hogy véletlen sincs valamilyen hiba miatt kétszer ugyanolyan nevű tulajdonság
+- Az egyedi `key` attribútum esetében használom az automatikusan generált indexet
+- Az `index` helyett lehetne használni akár a `key` alias értékét is a key attribútumnál, ha biztosak vagyunk abban, hogy véletlen sincs valamilyen hiba miatt kétszer ugyanolyan nevű tulajdonság

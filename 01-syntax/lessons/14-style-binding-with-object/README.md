@@ -6,8 +6,8 @@
 
 ## Lépések
 
-- Style binding esetében akármennyi CSS tulajdonsághoz rendelhetünk értéket
-- Legyen három darab objektumunk, amikben a `color`, és a `fontSize` is meg van adva:
+- Style binding esetében akármennyi CSS-tulajdonsághoz rendelhetünk értéket
+- Legyen három darab objektumunk, amelyekben a `color` és a `fontSize` is meg van adva:
 
 ```js
 const app = Vue.createApp({
@@ -66,7 +66,7 @@ const app = Vue.createApp({
 app.mount('#app')
 ```
 
-- Ebben az esetben a kapcsoszárójelek között vesszővel elválasztva több css tulajdonság nevét és értékként egy JavaScript objektum tulajdonság az értékét rendeljük egymáshoz
+- Ebben az esetben a kapcsos zárójelek között vesszővel elválasztva több CSS-tulajdonság nevét és értékként egy JavaScript-objektum tulajdonságának az értékét rendeljük egymáshoz
 
 ```html
 <div id="app">
@@ -94,9 +94,9 @@ app.mount('#app')
 </div>
 ```
 
-- Amit még észrevehető, hogy a `font-size` nem kebab-case van írva, hanem camelCase
+- Ami még észrevehető, hogy a `font-size` nem kebab-case, hanem camelCase írásmóddal szerepel
 - Vue esetében ez az ajánlott elnevezési konvenció
-- Ilyen esetben, amikor egy objektum összes tulajdonságát meg akarjuk feleltetni egy-egy css tulajdonságnak lehetőség van egy egyszerűbb megadási módra:
+- Ilyen esetben, amikor egy objektum összes tulajdonságát meg akarjuk feleltetni egy-egy CSS-tulajdonságnak, lehetőség van egy egyszerűbb megadási módra:
 
 ```html
 <div id="app">
@@ -114,4 +114,4 @@ app.mount('#app')
 </div>
 ```
 
-- Egyszerűen elhagyjuk a kapcsos zárójeleket és csak az objektum nevét adjuk meg
+- Egyszerűen elhagyjuk a kapcsos zárójeleket, és csak az objektum nevét adjuk meg

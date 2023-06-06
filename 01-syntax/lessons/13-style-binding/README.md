@@ -6,8 +6,8 @@
 
 ## Lépések
 
-- Nem csak egyes attribútumokhoz tudjuk egy-egy változó értékét hozzárendelni, de lehetőség van arra is, hogy egy css tulajdonsághoz rendeljük hozzá inline
-- Legyen három változónk is, és adjuk nekik értéknek a következőket:
+- Nemcsak egyes attribútumokhoz tudjuk egy-egy változó értékét hozzárendelni, hanem lehetőség van arra is, hogy azt egy CSS-tulajdonsághoz rendeljük hozzá inline
+- Legyen három változónk, és adjuk nekik értéknek a következőket:
 
 ```js
 const outOfStockColor = 'red'
@@ -15,8 +15,8 @@ const onlyFewLeftInStockColor = 'orange'
 const inStockColor = 'green'
 ```
 
-- Nem beégetem a html-be a színt, hanem egy változóból fogja azt kapni (ha ennek a változónak az értéke módosulna, akkor a megjelenő szöveg színe is)
-- A teljes JavaScript kód:
+- Nem beégetem a HTML-be a színt, hanem egy változóból fogja azt kapni (ha ennek a változónak az értéke módosul, akkor a megjelenő szöveg színe is változni fog)
+- A teljes JavaScript-kód:
 
 ```js
 const app = Vue.createApp({
@@ -65,7 +65,7 @@ const app = Vue.createApp({
 app.mount('#app')
 ```
 
-- A html pedig:
+- A HTML pedig:
 
 ```html
 <div id="app">
@@ -89,4 +89,4 @@ app.mount('#app')
 ```
 
 - Jelenleg inline stílusmegadást használtam, természetesen class is használható
-- A style binding esetében `:style=` után kapcsoszárójelben adjuk meg, hogy milyen css tulajdonság milyen értéket kapjon, jelen esetben melyik JavaScript változónak az értékét kapja meg
+- A style binding esetében a `:style=` után kapcsos zárójelben adjuk meg, hogy melyik CSS-tulajdonság milyen értéket kapjon, azaz jelen esetben melyik JavaScript-változónak az értékét kapja meg

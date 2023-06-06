@@ -6,7 +6,7 @@
 
 ## Lépések
 
-- Bővítem a cart store, a `removeFromCart()`al, ami adott id-jú elemet töröl a kosárból
+- Bővítem a cart store-t a `removeFromCart()`-tal, amely az adott Id-jű elemet törli a kosárból
 
 ```js
 function removeFromCart(id) {
@@ -16,7 +16,7 @@ function removeFromCart(id) {
 ```
 
 - A `handleCartButtonClick()`-et kiegészítem a törlés feltételével
-- Ha töröljük az elemet a kosárból, akkor a gomb szövegét módosítani kell
+- Ha töröljük az elemet a kosárból, akkor a gomb szövegét módosítani kell:
 
 ```js
 function handleCartButtonClick(guitar) {

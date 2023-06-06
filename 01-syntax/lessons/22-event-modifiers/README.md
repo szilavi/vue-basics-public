@@ -2,12 +2,12 @@
 
 ## Tartalom
 
-- Esemény módosítok
+- Eseménymódosítók
 
 ## Lépések
 
 - Legyen két input mező egy helyett, és amikor az űrlapot elküldjük, egyszerűen csak írassuk ki az értékeket a konzolra
-- A JS kód:
+- A JS-kód:
 
 ```js
 const { createApp, ref } = Vue
@@ -34,7 +34,7 @@ app.mount('#app')
 ```
 
 - A `handleSubmit()` fog felelni a submit esemény kezeléséért, ez írja ki a konzolra az értékeket
-- A HTML kód:
+- A HTML-kód:
 
 ```html
 <div id="app">
@@ -56,9 +56,9 @@ app.mount('#app')
 </div>
 ```
 
-- A `handleSubmit()` megkapja paraméterként a `$event`et, ez a speciális változó tartalmazza az event objektumot
+- A `handleSubmit()` megkapja paraméterként az `$event`et, ez a speciális változó tartalmazza az event objektumot
 - Rendezzük az űrlapelemeket középre, egymás alá
-- Hozzunk létre egy CSS fájlt _style.css_ névvel és linkeljük is be:
+- Hozzunk létre egy CSS-fájlt _style.css_ névvel, és linkeljük is be:
 
 ```css
 form {
@@ -76,11 +76,11 @@ label {
 }
 ```
 
-- Ha kitöltjük az űrlapot és a küldés gombra kattintunk, a konzolon megjelenik a két mező neve, és értéke
+- Ha kitöltjük az űrlapot és a küldés gombra kattintunk, a konzolon megjelenik a két mező neve és értéke
 - A `preventDefault()`-ra azért volt szükség, hogy küldés után ne töltődjön újra az oldal
 - Ez utóbbira azonban van egy szebb megoldás
-- A Vue úgynevezett `event modifier`-öket is definiál, melyek közül az egyik a `prevent`
-- A módosított HTML kódban látható, hogy a submit után ponttal megadtam a módosítót:
+- A Vue úgynevezett `event modifier`-öket is definiál, amelyek közül az egyik a `prevent`
+- A módosított HTML-kódban látható, hogy a submit után ponttal megadtam a módosítót:
 
 ```html
 <div id="app">
@@ -102,7 +102,7 @@ label {
 </div>
 ```
 
-- Így pedig a JS kód is letisztul:
+- Így pedig a JS-kód is letisztul:
 
 ```js
 const { createApp, ref } = Vue

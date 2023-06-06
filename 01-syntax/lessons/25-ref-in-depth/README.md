@@ -6,7 +6,7 @@
 
 ## Lépések
 
-- A html template-et módosítsuk annyiban, hogy a `v-model` ne egy objektum tulajdonságából kapja az értéket, és ezt írassuk is ki:
+- A HTML template-et módosítsuk annyiban, hogy a `v-model` ne egy objektum tulajdonságából kapja az értéket, és ezt írassuk is ki:
 
 ```html
 <div id="app">
@@ -28,7 +28,7 @@
 </div>
 ```
 
-- Úgy kell majd átalakítani a JS kódot, hogy a `return` value így nézzen majd ki:
+- Úgy kell majd átalakítani a JS-kódot, hogy a `return` value így nézzen ki:
 
 ```js
 return {
@@ -39,7 +39,7 @@ return {
 }
 ```
 
-- Nézzük meg, mit a helyzet, ha a `ref()` objektumot kap paraméterként:
+- Nézzük meg, mi a helyzet, ha a `ref()` objektumot kap paraméterként:
 
 ```js
 const formData = ref({
@@ -75,7 +75,7 @@ const email = formData.value.email
 ```
 
 - Kiszervezhetjük a tulajdonságokat külön változókba úgy, hogy a `ref()`-nek paraméterként adjuk meg az adott tulajdonságot
-- Ebben az eseten a kezdeti reaktív objektum, és a változók külön életet élnek:
+- Ebben az esetben a kezdeti reaktív objektum és a változók külön életet élnek:
 
 ```js
 // VALID, REACTIVE, UGLY

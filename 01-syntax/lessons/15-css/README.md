@@ -7,8 +7,8 @@
 ## Lépések
 
 - Ha nem akarjuk bonyolítani az életünket, és a lehetőség van arra, hogy valamit CSS-ből oldjunk meg JavaScript helyett, akkor mindig tegyük azt
-- Ha a CSS tulajdonságok statikusak lesznek, amiket hozzá akarunk rendelni az elemekhez, akkor a legegyszerűbb, ha felveszünk egy-egy class-t
-- Hozzuk létre a _style.css_ fájlt a tartalma pedig legyen a következő:
+- Ha a CSS-tulajdonságok, amelyeket hozzá akarunk rendelni az elemekhez, statikusak lesznek, akkor a legegyszerűbb, ha felveszünk egy-egy class-t
+- Hozzuk létre a _style.css_ fájlt, a tartalma pedig legyen a következő:
 
 ```css
 .out-of-stock {
@@ -27,7 +27,7 @@
 }
 ```
 
-- Alakítsuk át a html kódot:
+- Alakítsuk át a HTML-kódot:
 
 ```html
 <div id="app">
@@ -45,7 +45,7 @@
 </div>
 ```
 
-- A felesleges részeket töröljük a JS-ból:
+- A felesleges részeket töröljük a JS-ből:
 
 ```js
 const app = Vue.createApp({
@@ -87,4 +87,4 @@ const app = Vue.createApp({
 app.mount('#app')
 ```
 
-- Így, statikus tulajdonságok használata esetén inkább szervezzük ki a kódot css osztályokba
+- Így, statikus tulajdonságok használata esetén inkább szervezzük ki a kódot CSS-osztályokba

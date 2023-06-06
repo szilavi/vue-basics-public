@@ -6,8 +6,8 @@
 
 ## Lépések
 
-- Elkészítem a modal bodyn belül az űrlapot
-- Minden label-input párost egy külön div-be helyezek el így csoportosítva őket
+- Elkészítem a modal body-ján belül az űrlapot
+- Minden label-input párost egy külön divben helyezek el, így csoportosítva őket:
 
 ```html
 <form action="">

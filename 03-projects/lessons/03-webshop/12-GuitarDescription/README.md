@@ -2,11 +2,11 @@
 
 ## Tartalom
 
-- A `GuitarsDescription` komponens
+- A `GuitarDescription` komponens
 
 ## Lépések
 
-- A `GuitarsDescription` komponens megkapja propként a gitár leírását és egy bekezdésen belül megjeleníti azt:
+- A `GuitarDescription` komponens megkapja propként a gitár leírását, és egy bekezdésen belül megjeleníti azt:
 
 ```js
 <script setup>
@@ -23,7 +23,7 @@ defineProps({
 </template>
 ```
 
-- Ezt felhasználjuk a `GuitarItem`en belül
+- Ezt felhasználjuk a `GuitarItem`-ön belül:
 
 ```html
 <div class="right-column">

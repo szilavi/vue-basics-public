@@ -9,8 +9,8 @@
 
 - Készítsünk egy új komponenst `MainNavigation` névvel
 - Itt készítjük el az oldal belső navigációját
-- Amennyiben nem külső oldalra készítünk hivatkozást, nem az `a` tag-et, hanem a `router-link`-et használjuk, amit a `vue-router`biztosít
-- A router-link esetében megadhatjuk a hivatkozást akár a router fájlban definiált `path`re, de célszerűbb helyett a `name`re hivatkozni:
+- Amennyiben nem külső oldalra készítünk hivatkozást, nem az `a` taget, hanem a `router-link`-et használjuk, amelyet a `vue-router` biztosít
+- A router-link esetében megadhatjuk a hivatkozást, akár a router fájlban definiált `path`-re, de célszerűbb helyett a `name`-re hivatkozni:
 
 ```js
 
@@ -28,7 +28,7 @@
 ```
 
 - A _main.css_ fájlban létrehozok néhány változót a színeknek
-- Majd megírom a komponens stílusát
+- Majd megírom a komponens stílusát:
 
 ```css
 :root {
@@ -65,7 +65,7 @@
 </style>
 ```
 
-- Az `App`ba importáljuk a `MainNavigation` komponenst és használjuk is fel:
+- Az `App.vue`-be importáljuk a `MainNavigation` komponenst, és használjuk is fel:
 
 ```html
 <template>

@@ -9,7 +9,7 @@
 
 ## Lépések
 
-- A `CreateUserForm` komponensnél az árlapot helyezzük középre, ehhez egy div-en belülre tesszük, és a _div_-et formázzuk
+- A `CreateUserForm` komponensnél az űrlapot helyezzük középre, ehhez egy diven belülre tesszük, és a divet formázzuk
 - Készítsünk egy címsort is a _form_ elem elé:
 
 ```html
@@ -45,7 +45,7 @@ async function addUser(user) {
 }
 ```
 
-- Még a CSS fájl szintaktikai hibáit javítani kell, hogy helyesen jelenjenek meg a fókuszba került elemek:
+- Még a CSS-fájl szintaktikai hibáit kell javítani, hogy helyesen jelenjenek meg a fókuszba került elemek:
 
 ```css
 input:focus:invalid {

@@ -19,7 +19,7 @@
   - CartButton
 
 - A `GuitarItem` propként mindig megkap egy guitar objektumot
-- A tempalte két fő részre osztható:
+- A template két fő részre osztható:
   - bal oldalt egy kép
   - jobb oldalt az egyéb adatok
 

@@ -8,7 +8,7 @@
 ## Lépések
 
 - Létrehozok egy mappát `store` néven
-- **Megjegyzés**: Én az `src` mellett hoztam, de érdemes az `src`-n belül létrehozni
+- **Megjegyzés**: Én az `src` mellett hoztam létre, de érdemes az `src`-n belül létrehozni
 - Ezen belül létrehozok egy `user.js` fájlt
 - Itt fogom tárolni a felhasználókat, és azokat a függvényeket, amelyek a felhasználókkal fognak dolgozni
 
@@ -32,8 +32,8 @@ export function useUserStore() {
 
 - A `fetchUsers` nem csinál mást, mint lekéri a felhasználókat
 - A `useUserStore` composable bármikor felhasználható bármelyik komponensünkben
-- _composable_: olyan függvény, mely a vue reaktivitását használja fel állapotmentes logika újra felhasználhatósága céljából
-- Az `App.vue`-t módosítanom kell, hogy a store.t használja:
+- _composable_: olyan függvény, amely a Vue reaktivitását használja fel az állapotmentes logika újrafelhasználhatósága céljából
+- Az `App.vue`-t módosítanom kell, hogy a store-t használja:
 
 ```js
 <script setup>

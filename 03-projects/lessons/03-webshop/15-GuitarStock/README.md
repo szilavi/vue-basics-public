@@ -7,9 +7,9 @@
 ## Lépések
 
 - A `GuitarStock` komponens
-  - piros színnel kiírja: _Out of stock_ ha a termék nincs raktáron
-  - narancs színnel kiírja: _Last chance, only X left_ ha 3nál kevesebb van raktáron
-  - zöld színnel kiírja: _In stock_ ha 3nál több van raktáron
+  - piros színnel kiírja: _Out of stock_, ha a termék nincs raktáron
+  - narancs színnel kiírja: _Last chance, only X left_, ha 3-nál kevesebb van raktáron
+  - zöld színnel kiírja: _In stock_, ha 3-nál több van raktáron
 
 ```js
 <script setup>
@@ -38,7 +38,7 @@ defineProps({
 </style>
 ```
 
-- A megfelelő színekhez és 3 classt létrehozok a _main.css_ fájlban:
+- A megfelelő színekhez létrehozok 3 class-t a _main.css_ fájlban:
 
 ```css
 .text-red {
@@ -64,7 +64,7 @@ defineProps({
 </style>
 ```
 
-- A `GuitarItem`en belül felhasználom a komponenst:
+- A `GuitarItem`-ön belül felhasználom a komponenst:
 
 ```html
 <div class="right-column">

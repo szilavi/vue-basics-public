@@ -7,7 +7,7 @@
 ## Lépések
 
 - Annyival egészítsük ki még a kódot, hogy a küldés után reseteljük az űrlapot
-- Ehhez nem lesz szükség semmilyen JS metódusra (`querySelector()`, `getElementById()`, stb.), hogy mindezt megvalósítsuk, sőt az event objektumot sem foguk paraméterként átadni, hogy azon keresztül érjük el a formot
+- Ehhez nem lesz szükség semmilyen JS-metódusra (`querySelector()`, `getElementById()` stb.), hogy mindezt megvalósítsuk, sőt, az event objektumot sem foguk paraméterként átadni, hogy azon keresztül érjük el a formot
 - Ezek helyett létrehozok egy új reaktív változót a JS-ben `userForm` névvel:
 
 ```js
@@ -37,7 +37,7 @@ const app = createApp({
 app.mount('#app')
 ```
 
-- Ezt a változó pedig megadom a form elem `ref` tulajdonságánál
+- Ezt a változót pedig megadom a form elem `ref` tulajdonságánál
 
 ```html
 <div id="app">
@@ -64,7 +64,7 @@ app.mount('#app')
 
 - Így a `userForm` nem mást fog tárolni, mint a form elemet
 - Ez az úgynevezett _template ref_
-- **Megjegyzés**: Ezzel csak az űrlap értékei állnak vissza az alapértelmezettre, de a `userFormData`-n belül az adatok megmaradnak. A való életben a resetelénél a reaktív változó értékét állítjuk:
+- **Megjegyzés**: Ezzel csak az űrlap értékei állnak vissza az alapértelmezettre, a `userFormData`-n belül az adatok megmaradnak. A való életben a resetelénél a reaktív változó értékét állítjuk:
 
 ```js
 function handleSubmit() {

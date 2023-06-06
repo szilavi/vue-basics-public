@@ -49,10 +49,10 @@ const app = Vue.createApp({
 app.mount('#app')
 ```
 
-- Szeretném kiíratni a termékek nevét egy-egy bekezdésbe, de csak azokat, melyek vannak készleten, tehát a `stock` értéke nem nulla
+- Szeretném kiíratni a termékek nevét egy-egy bekezdésbe, de csak azokat, amelyek vannak készleten, tehát a `stock` értéke nem nulla
 - Ehhez használhatjuk a `v-if` direktívát
-- A `v-if` direktíva feltételes renderelést valósít meg, azaz ha a feltétel hamis, akkor fogja lerenderelni az adott html részt, ha a feltétel igaz
-- A `v-if` direktívát ne használjuk a `v-for`-al együtt, mert a `v-for` magasabb prioritású művelet, így nem elvárt működést eredményezhet, erről részletesebben: [Avoid v-if with v-for](https://vuejs.org/style-guide/rules-essential.html#avoid-v-if-with-v-for)
+- A `v-if` direktíva feltételes renderelést valósít meg, azaz ha a feltétel hamis; és akkor fogja lerenderelni az adott HTML-részt, ha a feltétel igaz
+- A `v-if` direktívát ne használjuk a `v-for`-ral együtt, mert a `v-for` magasabb prioritású művelet, így nem elvárt működést eredményezhet, erről részletesebben: [Avoid v-if with v-for](https://vuejs.org/style-guide/rules-essential.html#avoid-v-if-with-v-for)
 
 ```html
 <div id="app">
@@ -65,11 +65,11 @@ app.mount('#app')
 </div>
 ```
 
-- Így a böngészőben látható, hogy csak 4 gitár neve jelenik meg, ahol a `stock` 0 volt, nincs kiírva
-- Azonban ha megnézzük a böngésző fejlesztői eszköztárában azt látjuk, hogy a `guitars` osztályú elemen belül 5 darab div van, amiből az első üres
-- Azért 5 darab van, mert a div, ahol a v-for-t megadtam 5 alkalommal fog lerenderelődni, azonban a tartalma, a `guitar` osztályú elem az elsőben nem lesz benne, hiszen nem felel meg a feltételnek
+- Így a böngészőben látható, hogy csak 4 gitár neve jelenik meg; ahol a `stock` 0 volt, ott nincs kiírva
+- Azonban ha megnézzük a böngésző fejlesztői eszköztárában, azt látjuk, hogy a `guitars` osztályú elemen belül 5 darab div van, amelyekből az első üres
+- Azért 5 darab van, mert a div, ahol a v-for-t megadtam, 5 alkalommal fog lerenderelődni, azonban a tartalma, a `guitar` osztályú elem az elsőben nem lesz benne, hiszen nem felel meg a feltételnek
 - A legszebb az lenne, ha ilyen esetben maga az üres `div` se jelenne meg
-- Ezt úgy oldhatjuk meg, hogy kicseréljük a `div`-et `template` tag-re
+- Ezt úgy oldhatjuk meg, hogy kicseréljük a `div`et `template` tag-re
 
 ```html
 <div id="app">
